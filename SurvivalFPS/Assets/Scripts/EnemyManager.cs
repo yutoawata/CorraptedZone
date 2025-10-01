@@ -27,7 +27,9 @@ public class EnemyManager : MonoBehaviour
             // stage‚Ì‘å‚«‚³‚ðŽæ“¾‚·‚é
             Renderer stageRenderer = stageObject.GetComponent<Renderer>();
             Bounds stageBounds = stageRenderer.bounds;
+            // XŽ²‚ÌˆÊ’u‚ðŒˆ‚ß‚é
             float randPosX = Random.Range(stageBounds.min.x, stageBounds.max.x);
+            // ZŽ²‚ÌˆÊ’u‚ðŒˆ‚ß‚é
             float randPosZ = Random.Range(stageBounds.min.z, stageBounds.max.z);
             Vector3 spawnPos = new Vector3(randPosX, stageBounds.max.y + spawnOffsetY, randPosZ);
 
