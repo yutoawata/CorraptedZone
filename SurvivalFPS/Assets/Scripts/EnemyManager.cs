@@ -51,6 +51,7 @@ public class EnemyManager : MonoBehaviour
         float randPosX = Random.Range(stageBounds.min.x, stageBounds.max.x);
         // Z²‚ÌˆÊ’u‚ğŒˆ‚ß‚é
         float randPosZ = Random.Range(stageBounds.min.z, stageBounds.max.z);
+        // ¶¬ˆÊ’u
         Vector3 spawnPos = new Vector3(randPosX, stageBounds.max.y + spawnOffsetY, randPosZ);
 
         return spawnPos;
