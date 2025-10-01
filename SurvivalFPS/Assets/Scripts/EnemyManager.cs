@@ -29,21 +29,27 @@ public class EnemyManager : MonoBehaviour
         // 3秒経過で出現
         if (timer > spawnTime)
         {
-            // stageの大きさを取得する
-            Renderer stageRenderer = stageObject.GetComponent<Renderer>();
-            Bounds stageBounds = stageRenderer.bounds;
-            // X軸の位置を決める
-            float randPosX = Random.Range(stageBounds.min.x, stageBounds.max.x);
-            // Z軸の位置を決める
-            float randPosZ = Random.Range(stageBounds.min.z, stageBounds.max.z);
-            Vector3 spawnPos = new Vector3(randPosX, stageBounds.max.y + spawnOffsetY, randPosZ);
 
             Instantiate(
                 enemyObject,
-                spawnPos,
+                SpawnPos(),
                 Quaternion.identity);
 
             timer = 0.0f;
         }
+    }
+
+    Vector3 SpawnPos()
+    {
+        // stageの大きさを取得する
+        Renderer stageRenderer = stageObject.GetComponent<Renderer>();
+        Bounds stageBounds = stageRenderer.bounds;
+        // X軸の位置を決める
+        float randPosX = Random.Range(stageBounds.min.x, stageBounds.max.x);
+        // Z軸の位置を決める
+        float randPosZ = Random.Range(stageBounds.min.z, stageBounds.max.z);
+        Vector3 spawnPos = new Vector3(randPosX, stageBounds.max.y + spawnOffsetY, randPosZ);
+
+        return spawnPos;
     }
 }
