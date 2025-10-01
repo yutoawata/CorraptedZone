@@ -19,6 +19,11 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SpawnEnemy();
+    }
+
+    void SpawnEnemy()
+    {
         timer += Time.deltaTime;
         float spawnTime = 3.0f;
         // 3ïbåoâﬂÇ≈èoåª
