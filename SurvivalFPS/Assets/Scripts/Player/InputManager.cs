@@ -17,4 +17,8 @@ public class InputManager : MonoBehaviour
     public bool IsInputDownButton() { return gamepad.buttonSouth.isPressed; }
     public bool IsInputRightButton() { return gamepad.buttonEast.isPressed; }
     public bool IsInputLeftButton() { return gamepad.buttonWest.isPressed; }
+    public bool IsInputRightTrigger() { return gamepad.rightTrigger.isPressed;}
+    public bool IsInputLeftTrigger() { return gamepad.leftTrigger.isPressed;}
+    public bool IsInputRightShoulder() { return gamepad.rightShoulder.isPressed; }
+    public bool IsInputLeftShoulder() { return gamepad.leftShoulder.isPressed; }
 }
