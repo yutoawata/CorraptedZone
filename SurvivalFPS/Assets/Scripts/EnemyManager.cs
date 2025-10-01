@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyObject = null;
     [SerializeField] GameObject stageObject = null;
+    // Y軸のスポーン位置
     [SerializeField] float spawnOffsetY = 0.0f;
 
     float timer = 0.0f;
@@ -22,6 +23,7 @@ public class EnemyManager : MonoBehaviour
         SpawnEnemy();
     }
 
+    // 敵の出現関数
     void SpawnEnemy()
     {
         timer += Time.deltaTime;
@@ -39,6 +41,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    // 敵の生成位置関数
     Vector3 SpawnPos()
     {
         // stageの大きさを取得する
