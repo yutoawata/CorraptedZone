@@ -47,9 +47,5 @@ public class PlayerController : MonoBehaviour
 
 
         transform.eulerAngles += new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime;
-
-        Debug.Log(rotate);
-
-        Debug.Log(moveDirection);
     }
 }
