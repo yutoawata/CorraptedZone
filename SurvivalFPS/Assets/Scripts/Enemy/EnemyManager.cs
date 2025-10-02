@@ -9,7 +9,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] LayerMask obstaclesLayer = ~0;
     // Y軸のスポーン位置
     [SerializeField] float spawnOffsetY = 0.0f;
-    [SerializeField] float spawnradius = 0.0f;
+    [SerializeField] float spawnRadius = 0.0f;
 
     float timer = 0.0f;
 
@@ -55,7 +55,7 @@ public class EnemyManager : MonoBehaviour
     bool IsSpawn(Vector3 pos)
     {
         // 現在の位置と障害物の距離を測る
-        return !Physics.CheckSphere(pos, spawnradius, obstaclesLayer);
+        return !Physics.CheckSphere(pos, spawnRadius, obstaclesLayer);
     }
 
     // 敵の生成位置関数
