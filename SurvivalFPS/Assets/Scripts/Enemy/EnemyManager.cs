@@ -32,15 +32,21 @@ public class EnemyManager : MonoBehaviour
         float spawnTime = 0.5f;
         if (timer > spawnTime)
         {
-            if (IsSpawn(SpawnPos()))
+            // 生成位置を格納
+            Vector3 pos = SpawnPos();
+            // 現在の位置が生成出来るか判別する
+            if (IsSpawn(pos))
             {
-
                 Instantiate(
                     enemyObject,
-                    SpawnPos(),
+                    pos,
                     Quaternion.identity);
 
                 timer = 0.0f;
+            }
+            else
+            {
+                Debug.Log("生成出来なかった");
             }
         }
     }
@@ -48,12 +54,8 @@ public class EnemyManager : MonoBehaviour
     // 近くに障害物がなく生成できるか確認する関数
     bool IsSpawn(Vector3 pos)
     {
-        if (Physics.CheckSphere(pos, spawnradius, obstaclesLayer))
-        {
-            return true;
-        }
-
-        return false;
+        // 現在の位置と障害物の距離を測る
+        return !Physics.CheckSphere(pos, spawnradius, obstaclesLayer);
     }
 
     // 敵の生成位置関数
