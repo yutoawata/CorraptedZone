@@ -3,10 +3,11 @@ using UnityEngine;
 public class LightHouseController : MonoBehaviour
 {
     [SerializeField]private float spotChangeSpan;       //切り替え間隔
+    [SerializeField]private float rotationSpeed;
     [SerializeField]private Transform[] targetItem;     //アイテムの座標取得に使用
     private int spotNumber;                             //照らすアイテムの番号
     private int spotIndex;                              //アイテム配列の要素数の取得に使用
-    private Transform LightHouse;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +26,17 @@ public class LightHouseController : MonoBehaviour
     {
         //表示するスポット＝（経過時間 / 待機時間）％　要素数
         spotNumber = Mathf.FloorToInt(Time.time / spotChangeSpan) % spotIndex;
-        //指定されたアイテムにライトの中心を合わせる
-        transform.LookAt(targetItem[spotNumber]);
+        // ターゲット方向のベクトルを取得
+        Vector3 relativePos = targetItem[spotNumber].transform.position - this.transform.position;
+        //
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+        // 現在の回転情報と、ターゲット方向の回転情報を補完する
+        transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, rotationSpeed);
     }
 
     public Vector3 ReturnEnemyTargetTransform()
     {
-        LightHouse = this.transform;                                //トランスフォームの値の取得に使用
-        Vector3 enemyTargetAngle = LightHouse.eulerAngles;          //角度の取得に使用
-        Vector3 enemyTargetPos = LightHouse.transform.position;     //返す座標の保存に使用
-
-        float offsetRange = Mathf.Tan(enemyTargetAngle.x * enemyTargetPos.y);   //xz軸のベクトルの取得
-        enemyTargetPos.x = Mathf.Cos(offsetRange * enemyTargetAngle.y);         //x座標の計算
-        enemyTargetPos.z = Mathf.Sin(offsetRange * enemyTargetAngle.y);         //z座標の計算
-
+        Vector3 enemyTargetPos = targetItem[spotNumber].transform.position;     //返す座標の保存に使用
         return enemyTargetPos;                                      //座標を返す
     }
 }
