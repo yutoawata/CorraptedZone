@@ -5,6 +5,7 @@ Shader "Custom/OutlineToon"
         _OutlineColor ("Outline Color", Color) = (0,0,0,1)
         _OutlineWidth ("Outline Width (World)", Float) = 0.04
 
+
         _Color   ("Main Color", Color) = (1,1,1,1)
         _MainTex ("MainTex", 2D) = "white" {}
     }
@@ -86,7 +87,7 @@ Shader "Custom/OutlineToon"
                 float3 posWS    : TEXCOORD2;
             };
 
-            sampler2D _MainTex; float4 _MainTex_ST;
+            sampler2D _MainTex; float4 _MainTex_ST; float _Emission;
             float4 _Color;
 
             v2f vert (appdata v)
