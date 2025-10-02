@@ -1226,7 +1226,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   spawnOffsetY: 0.5
-  spawnradius: 3.5
+  spawnradius: 2
 --- !u!1 &1116415350
 GameObject:
   m_ObjectHideFlags: 0
