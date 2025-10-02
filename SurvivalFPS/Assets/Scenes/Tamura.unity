@@ -756,7 +756,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a4b831fae8e044a409d78e5fe4658046, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e008b07afafccd3438fe2a5e707187c1, type: 2}
+      objectReference: {fileID: 2100000, guid: 7bde988ef82f75d449bc84958b5be36d, type: 2}
     - target: {fileID: 919132149155446097, guid: a4b831fae8e044a409d78e5fe4658046, type: 3}
       propertyPath: m_Name
       value: O_CR_001_kibako_01_10
@@ -821,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 4431670454091400558, guid: 6f683f57036215744aaee9c48f61bf4d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 0189655056ca06742b4a396d8ac2c2fd, type: 2}
+      objectReference: {fileID: 2100000, guid: 7bde988ef82f75d449bc84958b5be36d, type: 2}
     - target: {fileID: 5694059874591286030, guid: 6f683f57036215744aaee9c48f61bf4d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
