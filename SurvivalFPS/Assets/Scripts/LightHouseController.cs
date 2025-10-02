@@ -26,8 +26,12 @@ public class LightHouseController : MonoBehaviour
     {
         //表示するスポット＝（経過時間 / 待機時間）％　要素数
         spotNumber = Mathf.FloorToInt(Time.time / spotChangeSpan) % spotIndex;
-        //指定されたアイテムにライトの中心を合わせる
-        transform.LookAt(targetItem[spotNumber]);
+        // ターゲット方向のベクトルを取得
+        Vector3 relativePos = targetItem[spotNumber].transform.position - this.transform.position;
+        //
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+        // 現在の回転情報と、ターゲット方向の回転情報を補完する
+        transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, rotationSpeed);
     }
 
     public Vector3 ReturnEnemyTargetTransform()
