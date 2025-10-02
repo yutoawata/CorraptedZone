@@ -6,8 +6,10 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyObject = null;
     [SerializeField] GameObject stageObject = null;
+    [SerializeField] LayerMask obstaclesLayer = ~0;
     // Y軸のスポーン位置
     [SerializeField] float spawnOffsetY = 0.0f;
+    [SerializeField] float spawnradius = 0.0f;
 
     float timer = 0.0f;
 
@@ -27,18 +29,31 @@ public class EnemyManager : MonoBehaviour
     void SpawnEnemy()
     {
         timer += Time.deltaTime;
-        float spawnTime = 3.0f;
-        // 3秒経過で出現
+        float spawnTime = 0.5f;
         if (timer > spawnTime)
         {
+            if (IsSpawn(SpawnPos()))
+            {
 
-            Instantiate(
-                enemyObject,
-                SpawnPos(),
-                Quaternion.identity);
+                Instantiate(
+                    enemyObject,
+                    SpawnPos(),
+                    Quaternion.identity);
 
-            timer = 0.0f;
+                timer = 0.0f;
+            }
         }
+    }
+
+    // 近くに障害物がなく生成できるか確認する関数
+    bool IsSpawn(Vector3 pos)
+    {
+        if (Physics.CheckSphere(pos, spawnradius, obstaclesLayer))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     // 敵の生成位置関数
