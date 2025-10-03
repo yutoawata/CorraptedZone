@@ -25,7 +25,7 @@ public class BulletCreator : MonoBehaviour
             Debug.Log("”­ËOK");
         }
 
-        if (InputManager.IsInputRightShoulder())
+        if (InputManager.IsInputRightTrigger())
         {
             Debug.Log("ƒgƒŠƒK[");
 
