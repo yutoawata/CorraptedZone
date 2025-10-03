@@ -3,10 +3,8 @@ using UnityEngine;
 public class BulletCreator : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
-    [SerializeField] InputManager input;
     [SerializeField] float shootPower = 100.0f;
     [SerializeField] float fireIngerval = 5.0f;
-
     float timer = 0.0f;
 
     // Start is called before the first frame update
@@ -27,21 +25,16 @@ public class BulletCreator : MonoBehaviour
             Debug.Log("”­ŽËOK");
         }
 
-        if (input != null)
+        if (InputManager.IsInputRightTrigger())
         {
+            Debug.Log("ƒgƒŠƒK[");
 
-
-            if (input.IsInputRightShoulder())
+            if (timer >= fireIngerval)
             {
-                Debug.Log("ƒgƒŠƒK[");
+                Fire();
+                timer = 0.0f;
 
-                if (timer >= fireIngerval)
-                {
-                    Fire();
-                    timer = 0.0f;
-
-                    Debug.Log("Fire");
-                }
+                Debug.Log("Fire");
             }
         }
     }
