@@ -11,6 +11,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] float spawnOffsetY = 0.0f;
     [SerializeField] float spawnRadius = 0.0f;
 
+    List<GameObject> enemis = new List<GameObject>();
+
     float timer = 0.0f;
 
     // Start is called before the first frame update
@@ -35,7 +37,8 @@ public class EnemyManager : MonoBehaviour
             // 生成位置を格納
             Vector3 pos = SpawnPos();
             // 現在の位置が生成出来るか判別する
-            if (IsSpawn(pos))
+            if (IsSpawn(pos) &&
+                enemyObject != null)
             {
                 Instantiate(
                     enemyObject,
@@ -54,6 +57,20 @@ public class EnemyManager : MonoBehaviour
     // 近くに障害物がなく生成できるか確認する関数
     bool IsSpawn(Vector3 pos)
     {
+        float distance = 2.0f;
+        for (int i = 0; i < enemis.Count; i++)
+        {
+            // nullチェック
+            if (enemis[i] == null) continue;
+
+            // 生成位置と敵の現在位置の距離を格納する
+            float dist = Vector3.Distance(pos, enemis[i].transform.position);
+            // 敵の距離と近い場合はfalseを返す
+            if (dist < distance)
+            {
+                return false;
+            }
+        }
         // 現在の位置と障害物の距離を測る
         return !Physics.CheckSphere(pos, spawnRadius, obstaclesLayer);
     }
@@ -72,5 +89,15 @@ public class EnemyManager : MonoBehaviour
         Vector3 spawnPos = new Vector3(randPosX, stageBounds.max.y + spawnOffsetY, randPosZ);
 
         return spawnPos;
+    }
+
+    public void RegistrationEnemyList(GameObject enemy)
+    {
+        enemis.Add(enemy);
+    }
+
+    public void RemoveEnemyList(GameObject enemy)
+    {
+        enemis.Remove(enemy);
     }
 }
