@@ -4,10 +4,10 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    Gamepad gamepad;
-
+    static Gamepad gamepad;
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     // Start is called before the first frame update
-    void Start()
+    static void CheckGamePad()
     {
         gamepad = Gamepad.current;
     }
