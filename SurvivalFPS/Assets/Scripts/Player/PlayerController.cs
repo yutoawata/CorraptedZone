@@ -56,9 +56,9 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(moveDirection * currentSpeed);
 
-        transform.rotation = Quaternion.Euler(new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime);
+        //transform.rotation = Quaternion.Euler(new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime);
 
-        //transform.eulerAngles += new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime;
+        transform.eulerAngles += new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime;
     }
 
     void ADS()
