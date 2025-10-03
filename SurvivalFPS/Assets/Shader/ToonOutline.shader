@@ -110,7 +110,7 @@ Shader "Custom/OutlineToon"
 
                 float nl = saturate(dot(N, L));
 
-                float t = (nl <= 0.1) ? 0.1 : (nl <= 0.4) ? 0.4 : 1.0;
+                float t = (nl <= 0.1) ? 0.1 : (nl <= 0.5) ? 0.5 : (nl <= 0.7) ? 0.7 : 1.0;
 
                 float4 baseCol = tex2D(_MainTex, i.uv) * _Color;
                 return float4(baseCol.rgb * t, baseCol.a);
