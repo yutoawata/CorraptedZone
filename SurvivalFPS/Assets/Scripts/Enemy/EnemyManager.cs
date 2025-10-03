@@ -5,10 +5,8 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyObject = null;
-    [SerializeField] GameObject stageObject = null;
     [SerializeField] LayerMask obstaclesLayer = ~0;
-    // Y軸のスポーン位置
-    [SerializeField] float spawnOffsetY = 0.0f;
+    [SerializeField] Vector3 spawnRange = Vector3.zero;
     [SerializeField] float spawnRadius = 0.0f;
 
     List<GameObject> enemis = new List<GameObject>();
@@ -78,15 +76,12 @@ public class EnemyManager : MonoBehaviour
     // 敵の生成位置関数
     Vector3 SpawnPos()
     {
-        // stageの大きさを取得する
-        Renderer stageRenderer = stageObject.GetComponent<Renderer>();
-        Bounds stageBounds = stageRenderer.bounds;
         // X軸の位置を決める
-        float randPosX = Random.Range(stageBounds.min.x, stageBounds.max.x);
+        float randPosX = Random.Range(-spawnRange.x, spawnRange.x);
         // Z軸の位置を決める
-        float randPosZ = Random.Range(stageBounds.min.z, stageBounds.max.z);
+        float randPosZ = Random.Range(-spawnRange.z, spawnRange.z);
         // 生成位置
-        Vector3 spawnPos = new Vector3(randPosX, stageBounds.max.y + spawnOffsetY, randPosZ);
+        Vector3 spawnPos = new Vector3(randPosX, spawnRange.y, randPosZ);
 
         return spawnPos;
     }
