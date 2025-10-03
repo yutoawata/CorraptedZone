@@ -2,13 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameObject gun;
-    [SerializeField] Camera mainCamera;
-    [SerializeField] InputManager input;
-    [SerializeField] Rigidbody rb;
-    [SerializeField] float moveSpeed = 20.0f;
-    [SerializeField] float rotateSpeed = 60.0f;
+    [SerializeField] PlayerParameters paramaters;
 
+    Rigidbody rb;
     Vector3 ADSPosition = new Vector3(0.0f, 0.6f, 0.3f);
     Vector3 hipPosition = new Vector3(0.2f, 0.55f, 0.4f);
     Vector3 moveDirection = Vector2.zero;
@@ -20,7 +16,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -37,8 +33,8 @@ public class PlayerController : MonoBehaviour
 
         if (!isfirstFrame)
         {
-            moveDirection = new Vector2(input.InputLeftStickValue().x, input.InputLeftStickValue().y);
-            rotate = input.InputRightStickValue();
+            moveDirection = new Vector2(paramaters.input.InputLeftStickValue().x, paramaters.input.InputLeftStickValue().y);
+            rotate = paramaters.input.InputRightStickValue();
         }
         else
         {
@@ -51,31 +47,31 @@ public class PlayerController : MonoBehaviour
 
         moveDirection = rotation * new Vector3(moveDirection.x, 0.0f, moveDirection.y);
 
-        rb.AddForce(moveDirection * moveSpeed);
+        rb.AddForce(moveDirection * paramaters.moveSpeed);
 
-        transform.eulerAngles += new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime;
+        transform.eulerAngles += new Vector3(-rotate.y, rotate.x, 0.0f) * paramaters.rotateSpeed * Time.deltaTime;
     }
 
     void ADS()
     {
-        if (input.IsInputLeftTrigger())
+        if (paramaters.input.IsInputLeftTrigger())
         {
-            mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
+            paramaters.mainCamera.fieldOfView += (cameraViewMin - paramaters.mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
 
-            Vector3 direction = ADSPosition - gun.transform.position;
+            Vector3 direction = ADSPosition - paramaters.gun.transform.position;
 
-            gun.transform.position += direction * Time.deltaTime * 5.0f;
+            paramaters.gun.transform.position += direction * Time.deltaTime * 5.0f;
         }
         else
         {
-            mainCamera.fieldOfView += (cameraViewMax - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
+            paramaters.mainCamera.fieldOfView += (cameraViewMax - paramaters.mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
 
 
-            Vector3 direction = hipPosition - gun.transform.position;
+            Vector3 direction = hipPosition - paramaters.gun.transform.position;
 
-            gun.transform.position += direction * Time.deltaTime * 5.0f;
+            paramaters.gun.transform.position += direction * Time.deltaTime * 5.0f;
         }
 
-        mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, cameraViewMin, cameraViewMax);
+        paramaters.mainCamera.fieldOfView = Mathf.Clamp(paramaters.mainCamera.fieldOfView, cameraViewMin, cameraViewMax);
     }
 }

@@ -2,23 +2,19 @@ using UnityEngine;
 
 public class BulletCreator : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
-    [SerializeField] InputManager input;
-    [SerializeField] float shootPower = 100.0f;
-    [SerializeField] float fireIngerval = 5.0f;
-
+    [SerializeField] GunParamater paramater;
     float timer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = fireIngerval;
+        timer = paramater.fireIngerval;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < fireIngerval)
+        if (timer < paramater.fireIngerval)
         {
             timer += Time.deltaTime;
         }
@@ -27,15 +23,15 @@ public class BulletCreator : MonoBehaviour
             Debug.Log("”­ŽËOK");
         }
 
-        if (input != null)
+        if (paramater.input != null)
         {
 
 
-            if (input.IsInputRightShoulder())
+            if (paramater.input.IsInputRightShoulder())
             {
                 Debug.Log("ƒgƒŠƒK[");
 
-                if (timer >= fireIngerval)
+                if (timer >= paramater.fireIngerval)
                 {
                     Fire();
                     timer = 0.0f;
@@ -49,8 +45,8 @@ public class BulletCreator : MonoBehaviour
     void Fire()
     {
         GameObject obj = null;
-        obj = Instantiate(bullet,transform.position + transform.forward * 2.0f,Quaternion.identity);
+        obj = Instantiate(paramater.bullet,transform.position + transform.forward * 2.0f,Quaternion.identity);
 
-        obj.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower);
+        obj.GetComponent<Rigidbody>().AddForce(transform.forward * paramater.shootPower);
     }
 }
