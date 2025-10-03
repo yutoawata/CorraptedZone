@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class BulletCreator : MonoBehaviour
 {
-    [SerializeField] GunParamater paramater;
     [SerializeField] GameObject bullet;
-    [SerializeField] InputManager input;
     [SerializeField] float shootPower = 100.0f;
     [SerializeField] float fireIngerval = 5.0f;
     float timer = 0.0f;
