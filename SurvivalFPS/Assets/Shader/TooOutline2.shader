@@ -104,7 +104,7 @@ Shader "Custom/OutlineToon2"
             o.Alpha    = c.a;
 
             // 自発光（ライティングに加算される）
-            o.Emission = _EmissionColor.rgb * _Emission;
+            o.Emission = c.rgb * _Emission;
         }
         ENDCG
     }
