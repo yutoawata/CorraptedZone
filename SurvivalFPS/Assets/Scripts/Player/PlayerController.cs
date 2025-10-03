@@ -4,7 +4,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject gun;
     [SerializeField] Camera mainCamera;
-    [SerializeField] InputManager input;
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 60.0f;
     Rigidbody rb;
@@ -63,18 +62,18 @@ public class PlayerController : MonoBehaviour
 
             mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
 
-            Vector3 direction = ADSPosition - gun.transform.position;
+            Vector3 direction = ADSPosition - gun.transform.localPosition;
 
-            gun.transform.position += direction * Time.deltaTime * 5.0f;
+            gun.transform.localPosition += direction * Time.deltaTime * 4.0f;
         }
         else
         {
             mainCamera.fieldOfView += (cameraViewMax - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
 
 
-            Vector3 direction = hipPosition - gun.transform.position;
+            Vector3 direction = hipPosition - gun.transform.localPosition;
 
-            gun.transform.position += direction * Time.deltaTime * 5.0f;
+            gun.transform.localPosition += direction * Time.deltaTime * 4.0f;
         }
 
         mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, cameraViewMin, cameraViewMax);
