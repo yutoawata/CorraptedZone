@@ -79,7 +79,7 @@ Shader "Custom/OutlineToon2"
         // Toon 用カスタムライティング
         fixed4 LightingToonLit (SurfaceOutput s, fixed3 lightDir, fixed atten)
         {
-            half nl    = saturate(dot(s.Normal, lightDir));
+            half nl = saturate(dot(s.Normal, lightDir));
             // 面の向きを絞る
             nl = pow(nl, max(_NLPower, 1.0)); // 値が上がるほどあたりが狭くなる
 
