@@ -87,6 +87,8 @@ Shader "Custom/OutlineToon2"
             half att = saturate(atten);
             att = pow(att, max(_AttenPower, 1.0)); // 値が上がるほどスポットライトのコーンが狭くなる
 
+           
+
             half steps = max(_Steps, 2.0);
             half q     = floor(nl * steps) / (steps - 1.0);  // 0,1/(N-1),...,1
 
