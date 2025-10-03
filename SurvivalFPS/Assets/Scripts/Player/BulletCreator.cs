@@ -3,18 +3,22 @@ using UnityEngine;
 public class BulletCreator : MonoBehaviour
 {
     [SerializeField] GunParamater paramater;
+    [SerializeField] GameObject bullet;
+    [SerializeField] InputManager input;
+    [SerializeField] float shootPower = 100.0f;
+    [SerializeField] float fireIngerval = 5.0f;
     float timer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = paramater.fireIngerval;
+        timer = fireIngerval;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < paramater.fireIngerval)
+        if (timer < fireIngerval)
         {
             timer += Time.deltaTime;
         }
@@ -23,21 +27,16 @@ public class BulletCreator : MonoBehaviour
             Debug.Log("”­ŽËOK");
         }
 
-        if (paramater.input != null)
+        if (InputManager.IsInputRightShoulder())
         {
+            Debug.Log("ƒgƒŠƒK[");
 
-
-            if (paramater.input.IsInputRightShoulder())
+            if (timer >= fireIngerval)
             {
-                Debug.Log("ƒgƒŠƒK[");
+                Fire();
+                timer = 0.0f;
 
-                if (timer >= paramater.fireIngerval)
-                {
-                    Fire();
-                    timer = 0.0f;
-
-                    Debug.Log("Fire");
-                }
+                Debug.Log("Fire");
             }
         }
     }
@@ -45,8 +44,8 @@ public class BulletCreator : MonoBehaviour
     void Fire()
     {
         GameObject obj = null;
-        obj = Instantiate(paramater.bullet,transform.position + transform.forward * 2.0f,Quaternion.identity);
+        obj = Instantiate(bullet,transform.position + transform.forward * 2.0f,Quaternion.identity);
 
-        obj.GetComponent<Rigidbody>().AddForce(transform.forward * paramater.shootPower);
+        obj.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower);
     }
 }

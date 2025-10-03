@@ -659,6 +659,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492320496}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &560029122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+  m_PrefabInstance: {fileID: 7538054827848885710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &610210229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1905,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 730040591246818145, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1259063435819673586, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1947,7 +1956,7 @@ PrefabInstance:
     - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: gun
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 560029122}
     - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: input
       value: 
@@ -1956,8 +1965,22 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7121494132723412649, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121494132723412649, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121494132723412649, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7866977290574284178, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+    - {fileID: 7322069327057265623, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
