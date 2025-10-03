@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AttenPower: 1
+    - _AttenPower: 0.79
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -76,14 +76,14 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NLPower: 3.63
+    - _NLPower: 8.53
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.06
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 4.74
+    - _Steps: 5.77
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
