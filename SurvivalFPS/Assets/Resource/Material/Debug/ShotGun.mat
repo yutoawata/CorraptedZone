@@ -76,14 +76,14 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NLPower: 9.1
+    - _NLPower: -0.08
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.003
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 3
+    - _Steps: 4.2
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
