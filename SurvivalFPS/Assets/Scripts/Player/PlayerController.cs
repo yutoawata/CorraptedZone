@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] GameObject gun;
+    [SerializeField] Camera mainCamera;
     [SerializeField] InputManager input;
     [SerializeField] Rigidbody rb;
+    [SerializeField] float moveSpeed = 20.0f;
+    [SerializeField] float rotateSpeed = 60.0f;
 
+    Vector3 ADSPosition = new Vector3(0.0f, 0.6f, 0.3f);
+    Vector3 hipPosition = new Vector3(0.2f, 0.55f, 0.4f);
     Vector3 moveDirection = Vector2.zero;
     Vector2 rotate = Vector2.zero;
-    [SerializeField]float moveSpeed = 20.0f;
-    [SerializeField]float rotateSpeed = 60.0f;
+    float cameraViewMax = 60.0f;
+    float cameraViewMin = 45.0f;
     bool isfirstFrame = true;
 
     // Start is called before the first frame update
@@ -21,6 +27,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+
+        ADS();
     }
 
     void Move()
@@ -45,7 +53,29 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(moveDirection * moveSpeed);
 
-
         transform.eulerAngles += new Vector3(-rotate.y, rotate.x, 0.0f) * rotateSpeed * Time.deltaTime;
+    }
+
+    void ADS()
+    {
+        if (input.IsInputLeftTrigger())
+        {
+            mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
+
+            Vector3 direction = ADSPosition - gun.transform.position;
+
+            gun.transform.position += direction * Time.deltaTime * 5.0f;
+        }
+        else
+        {
+            mainCamera.fieldOfView += (cameraViewMax - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
+
+
+            Vector3 direction = hipPosition - gun.transform.position;
+
+            gun.transform.position += direction * Time.deltaTime * 5.0f;
+        }
+
+        mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, cameraViewMin, cameraViewMax);
     }
 }
