@@ -79,21 +79,38 @@ Shader "Custom/OutlineToon2"
         // Toon 用カスタムライティング
         fixed4 LightingToonLit (SurfaceOutput s, fixed3 lightDir, fixed atten)
         {
-            half nl    = saturate(dot(s.Normal, lightDir));
-            // 面の向きを絞る
-            nl = pow(nl, max(_NLPower, 1.0)); // 値が上がるほどあたりが狭くなる
+           //  half nl    = saturate(dot(s.Normal, lightDir));
+           //  // 面の向きを絞る
+           //  nl = pow(nl, max(_NLPower, 1.0)); // 値が上がるほどあたりが狭くなる
 
-            // ライトの減衰をまとめて絞る
-            half att = saturate(atten);
-            att = pow(att, max(_AttenPower, 1.0)); // 値が上がるほどスポットライトのコーンが狭くなる
+           //  // ライトの減衰をまとめて絞る
+           //  half att = saturate(atten);
+           //  att = pow(att, max(_AttenPower, 1.0)); // 値が上がるほどスポットライトのコーンが狭くなる
 
-           
+           // half raw = saturate(nl * att);
 
-            half steps = max(_Steps, 2.0);
-            half q     = floor(nl * steps) / (steps - 1.0);  // 0,1/(N-1),...,1
+           //  half steps = max(_Steps, 2.0);
+           //  half q     = floor(raw * steps) / (steps - 1.0);  // 0,1/(N-1),...,1
 
-            fixed3 col = s.Albedo * _LightColor0.rgb * q * att;
-            return fixed4(col, s.Alpha);
+           //  fixed3 col = s.Albedo * _LightColor0.rgb * q;
+           //  return fixed4(col, s.Alpha);
+
+            // Lambert側のつまみは“色の強さ”にだけ使う場合は残してOK
+    half nl  = saturate(dot(s.Normal, lightDir));
+    half lam = pow(nl,  max(_NLPower,   1.0));
+
+    // ★ コーン幅にロック：atten だけで段階を決定
+    half att = pow(saturate(atten), max(_AttenPower, 1.0));
+
+    // 量子化は atten で決める ⇒ コーンの内側＝明、外側＝暗
+    half steps = max(_Steps, 2.0);
+    half q     = floor(att * steps) / (steps - 1.0);
+
+    // 出力：Albedo × LightColor ×（Lambertの強さ）×（段階）
+    // ここで lam を掛けるのは“質感の張り”用（いらなければ外してOK）
+    fixed3 col = s.Albedo * _LightColor0.rgb * lam * q;
+    return fixed4(col, s.Alpha);
+
         }
 
         void surf (Input IN, inout SurfaceOutput o)
