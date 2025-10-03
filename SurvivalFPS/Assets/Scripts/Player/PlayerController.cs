@@ -7,12 +7,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 60.0f;
     Rigidbody rb;
-    Vector3 ADSPosition = new Vector3(0.0f, 0.6f, 0.3f);
+    Vector3 ADSPosition = new Vector3(0.0f, 0.662f, 0.2f);
     Vector3 hipPosition = new Vector3(0.2f, 0.55f, 0.4f);
     Vector3 moveDirection = Vector2.zero;
     Vector2 rotate = Vector2.zero;
     float cameraViewMax = 60.0f;
     float cameraViewMin = 45.0f;
+    float ADSSpeed = 5.0f;
     bool isfirstFrame = true;
 
     // Start is called before the first frame update
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
             Vector3 direction = ADSPosition - gun.transform.localPosition;
 
-            gun.transform.localPosition += direction * Time.deltaTime * 4.0f;
+            gun.transform.localPosition += direction * Time.deltaTime * ADSSpeed;
         }
         else
         {
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
             Vector3 direction = hipPosition - gun.transform.localPosition;
 
-            gun.transform.localPosition += direction * Time.deltaTime * 4.0f;
+            gun.transform.localPosition += direction * Time.deltaTime * ADSSpeed;
         }
 
         mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, cameraViewMin, cameraViewMax);
