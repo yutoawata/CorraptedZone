@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: xplosion
+  m_Name: xplosiongray
   m_Shader: {fileID: 4800000, guid: e44f3aede958b584f8abee938cbf2d85, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,18 +38,27 @@ Material:
     m_Ints: []
     m_Floats:
     - _AttenPower: 0.1
-    - _Emission: 0.28
+    - _Dissolve: 0
+    - _DissolveAmp: 0.35
+    - _EdgeSharpness: 2
+    - _Emission: -0.2
+    - _Fade: 1
+    - _InvFade: 2
     - _MinStep: 0
     - _NLPower: 1
     - _OutlineWidth: 0.09
-    - _Steps: 2
+    - _OutlineWidthPx: 2
+    - _Radius: 0.2
+    - _SoftParticles: 1
+    - _Steps: 1.91
+    - _Thickness: 0.25
     - _Threshold: 0
     m_Colors:
-    - _Color: {r: 0.9460278, g: 0.98490566, b: 0, a: 1}
+    - _Color: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 1}
     - _EmissionColor: {r: 0, g: 0.07902956, b: 1, a: 1}
-    - _LitTint: {r: 1, g: 0.9053066, b: 0.066037595, a: 1}
+    - _LitTint: {r: 0.6075471, g: 0.6075471, b: 0.6075471, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 0.80465114, b: 0, a: 1}
-    - _ShadowTint: {r: 1, g: 0.015686275, b: 0, a: 1}
+    - _RimColor: {r: 0.4867924, g: 0.4867924, b: 0.4867924, a: 1}
+    - _ShadowTint: {r: 0.3433962, g: 0.34148294, b: 0.34145245, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

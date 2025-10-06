@@ -38,30 +38,39 @@ Material:
     m_Ints: []
     m_Floats:
     - _AttenPower: 0.1
+    - _AutoDelay: 0
+    - _AutoDuration: 0.6
+    - _AutoPower: 1
     - _Dissolve: 0
     - _DissolveAmp: 0.35
+    - _DissolveSpeed: 0
+    - _DissolveTiling: 1
     - _EdgeSharpness: 2
-    - _Emission: -0.58
+    - _Emission: 0.03
     - _Fade: 1
     - _InvFade: 2
-    - _MinStep: 0
+    - _MinStep: 0.352
     - _NLPower: 1
+    - _NoiseSpeed: 0
+    - _NoiseTiling: 1
     - _OutlineWidth: 0.09
     - _OutlineWidthPx: 2
     - _Radius: 0.2
+    - _RimIntensity: 0
+    - _RimPower: 0.67
     - _SoftParticles: 1
     - _Steps: 2
     - _Thickness: 0.25
     - _ThrOffset: -1
-    - _ThrScale: 1
+    - _ThrScale: 3
     - _Threshold: 0
-    - _UseCustom: 1
+    - _UseCustom: 0.18
     m_Colors:
     - _Color: {r: 0.9460278, g: 0.98490566, b: 0, a: 1}
     - _EmissionColor: {r: 1, g: 0.11923355, b: 0, a: 1}
     - _LitTint: {r: 1, g: 0.9053066, b: 0.066037595, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 0.34403342, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 0.3440334, b: 0, a: 1}
     - _ShadowTint: {r: 1, g: 0.015228424, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
