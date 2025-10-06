@@ -29,7 +29,7 @@ Shader "Custom/OutlineToon3"
         LOD 200
 
         CGPROGRAM
-        #pragma surface surf ToonLit fullforwardshadows addshadow alpha:clip
+        #pragma surface surf ToonLit fullforwardshadows addshadow alpha:clip vertex:vert
         #pragma target 3.0
 
         sampler2D _MainTex;
@@ -51,10 +51,19 @@ Shader "Custom/OutlineToon3"
 
         float4 _RimColor;
 
-        struct Input { 
-            float2 uv_MainTex;
-            float3 viewDir;
-            };
+
+        struct Input {
+    float2 uv_MainTex;
+    float3 viewDir;
+    float  Threshold;   // ← セマンティクスは付けない
+    INTERNAL_DATA
+    };
+
+// 頂点関数で TEXCOORD1.x（= Custom1.x）を詰め替え
+    void vert (inout appdata_full v, out Input o) {
+    UNITY_INITIALIZE_OUTPUT(Input, o);
+    o.Threshold = v.texcoord1.x;
+    }
 
         fixed4 LightingToonLit (SurfaceOutput s, fixed3 lightDir, fixed atten)
         {
@@ -79,13 +88,14 @@ Shader "Custom/OutlineToon3"
             fixed4 baseC = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 
             // 切り抜き（影にも反映）
-            float n = tex2D(_DissolveTex, IN.uv_MainTex).r * _Time * 0.5;
-            clip(n - _Threshold);
+            float2 nUV = IN.uv_MainTex + _Time.y * 0.2; // 0.2 = 速度
+            float n    = tex2D(_DissolveTex, nUV).r;
+            clip(n - IN.Threshold);
 
             o.Albedo   = baseC.rgb;
             o.Alpha    = 1; // Cutoutなので1固定
             float rim = 1 - saturate(dot(IN.viewDir, o.Normal));
-            o.Emission = _RimColor * pow(rim, _Emission);
+            o.Emission = _Emission * baseC.rgb;
         }
         ENDCG
     }

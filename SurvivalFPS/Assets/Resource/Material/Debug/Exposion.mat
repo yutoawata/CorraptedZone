@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Exposion
-  m_Shader: {fileID: 4800000, guid: e44f3aede958b584f8abee938cbf2d85, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4d57b2ba1e3faf1468ef66eb4d3f62bd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -38,17 +38,26 @@ Material:
     m_Ints: []
     m_Floats:
     - _AttenPower: 0.1
-    - _Emission: 2.9
-    - _MinStep: 0.1
+    - _AutoDelay: 0
+    - _AutoDuration: 0.6
+    - _AutoPower: 0.1
+    - _Emission: 0.58
+    - _MinStep: 0.38
     - _NLPower: 1
+    - _NoiseSpeed: 0
+    - _NoiseTiling: 1
     - _OutlineWidth: 0.76
+    - _RimIntensity: 0
+    - _RimPower: 2
     - _Steps: 26.45
     - _Threshold: 0.208
+    - _UseCustom: 1
     m_Colors:
     - _Color: {r: 1, g: 0.4399923, b: 0.2396226, a: 1}
     - _EmissionColor: {r: 1, g: 0.65424496, b: 0.081131995, a: 1}
     - _LitTint: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowTint: {r: 0.19999996, g: 0.19999996, b: 0.24999997, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
