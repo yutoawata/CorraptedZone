@@ -14,7 +14,6 @@ public class TestScript : MonoBehaviour
     {
         manager = GameObject.Find("EnemyManager");
         enemyManager = manager.GetComponent<EnemyManager>();
-        enemyManager.RegistrationEnemyList(gameObject);
     }
 
     // Update is called once per frame
