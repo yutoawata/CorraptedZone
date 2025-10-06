@@ -38,10 +38,8 @@ public class EnemyManager : MonoBehaviour
             if (IsSpawn(pos) &&
                 enemyObject != null)
             {
-                Instantiate(
-                    enemyObject,
-                    pos,
-                    Quaternion.identity);
+                GameObject enemy = Instantiate(enemyObject, pos, Quaternion.identity);
+                AddEnemyList(enemy);
 
                 timer = 0.0f;
             }
@@ -59,14 +57,15 @@ public class EnemyManager : MonoBehaviour
         for (int i = 0; i < enemis.Count; i++)
         {
             // nullƒ`ƒFƒbƒN
-            if (enemis[i] == null) continue;
-
-            // ¶¬ˆÊ’u‚Æ“G‚ÌŒ»ÝˆÊ’u‚Ì‹——£‚ðŠi”[‚·‚é
-            float dist = Vector3.Distance(pos, enemis[i].transform.position);
-            // “G‚Ì‹——£‚Æ‹ß‚¢ê‡‚Ífalse‚ð•Ô‚·
-            if (dist < distance)
+            if (enemis[i] != null)
             {
-                return false;
+                // ¶¬ˆÊ’u‚Æ“G‚ÌŒ»ÝˆÊ’u‚Ì‹——£‚ðŠi”[‚·‚é
+                float dist = Vector3.Distance(pos, enemis[i].transform.position);
+                // “G‚Ì‹——£‚Æ‹ß‚¢ê‡‚Ífalse‚ð•Ô‚·
+                if (dist < distance)
+                {
+                    return false;
+                }
             }
         }
         // Œ»Ý‚ÌˆÊ’u‚ÆáŠQ•¨‚Ì‹——£‚ð‘ª‚é
@@ -86,11 +85,13 @@ public class EnemyManager : MonoBehaviour
         return spawnPos;
     }
 
-    public void RegistrationEnemyList(GameObject enemy)
+    // List‚É’Ç‰Á‚·‚é—p‚ÌŠÖ”
+    void AddEnemyList(GameObject enemy)
     {
         enemis.Add(enemy);
     }
 
+    // List‚©‚çÁ‚·—p‚ÌŠÖ”
     public void RemoveEnemyList(GameObject enemy)
     {
         enemis.Remove(enemy);
