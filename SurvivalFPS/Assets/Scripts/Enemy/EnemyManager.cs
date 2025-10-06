@@ -96,4 +96,14 @@ public class EnemyManager : MonoBehaviour
     {
         enemis.Remove(enemy);
     }
+
+    private void OnDrawGizmos()
+    {
+        // Fw’è
+        Gizmos.color = Color.red;
+        Vector3 center = Vector3.zero;
+        // •`‰æ‚Ì‘å‚«‚³‚ğ2”{‚É‚·‚é
+        Vector3 size = new Vector3(spawnRange.x * 2, spawnRange.y, spawnRange.z * 2);
+        Gizmos.DrawWireCube(center, size);
+    }
 }
