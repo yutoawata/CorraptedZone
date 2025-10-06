@@ -8,6 +8,9 @@ Shader "Custom/OutlineToon2"
         _Color         ("Main Color", Color) = (1,1,1,1)
         _MainTex       ("MainTex", 2D) = "white" {}
 
+        _DisoleveTex("NoiseTex", 2D) = "white"{}
+        _Threshold("Threshold", Range(0, 1)) = 0.0
+
         _Steps         ("Toon Steps (>=2)", Float) = 3
         _Emission      ("Emission", Float) = 0
         _EmissionColor ("Emission Color", Color) = (1,1,1,1)
@@ -18,7 +21,7 @@ Shader "Custom/OutlineToon2"
 
     SubShader
     {
-        Tags { "RenderType"="Opaque" "Queue"="Geometry" }
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
         LOD 200
 
         // ===== Pass 1: Outline（ワールド空間押し出し＋スケール補正） =====
@@ -73,6 +76,7 @@ Shader "Custom/OutlineToon2"
 
         float     _NLPower;
         float     _AttenPower;
+
 
         struct Input { float2 uv_MainTex; };
 
