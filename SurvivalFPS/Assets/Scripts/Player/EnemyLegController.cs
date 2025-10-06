@@ -11,15 +11,25 @@ public class EnemyLegController : MonoBehaviour
     [SerializeField] float randomAmplitude = 10f; // ƒ‰ƒ“ƒ_ƒ€—h‚ç‚¬‚Ì‹­‚³
     [SerializeField] float randomSpeed = 1.5f;    // —h‚ç‚¬‚Ì‘¬‚³
 
-
-
-    List<Vector3> basePositionList = new List<Vector3>();
-
+    SkinnedMeshRenderer renderer;
+    float walkAngle = 0.0f;
+    List<Transform> basePositionList = new List<Transform>();
+    int num = 0;
     private void Start()
     {
+        renderer = GetComponent<SkinnedMeshRenderer>();
+
+        if(renderer != null)
+        {
+            for (int i = 0; i < renderer.bones.Length; i++)
+            {
+                bones = renderer.bones;
+            }
+        }
+
         for (int i = 0; i < bones.Length; i++)
         {
-            basePositionList.Add(bones[i].position);
+            //basePositionList.Add(bones[i]);
         }
     }
 
@@ -27,6 +37,7 @@ public class EnemyLegController : MonoBehaviour
     void Update()
     {
         float time = Time.time;
+
 
         for (int i = 0; i < bones.Length; i++)
         {
@@ -38,9 +49,12 @@ public class EnemyLegController : MonoBehaviour
             float randomAngle = noise * randomAmplitude;
 
             // ---- ‡¬‚µ‚Ä‰ñ“] ----
-            //bones[i].localRotation = Quaternion.Euler(walkAngle + randomAngle, 0, 0);
-
-            bones[i].position = basePositionList[i] + new Vector3(0.0f, Mathf.Sin(walkAngle + randomAngle), 0.0f);
+           // bones[i].localRotation = Quaternion.Euler(walkAngle + randomAngle, 0, 0);
+            bones[i].localPosition = new Vector3(1, Mathf.Sin(walkAngle + randomAngle), 0.0f);
+        }
+        if (num == bones.Length)
+        {
+            num = 0;
         }
     }
 }
