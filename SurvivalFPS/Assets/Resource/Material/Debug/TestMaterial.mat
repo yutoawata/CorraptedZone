@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lighthouse
+  m_Name: TestMaterial
   m_Shader: {fileID: 4800000, guid: 7dd2cc9a9ebaba94497bf734c4fd3e6d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -32,11 +32,11 @@ Material:
     - _AttenPower: 0.1
     - _Emission: 0
     - _NLPower: 1
-    - _OutlineWidth: 0.04
-    - _Steps: 3.97
+    - _OutlineWidth: 0.001
+    - _Steps: 4.12
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9071305, g: 0.45917407, b: 0.93962264, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.97010803, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
