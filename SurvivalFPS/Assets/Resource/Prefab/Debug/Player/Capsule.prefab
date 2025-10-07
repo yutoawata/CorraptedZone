@@ -380,7 +380,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3579970191953194906, guid: 597b65428532fdf4dbb5ef935637e697, type: 3}
+  - {fileID: 2100000, guid: 7bcf212b209fb504ab8a4fed8d66777d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1146,10 +1146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dbea289956d3b44a752a7ccb64d2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 0}
+  gun: {fileID: 919132149155446097}
   mainCamera: {fileID: 7121494132723412649}
   moveSpeed: 20
   rotateSpeed: 60
+  gun_obj: {fileID: -6295847236071286009}
 --- !u!1 &2391223815293005248
 GameObject:
   m_ObjectHideFlags: 0
