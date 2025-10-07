@@ -38,8 +38,8 @@ public class BulletCreator : MonoBehaviour
     void Fire()
     {
         GameObject obj = null;
-        obj = Instantiate(bullet,transform.position + transform.forward * 2.0f,Quaternion.identity);
+        obj = Instantiate(bullet,transform.position + -transform.forward, Quaternion.identity);
 
-        obj.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower);
+        obj.GetComponent<Rigidbody>().AddForce(-transform.forward * shootPower);
     }
 }
