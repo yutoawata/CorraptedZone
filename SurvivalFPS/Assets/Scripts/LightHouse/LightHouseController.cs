@@ -29,8 +29,7 @@ public class LightHouseController : MonoBehaviour
         // ターゲット方向のベクトルを取得
         Vector3 relativePos = ReturnEnemyTargetTransform() - this.transform.position;
         //回転軸の固定(横にだけ動かすため)
-        relativePos.x -= 90;
-        relativePos.y -= 90;
+        relativePos.y = 0;
         //位置座標から角度に変換
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         // 現在の回転情報と、ターゲット方向の回転情報を補完する
