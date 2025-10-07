@@ -5,13 +5,18 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyObject = null;
+    [SerializeField] GameObject lightObject = null;
     [SerializeField] LayerMask obstaclesLayer = ~0;
     [SerializeField] Vector3 spawnRange = Vector3.zero;
     [SerializeField] float spawnRadius = 0.0f;
 
     List<GameObject> enemis = new List<GameObject>();
+    LightHouseController lightHouseController = null;
 
-    float timer = 0.0f;
+    private void Awake()
+    {
+        lightHouseController = lightObject.GetComponent<LightHouseController>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,25 +33,14 @@ public class EnemyManager : MonoBehaviour
     // 敵の出現関数
     void SpawnEnemy()
     {
-        timer += Time.deltaTime;
-        float spawnTime = 0.5f;
-        if (timer > spawnTime)
+        // 生成位置を格納
+        Vector3 pos = lightHouseController.ReturnEnemyTargetTransform() + SpawnPos();
+        // 現在の位置が生成出来るか判別する
+        if (IsSpawn(pos) &&
+            enemyObject != null)
         {
-            // 生成位置を格納
-            Vector3 pos = SpawnPos();
-            // 現在の位置が生成出来るか判別する
-            if (IsSpawn(pos) &&
-                enemyObject != null)
-            {
-                GameObject enemy = Instantiate(enemyObject, pos, Quaternion.identity);
-                AddEnemyList(enemy);
-
-                timer = 0.0f;
-            }
-            else
-            {
-                Debug.Log("生成出来なかった");
-            }
+            GameObject enemy = Instantiate(enemyObject, pos, Quaternion.identity);
+            AddEnemyList(enemy);
         }
     }
 
