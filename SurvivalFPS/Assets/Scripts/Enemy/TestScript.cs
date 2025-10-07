@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    GameObject manager = null;
     EnemyManager enemyManager = null;
 
     float timer = 0.0f;
@@ -12,8 +11,8 @@ public class TestScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameObject.Find("EnemyManager");
-        enemyManager = manager.GetComponent<EnemyManager>();
+        enemyManager = FindAnyObjectByType<EnemyManager>();
+        enemyManager.GetComponent<EnemyManager>();
     }
 
     // Update is called once per frame
