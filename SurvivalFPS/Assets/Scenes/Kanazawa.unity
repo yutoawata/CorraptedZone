@@ -414,6 +414,7 @@ MonoBehaviour:
   - {fileID: 1603695608}
   spotNumber: 0
   spotIndex: 0
+  enemyObject: {fileID: 1862582192}
 --- !u!1 &1093435908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,12 +1028,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyObject: {fileID: 349189663480029946, guid: aeac0e9647765364cbaa4e6fc47f16c4, type: 3}
-  lightObject: {fileID: 0}
+  lightObject: {fileID: 1064656959}
   obstaclesLayer:
     serializedVersion: 2
-    m_Bits: 0
-  spawnRange: {x: 0, y: 0.5, z: 0}
-  spawnRadius: 0
+    m_Bits: 8
+  spawnRange: {x: 50, y: 0, z: 50}
+  spawnRadius: 2
+  spawnCount: 10
 --- !u!4 &1862582194
 Transform:
   m_ObjectHideFlags: 0
