@@ -7,8 +7,11 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject enemyObject = null;
     [SerializeField] GameObject lightObject = null;
     [SerializeField] LayerMask obstaclesLayer = ~0;
+    // ¶¬”ÍˆÍ‚ğŒˆ‚ß‚é•Ï”
     [SerializeField] Vector3 spawnRange = Vector3.zero;
+    // “G‚Ì¶¬ŠÔŠu‚Ì•Ï”
     [SerializeField] float spawnRadius = 0.0f;
+    [SerializeField] int spawnCount = 0;
 
     List<GameObject> enemis = new List<GameObject>();
     LightHouseController lightHouseController = null;
@@ -27,20 +30,23 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpawnEnemy();
+        
     }
 
     // “G‚ÌoŒ»ŠÖ”
-    void SpawnEnemy()
+    public void SpawnEnemy()
     {
-        // ¶¬ˆÊ’u‚ğŠi”[
-        Vector3 pos = lightHouseController.ReturnEnemyTargetTransform() + SpawnPos();
-        // Œ»İ‚ÌˆÊ’u‚ª¶¬o—ˆ‚é‚©”»•Ê‚·‚é
-        if (IsSpawn(pos) &&
-            enemyObject != null)
+        for (int i = 0; i < spawnCount; i++)
         {
-            GameObject enemy = Instantiate(enemyObject, pos, Quaternion.identity);
-            AddEnemyList(enemy);
+            // ¶¬ˆÊ’u‚ğŠi”[
+            Vector3 pos = lightHouseController.ReturnEnemyTargetTransform() + SpawnPos();
+            // Œ»İ‚ÌˆÊ’u‚ª¶¬o—ˆ‚é‚©”»•Ê‚·‚é
+            if (IsSpawn(pos) &&
+                enemyObject != null)
+            {
+                GameObject enemy = Instantiate(enemyObject, pos, Quaternion.identity);
+                AddEnemyList(enemy);
+            }
         }
     }
 
