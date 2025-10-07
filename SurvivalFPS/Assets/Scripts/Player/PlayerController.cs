@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,10 +7,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera mainCamera;
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 300.0f;
+    [SerializeField] MeshRenderer gun_obj;
 
     Rigidbody rb;
     Material gunMaterial;
-    Vector3 ADSPosition = new Vector3(0.0f, 0.662f, 0.2f);
+    
+    Vector3 ADSPosition = new Vector3(0.0f, 0.6f, 0.25f);
     Vector3 hipPosition = new Vector3(0.2f, 0.55f, 0.4f);
     Vector3 moveDirection = Vector2.zero;
     Vector2 rotate = Vector2.zero;
@@ -23,7 +26,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gunMaterial = gun.GetComponent<MeshRenderer>().material;
+        gunMaterial = gun_obj.GetComponent<MeshRenderer>().material;
+        
     }
 
     // Update is called once per frame
