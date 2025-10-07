@@ -5,57 +5,75 @@ using UnityEngine;
 
 public class EnemyLegController : MonoBehaviour
 {
-
-    [SerializeField] List<Transform> bones = new List<Transform>(); //ボーンの座標配列
-    [SerializeField] Transform targetPosition;                      //先端が向かう先の座標
-    [SerializeField] Transform body;                                //体の座標
+    [SerializeField] List<Transform> legObjectList;
+    [SerializeField] List<Transform> targetPositions = new List<Transform>(); //ボーンの座標配列
 
     struct Leg
     {
-        List<Transform> bones;
-        List<Vector3> positions;
-        List<float> lengths;
-        Vector3 tipPositon;
-        Leg(List<Transform> bones_)
+        public List<Transform> bones;
+        public List<Vector3> positions;
+        public List<float> lengths;
+        public Transform targetPosition;
+        public Vector3 tipPosition;
+
+        public Leg(List<Transform> bones_, Transform target_position)
         {
             bones = new List<Transform>();
             bones.AddRange(bones_);
             positions = new List<Vector3>();
             lengths = new List<float>();
-            tipPositon = new Vector3();
+            targetPosition = target_position;
+            tipPosition = new Vector3();
+
+            tipPosition = targetPosition.position;
+
+            // ボーンの長さ
+            lengths.Clear();
+            for (int i = 0; i < bones.Count - 1; i++)
+            {
+                lengths.Add(Vector3.Distance(bones[i].position, bones[i + 1].position));
+            }
+
+            // ボーンの位置
+            positions.Clear();
+            for (int i = 0; i < bones.Count; i++)
+            {
+                positions.Add(bones[i].position);
+            }
         }
        
     }
-
-
+    Leg forward;
+    List<Leg> legList = new List<Leg>();
     List<float> lengths = new List<float>();        //ボーン間の距離
     List<Vector3> positions = new List<Vector3>();  //ボーンの座標配列(コピー)
     Vector3 tipPosition = Vector3.zero;             //付け根の座標
     int maxIteration = 0;                           //関節数
 
-
     void Awake()
     {
-        InitializeBones();
-        Debug.Log(targetPosition.name);
+
+        //forward = new Leg(GetChildren(gameObject.transform, false), targetPosition);
+        int num = 0;
+        for (int i = 0; i < legObjectList.Count; i++)
+        {
+            num++;
+            legList.Add(new Leg(GetChildren(legObjectList[i], false), targetPositions[i]));
+        }
+
+        maxIteration = legList[0].bones.Count - 2;
+
+        Debug.Log(num);
+        //InitializeBones();
     }
 
     void Update()
     {
-        if (bones.Count <= 0 )
-        {
-            InitializeBones();
-            Debug.Log("配列エラー");
-            Debug.Log(gameObject.name);
-        }
 
-        if((targetPosition.position - tipPosition).magnitude >= 1.5f)
+        for (int i = 0; i < legList.Count; i++)
         {
-            tipPosition = targetPosition.position; //移動先の座標
+            ControlleBone(legList[i]);
         }
-        
-
-        ControlleBone();
     }
 
     List<Transform> GetChildren(Transform parent_, bool include_parent)
@@ -76,23 +94,23 @@ public class EnemyLegController : MonoBehaviour
         return list;
     }
 
-    void ControlleBone()
+    void ControlleBone(Leg leg_)
     {
         // 現在のボーン位置をコピーしてくる
-        for (int i = 0; i < bones.Count; i++)
+        for (int i = 0; i < leg_.bones.Count; i++)
         {
-            positions[i] = bones[i].position;
+            leg_.positions[i] = leg_.bones[i].position;
         }
 
         // FABRIKでボーン位置を推定
-        Vector3 basePosition = positions[0];
+        Vector3 basePosition = leg_.positions[0];
         float prevDistance = 0.0f;
 
         //関節ボーンの処理
         for (int iter = 0; iter < maxIteration; iter++)
         {
             // 収束チェック
-            float distance = Vector3.Distance(positions[positions.Count - 1], tipPosition);
+            float distance = Vector3.Distance(leg_.positions[leg_.positions.Count - 1], leg_.tipPosition);
             float change = Mathf.Abs(distance - prevDistance);
             prevDistance = distance;
 
@@ -103,73 +121,73 @@ public class EnemyLegController : MonoBehaviour
             }
 
             // Backward
-            positions[positions.Count - 1] = tipPosition;
+            leg_.positions[leg_.positions.Count - 1] = leg_.tipPosition;
 
             //先端から付け根にかけての関節処理
-            for (int i = positions.Count - 1; i >= 1; i--)
+            for (int i = leg_.positions.Count - 1; i >= 1; i--)
             {
-                Vector3 direction = (positions[i] - positions[i - 1]).normalized;
-                Vector3 setPosition = positions[i] - direction * lengths[i - 1];
-                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / positions.Count;
+                Vector3 direction = (leg_.positions[i] - leg_.positions[i - 1]).normalized;
+                Vector3 setPosition = positions[i] - direction * leg_.lengths[i - 1];
+                setPosition.y += Mathf.Sin((Mathf.PI / leg_.positions.Count) * i) / leg_.positions.Count;
 
-                positions[i - 1] = setPosition;
+                leg_.positions[i - 1] = setPosition;
             }
 
             float allLength = 0;
-            for(int i = 0; i < lengths.Count; i++)
+            for(int i = 0; i < leg_.lengths.Count; i++)
             {
-                allLength += lengths[i];
+                allLength += leg_.lengths[i];
             }
 
             // 付け根から先端にかけた関節処理
-            positions[0] = basePosition;
-            for (int i = 0; i <= positions.Count - 2; i++)
+            leg_.positions[0] = basePosition;
+            for (int i = 0; i <= leg_.positions.Count - 2; i++)
             {
-                Vector3 direction = (positions[i + 1] - positions[i]).normalized;
-                Vector3 setPosition = positions[i] + direction * lengths[i];
-                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / positions.Count;
+                Vector3 direction = (leg_.positions[i + 1] - leg_.positions[i]).normalized;
+                Vector3 setPosition = leg_.positions[i] + direction * leg_.lengths[i];
+                setPosition.y += Mathf.Sin((Mathf.PI / leg_.positions.Count) * i) / leg_.positions.Count;
 
-                positions[i + 1] = setPosition;
+                leg_.positions[i + 1] = setPosition;
             }
         }
 
         // 推定したボーン位置から回転角を計算
-        for (int i = 0; i < positions.Count - 1; i++)
+        for (int i = 0; i < leg_.positions.Count - 1; i++)
         {
-            Vector3 origin = bones[i].position;
-            Vector3 current = bones[i + 1].position;
-            Vector3 target = positions[i + 1];
+            Vector3 origin = leg_.bones[i].position;
+            Vector3 current = leg_.bones[i + 1].position;
+            Vector3 target = leg_.positions[i + 1];
             Quaternion delta = GetDeltaRotation(origin, current, target);
-            bones[i].rotation = delta * bones[i].rotation;
+            leg_.bones[i].rotation = delta * leg_.bones[i].rotation;
         }
     }
 
-    //必要情報の初期化
-    void InitializeBones()
-    {
-        tipPosition = targetPosition.position;
-        //関節数を先端と付け根を抜いた数にする
-        maxIteration = bones.Count - 2;
+    ////必要情報の初期化
+    //void InitializeBones()
+    //{
+    //    tipPosition = targetPosition.position;
+    //    //関節数を先端と付け根を抜いた数にする
+    //    maxIteration = bones.Count - 2;
 
-        // ボーンの長さ
-        lengths.Clear();
-        for (int i = 0; i < bones.Count - 1; i++)
-        {
-            lengths.Add(Vector3.Distance(bones[i].position, bones[i + 1].position));
-        }
+    //    // ボーンの長さ
+    //    lengths.Clear();
+    //    for (int i = 0; i < bones.Count - 1; i++)
+    //    {
+    //        lengths.Add(Vector3.Distance(bones[i].position, bones[i + 1].position));
+    //    }
 
-        // ボーンの位置
-        positions.Clear();
-        for (int i = 0; i < bones.Count; i++)
-        {
-            positions.Add(bones[i].position);
-        }
+    //    // ボーンの位置
+    //    positions.Clear();
+    //    for (int i = 0; i < bones.Count; i++)
+    //    {
+    //        positions.Add(bones[i].position);
+    //    }
 
-        if (bones.Count == 0)
-        {
-            Debug.Log(gameObject.name);
-        }
-    }
+    //    if (bones.Count == 0)
+    //    {
+    //        Debug.Log(gameObject.name);
+    //    }
+    //}
 
     //回転角の差を算出
     Quaternion GetDeltaRotation(Vector3 origin, Vector3 current, Vector3 target)
