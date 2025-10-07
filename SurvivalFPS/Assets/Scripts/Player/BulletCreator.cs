@@ -20,10 +20,6 @@ public class BulletCreator : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        else
-        {
-            Debug.Log("”­ŽËOK");
-        }
 
         if (InputManager.IsInputRightTrigger())
         {
