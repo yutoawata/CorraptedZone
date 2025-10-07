@@ -65,8 +65,6 @@ public class PlayerController : MonoBehaviour
     {
         if (InputManager.IsInputLeftTrigger())
         {
-            Debug.Log("ADS");
-
             gunMaterial.SetFloat("_OutlineWidth", 0.0f);
             //ÉYÅ[ÉÄÉCÉì
             mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
