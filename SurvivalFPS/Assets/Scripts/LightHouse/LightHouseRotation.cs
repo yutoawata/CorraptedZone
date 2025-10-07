@@ -21,6 +21,9 @@ public class LightHouseRotation : MonoBehaviour
         relativePos.z = 0;
         //位置座標から角度に変換
         Quaternion rotation = Quaternion.LookRotation(relativePos);
+        //オブジェクトの角度のずれの修正
+        rotation.y = rotation.x;
+        rotation.x = 0;
         // 現在の回転情報と、ターゲット方向の回転情報を補完する
         transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, rotationSpeed);
     }
