@@ -5,14 +5,15 @@ public class LightHouseController : MonoBehaviour
     [SerializeField]private float spotChangeSpan;       //切り替え間隔
     [SerializeField]private float rotationSpeed;
     [SerializeField]private Transform[] targetItem;     //アイテムの座標取得に使用
-    [SerializeField]private int spotNumber;             //照らすアイテムの番号
-    [SerializeField]private int spotIndex;              //アイテム配列の要素数の取得に使用
     [SerializeField]private GameObject enemyObject;
-
+    private int spotNumber;             //照らすアイテムの番号
+    private int spotIndex;              //アイテム配列の要素数の取得に使用
+    private const float OFF_SPAWNANGLE = 10.0f;
+    private const float ON_SPAWNANGLE = 5.0f;
     private EnemyManager enemyManager;
 
     // 追加 スポーンを管理する変数
-    bool hasSpawned;
+    private bool hasSpawned;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class LightHouseController : MonoBehaviour
     {
         //ターゲットアイテムの要素数の取り出し
         spotIndex = targetItem.Length;
+
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class LightHouseController : MonoBehaviour
         float angleDeff = Quaternion.Angle(transform.rotation, targetRotation);
 
         // 追加 一定角度内を向くと敵が生成されるようになる マジックナンバーは角度
-        if (angleDeff < 5.0f && !hasSpawned)
+        if (angleDeff < ON_SPAWNANGLE && !hasSpawned)
         {
             enemyManager.SpawnEnemy();
             hasSpawned = true;
@@ -60,7 +62,7 @@ public class LightHouseController : MonoBehaviour
         }
 
         // 追加 一定角度から離れると生成が出来る状態に戻す
-        if (angleDeff > 10.0f)
+        if (angleDeff > OFF_SPAWNANGLE)
         {
             hasSpawned = false;
         }
