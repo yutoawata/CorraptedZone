@@ -1228,7 +1228,7 @@ MonoBehaviour:
     m_Bits: 8
   spawnRange: {x: 50, y: 0.5, z: 50}
   spawnRadius: 2
-  spawnCount: 0
+  spawnCount: 5
 --- !u!1 &1116415350
 GameObject:
   m_ObjectHideFlags: 0
