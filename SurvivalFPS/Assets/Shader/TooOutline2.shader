@@ -112,6 +112,5 @@ Shader "Custom/OutlineToon2"
         }
         ENDCG
     }
-
     FallBack Off
 }
