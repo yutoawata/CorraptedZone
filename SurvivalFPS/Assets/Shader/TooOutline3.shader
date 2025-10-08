@@ -24,7 +24,7 @@ Shader "Custom/OutlineToon3"
 
     SubShader
     {
-        // 影を出すため Cutout を使用（clip が影にも効く）
+        // 影を出すため Cutout を使用
         Tags { "RenderType"="TransparentCutout" "Queue"="AlphaTest" }
         LOD 200
 
@@ -55,7 +55,7 @@ Shader "Custom/OutlineToon3"
         struct Input {
     float2 uv_MainTex;
     float3 viewDir;
-    float  Threshold;   // ← セマンティクスは付けない
+    float  Threshold;
     INTERNAL_DATA
     };
 
