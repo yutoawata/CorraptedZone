@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material 3
+  m_Name: New Material
   m_Shader: {fileID: 4800000, guid: 7dd2cc9a9ebaba94497bf734c4fd3e6d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,8 +48,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3d5a6385f10d1384b9b4e98bb85f182b, type: 3}
-        m_Scale: {x: 20, y: 20}
+        m_Texture: {fileID: 2800000, guid: a2d93a2aad7a9a147a2e3178ee38bb4f, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -78,12 +78,12 @@ Material:
     - _Mode: 0
     - _NLPower: 1
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.04
+    - _OutlineWidth: 0.001
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 4.97
+    - _Steps: 3
     - _Threshold: 0
     - _UVSec: 0
     - _ZWrite: 1

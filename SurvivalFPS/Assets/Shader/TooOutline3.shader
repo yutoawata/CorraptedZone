@@ -55,7 +55,7 @@ Shader "Custom/OutlineToon3"
         struct Input {
     float2 uv_MainTex;
     float3 viewDir;
-    float  Threshold;   // ← セマンティクスは付けない
+    float  Threshold;
     INTERNAL_DATA
     };
 
