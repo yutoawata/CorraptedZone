@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.InputSystem.XR;
 
 public class PlayerController : MonoBehaviour
@@ -131,6 +132,7 @@ public class PlayerController : MonoBehaviour
             {
                 
             }
+            target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
         }
         remainingBulletVaue--;
     }
