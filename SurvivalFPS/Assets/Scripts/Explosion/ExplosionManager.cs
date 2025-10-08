@@ -17,7 +17,6 @@ public class ExplosionManager : MonoBehaviour
     [SerializeField] float moveSpeed = 0.0f;
 
     float size = 1;
-    float timer = 0;
 
     private void Start()
     {
@@ -31,20 +30,10 @@ public class ExplosionManager : MonoBehaviour
         testCube.transform.position = new Vector3(x, y, z);
 
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            timer += Time.deltaTime;
-            Debug.Log("’Ê‚Á‚Ä‚é‚æ");
-            if (timer >= 30)
-            {
-                size -= 0.1f;
-                if (size <= 0)
-                {
-                    size = 0.1f;
-                }
-                Generate(testCube.transform.position.x, testCube.transform.position.y, testCube.transform.position.z, size);
-                timer = 0;
-            }  
+            Generate(testCube.transform.position.x, testCube.transform.position.y, testCube.transform.position.z, size);
+            size++;
         }
     }
 
