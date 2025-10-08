@@ -1221,11 +1221,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyObject: {fileID: 349189663480029946, guid: aeac0e9647765364cbaa4e6fc47f16c4, type: 3}
+  lightObject: {fileID: 0}
+  spawnPos: {fileID: 0}
   obstaclesLayer:
     serializedVersion: 2
     m_Bits: 8
   spawnRange: {x: 50, y: 0.5, z: 50}
   spawnRadius: 2
+  spawnCount: 0
 --- !u!1 &1116415350
 GameObject:
   m_ObjectHideFlags: 0
