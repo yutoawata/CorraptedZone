@@ -7,19 +7,19 @@ public class EnemyLeg
     List<Transform> bones;
     List<Vector3> positions;
     List<float> lengths;
-    Transform targetPosition;
+    GameObject target;
     Vector3 tipPosition;
     int maxIteration = 0;     //関節数
 
     //変数初期化処理
-    public void initialized(List<Transform> bones_, Transform target_position)
+    public void initialized(List<Transform> bones_, GameObject target_)
     {
         bones = new List<Transform>();
         bones.AddRange(bones_);
         positions = new List<Vector3>();
         lengths = new List<float>();
-        targetPosition = target_position;
-        tipPosition = targetPosition.position;
+        target = target_;
+        tipPosition = target_.transform.position;
 
         // ボーンの長さ
         lengths.Clear();
@@ -50,6 +50,11 @@ public class EnemyLeg
         Vector3 basePosition = positions[0];
         float prevDistance = 0.0f;
 
+        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= 1.0f)
+        {
+            tipPosition = target.transform.position;
+        }
+
         //関節ボーンの処理
         for (int iter = 0; iter < maxIteration; iter++)
         {
@@ -72,7 +77,7 @@ public class EnemyLeg
             {
                 Vector3 direction = (positions[i] - positions[i - 1]).normalized;
                 Vector3 setPosition = positions[i] - direction * lengths[i - 1];
-                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / positions.Count;
+                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / maxIteration;
 
                 positions[i - 1] = setPosition;
             }
@@ -89,7 +94,7 @@ public class EnemyLeg
             {
                 Vector3 direction = (positions[i + 1] - positions[i]).normalized;
                 Vector3 setPosition = positions[i] + direction * lengths[i];
-                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / positions.Count;
+                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / maxIteration;
 
                 positions[i + 1] = setPosition;
             }

@@ -16,12 +16,13 @@ public class EnemyLegController : MonoBehaviour
         for (int i = 0; i < legObjectList.Count; i++)
         {
             legList.Add(new EnemyLeg());
-            //legList[i].initialized(GetChildren(legObjectList[i], false), targetPositions[i].transform);
+            legList[i].initialized(GetChildren(legObjectList[i], false), targetPositions[i]);
         }
     }
 
     void Update()
     {
+
         for (int i = 0; i < legList.Count; i++)
         {
             legList[i].ControlleBone();
@@ -33,6 +34,9 @@ public class EnemyLegController : MonoBehaviour
         List<Transform> list = new List<Transform>();
         //trueを指定しないと非アクティブなオブジェクトを取得できない
         list.AddRange(parent_.GetComponentsInChildren<Transform>(true));
+
+        //Cyllinderを削除
+        list.Remove(list[list.Count - 1]);
 
         //親オブジェクトを保存した状態で返す
         if (include_parent)
