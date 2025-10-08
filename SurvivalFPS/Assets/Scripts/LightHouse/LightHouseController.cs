@@ -45,7 +45,7 @@ public class LightHouseController : MonoBehaviour
         flatTarget.y = transform.position.y; // 高さを無視
         transform.LookAt(flatTarget, Vector3.up);
 
-        // ==== 2) 子（砲身）は上下だけ回す ====
+        // ==== 2) 子は上下だけ回す ====
         // 親のローカル空間に変換したターゲット方向
         Vector3 localDir = transform.InverseTransformPoint(ReturnEnemyTargetTransform());
         Debug.Log(localDir);
