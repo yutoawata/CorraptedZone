@@ -8,6 +8,7 @@ TagManager:
   - LightHouse
   - Gasolene
   - Ammo
+  - 'Generator '
   layers:
   - Default
   - TransparentFX
