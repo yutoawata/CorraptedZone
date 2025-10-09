@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2567469869982720771}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4388042963213715820}
   - component: {fileID: 1945980113742036390}
   - component: {fileID: 8477720732373587130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 825195092672947707}
   - component: {fileID: 4385508805096876638}
   - component: {fileID: 1961460901675884180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1304,7 +1304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3186590408549827559}
   - component: {fileID: 2160835568777042025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 2093732421544544825}
   - component: {fileID: 2632510500326450595}
   - component: {fileID: 9171438108815659041}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1777,7 +1777,7 @@ GameObject:
   - component: {fileID: 5388672878572848349}
   - component: {fileID: 2878404318532099247}
   - component: {fileID: 6504294026533884636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -1846,7 +1846,7 @@ GameObject:
   - component: {fileID: 651087827991428688}
   - component: {fileID: 4514572183645549045}
   - component: {fileID: 1820030611471828287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3340088431372793703}
   - component: {fileID: 2278750136381631721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2554,7 +2554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3379815305371736422}
   - component: {fileID: 2243456218413122280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2925,7 +2925,7 @@ GameObject:
   - component: {fileID: 1089575700817941298}
   - component: {fileID: 4085091172117748887}
   - component: {fileID: 2257956593859127389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3010,7 +3010,7 @@ GameObject:
   - component: {fileID: 1085851871261901112}
   - component: {fileID: 4088814446553419421}
   - component: {fileID: 2259281280390511191}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3093,7 +3093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2867704434477667786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3431,7 +3431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2907722587024643245}
   - component: {fileID: 1846354755656372003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3924,7 +3924,7 @@ GameObject:
   - component: {fileID: 5666993627643114004}
   - component: {fileID: 2566903048656022118}
   - component: {fileID: 6786565336988869653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -5478,7 +5478,7 @@ GameObject:
   - component: {fileID: 866912727307647160}
   - component: {fileID: 4298755238319421213}
   - component: {fileID: 2039224998260900823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5563,7 +5563,7 @@ GameObject:
   - component: {fileID: 1996197874734249873}
   - component: {fileID: 2464889244808419339}
   - component: {fileID: 8789614361661222281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5840,7 +5840,7 @@ GameObject:
   - component: {fileID: 879282582712820789}
   - component: {fileID: 4295322768595364752}
   - component: {fileID: 2051664529713454938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6433,7 +6433,7 @@ GameObject:
   - component: {fileID: 240346237322849724}
   - component: {fileID: 3817427630852268569}
   - component: {fileID: 1377764475169740499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6781,7 +6781,7 @@ GameObject:
   - component: {fileID: 224616135583515583}
   - component: {fileID: 3797137817818745882}
   - component: {fileID: 1393534178575333584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7718,7 +7718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2602884482680572048}
   - component: {fileID: 1574731766809678622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8413,7 +8413,7 @@ GameObject:
   - component: {fileID: 187551235722204126}
   - component: {fileID: 3834123832019868795}
   - component: {fileID: 1356001329142016177}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9197,7 +9197,7 @@ GameObject:
   - component: {fileID: 126905077928503822}
   - component: {fileID: 3921791862982059435}
   - component: {fileID: 1263813447053791585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9566,7 +9566,7 @@ GameObject:
   - component: {fileID: 3904569846140958171}
   - component: {fileID: 1282161260787269905}
   - component: {fileID: 9181799859235645453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9672,7 +9672,7 @@ GameObject:
   - component: {fileID: 1726823182211099564}
   - component: {fileID: 3346183703931520054}
   - component: {fileID: 8484773304493388212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10054,7 +10054,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6835646878983548643}
-  m_Layer: 0
+  - component: {fileID: 2344888681143078890}
+  m_Layer: 9
   m_Name: SafeArea (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10082,6 +10083,27 @@ Transform:
   - {fileID: 3535846214545803868}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 10.8, z: 0}
+--- !u!135 &2344888681143078890
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830372891803342042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &849623219790266349
 GameObject:
   m_ObjectHideFlags: 0
@@ -11166,7 +11188,7 @@ GameObject:
   - component: {fileID: 1294440170929260646}
   - component: {fileID: 2913871475942107132}
   - component: {fileID: 8340621083777274494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11665,7 +11687,7 @@ GameObject:
   - component: {fileID: 1246128056737572455}
   - component: {fileID: 2940219492462856701}
   - component: {fileID: 8287241277576854655}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11920,7 +11942,7 @@ GameObject:
   - component: {fileID: 477153269887633914}
   - component: {fileID: 3544592166890145375}
   - component: {fileID: 1644971110163182229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12315,7 +12337,7 @@ GameObject:
   - component: {fileID: 370315001987770581}
   - component: {fileID: 3642361090021894000}
   - component: {fileID: 1542680049631974330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12570,7 +12592,7 @@ GameObject:
   - component: {fileID: 429769194231821834}
   - component: {fileID: 3627934665737304495}
   - component: {fileID: 1566676606519872869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13240,7 +13262,7 @@ GameObject:
   - component: {fileID: 1411225195555224806}
   - component: {fileID: 3031851670649066364}
   - component: {fileID: 8204640445447792382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13324,7 +13346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2495777364298986808}
   - component: {fileID: 1398112449579445942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13918,7 +13940,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6534799328100112426}
-  m_Layer: 0
+  - component: {fileID: 6933797721663424483}
+  m_Layer: 9
   m_Name: SafeArea (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13946,6 +13969,27 @@ Transform:
   - {fileID: 3854101233185176725}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6933797721663424483
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147096832984310291}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &1149112336657925854
 GameObject:
   m_ObjectHideFlags: 0
@@ -14471,7 +14515,7 @@ GameObject:
   - component: {fileID: 1958360179359849866}
   - component: {fileID: 3207307992715006511}
   - component: {fileID: 821435145895306981}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15346,7 +15390,7 @@ GameObject:
   - component: {fileID: 1878114926489391614}
   - component: {fileID: 3296560188207488603}
   - component: {fileID: 746272968566221457}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15429,7 +15473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3657685124234761990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15463,7 +15507,7 @@ GameObject:
   - component: {fileID: 6447879512514640825}
   - component: {fileID: 3765348307260908491}
   - component: {fileID: 5328028681968725432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -16072,7 +16116,7 @@ GameObject:
   - component: {fileID: 1062145431679038813}
   - component: {fileID: 3979950024541362887}
   - component: {fileID: 7851022584766918469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16465,7 +16509,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5158468421645512722}
-  m_Layer: 0
+  - component: {fileID: 701063990815063529}
+  m_Layer: 9
   m_Name: SafeArea (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16493,6 +16538,27 @@ Transform:
   - {fileID: 2907722587024643245}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 46.29, z: 0}
+--- !u!135 &701063990815063529
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354884828220033579}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &1358010243019109953
 GameObject:
   m_ObjectHideFlags: 0
@@ -18038,7 +18104,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4695923897498320345}
-  m_Layer: 0
+  - component: {fileID: 1477591633427264694}
+  m_Layer: 9
   m_Name: SafeArea (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18066,6 +18133,27 @@ Transform:
   - {fileID: 3379815305371736422}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 8.11, z: 0}
+--- !u!135 &1477591633427264694
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472763698420942816}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &1473948773298561843
 GameObject:
   m_ObjectHideFlags: 0
@@ -18447,7 +18535,7 @@ GameObject:
   - component: {fileID: 2296443507543221946}
   - component: {fileID: 2914181518812424479}
   - component: {fileID: 1123005920662674901}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18637,7 +18725,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726142156159718360}
-  m_Layer: 0
+  - component: {fileID: 3188864596392153776}
+  m_Layer: 9
   m_Name: SafeArea (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18665,6 +18754,27 @@ Transform:
   - {fileID: 3340088431372793703}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 13.46, z: 0}
+--- !u!135 &3188864596392153776
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499041582278060513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &1502380680524865630
 GameObject:
   m_ObjectHideFlags: 0
@@ -19960,7 +20070,7 @@ GameObject:
   - component: {fileID: 779160564147700628}
   - component: {fileID: 3699358234202893326}
   - component: {fileID: 7537111195402492300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20320,7 +20430,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4897043287010731864}
-  m_Layer: 0
+  - component: {fileID: 9019800321076360586}
+  m_Layer: 9
   m_Name: SafeArea (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20348,6 +20459,27 @@ Transform:
   - {fileID: 3186590408549827559}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: -24.14, z: 0}
+--- !u!135 &9019800321076360586
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634456799973432673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &1635412773105294670
 GameObject:
   m_ObjectHideFlags: 0
@@ -20620,7 +20752,7 @@ GameObject:
   - component: {fileID: 6901482403999057425}
   - component: {fileID: 3674006811233132131}
   - component: {fileID: 5714346871881437200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -20817,7 +20949,7 @@ GameObject:
   - component: {fileID: 3170075488174603541}
   - component: {fileID: 872195938448378335}
   - component: {fileID: 7115055299438305475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21179,7 +21311,7 @@ GameObject:
   - component: {fileID: 3129977868291781510}
   - component: {fileID: 903848037536581452}
   - component: {fileID: 7074158362703408720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21673,7 +21805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3782795892968614574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21707,7 +21839,7 @@ GameObject:
   - component: {fileID: 2066556827860954198}
   - component: {fileID: 3099103167124628467}
   - component: {fileID: 929657563124897593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21899,7 +22031,7 @@ GameObject:
   - component: {fileID: 1400564368765001691}
   - component: {fileID: 2648141088837177470}
   - component: {fileID: 226553287922508980}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21982,7 +22114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5579407645317239175}
-  m_Layer: 0
+  - component: {fileID: 3016562592876304945}
+  m_Layer: 9
   m_Name: SafeArea (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22010,6 +22143,27 @@ Transform:
   - {fileID: 2495777364298986808}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3016562592876304945
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744303252551543742}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &1755742176713487371
 GameObject:
   m_ObjectHideFlags: 0
@@ -22020,7 +22174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3854101233185176725}
   - component: {fileID: 340403514882533147}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22603,7 +22757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4243784545837816945}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22829,7 +22983,7 @@ GameObject:
   - component: {fileID: 1312272769845074569}
   - component: {fileID: 2709472305616491820}
   - component: {fileID: 179314940628656614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24075,7 +24229,7 @@ GameObject:
   - component: {fileID: 1176928847398104585}
   - component: {fileID: 2880774445350117804}
   - component: {fileID: 8556750585009510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24158,7 +24312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4073391667861711089}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24192,7 +24346,7 @@ GameObject:
   - component: {fileID: 6017933089681938988}
   - component: {fileID: 4519839784832336478}
   - component: {fileID: 4830237975271771181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -24413,7 +24567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4051687722437265136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24447,7 +24601,7 @@ GameObject:
   - component: {fileID: 1218415197808705544}
   - component: {fileID: 2830360358191648685}
   - component: {fileID: 46024414584421223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25050,7 +25204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3535846214545803868}
   - component: {fileID: 59680332904010194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25252,7 +25406,7 @@ GameObject:
   - component: {fileID: 2338900649053988158}
   - component: {fileID: 545365422717522420}
   - component: {fileID: 7581509234108217576}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25896,7 +26050,7 @@ GameObject:
   - component: {fileID: 1609302941795405251}
   - component: {fileID: 2448480361382658662}
   - component: {fileID: 440869680218584748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25979,7 +26133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4505770961899408187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26189,7 +26343,7 @@ GameObject:
   - component: {fileID: 6161998171286911462}
   - component: {fileID: 4087470367255962004}
   - component: {fileID: 4974328223904772071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -26952,7 +27106,7 @@ GameObject:
   - component: {fileID: 6142404218514315239}
   - component: {fileID: 4036483121040560021}
   - component: {fileID: 5023124977651188198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -27318,7 +27472,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5463865108624485423}
-  m_Layer: 0
+  - component: {fileID: 5568802958563581461}
+  m_Layer: 9
   m_Name: SafeArea (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27346,6 +27501,27 @@ Transform:
   - {fileID: 2602884482680572048}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5568802958563581461
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200157394630710806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &2208663694432778983
 GameObject:
   m_ObjectHideFlags: 0
@@ -27727,7 +27903,7 @@ GameObject:
   - component: {fileID: 6332266808744332646}
   - component: {fileID: 4240973613695522068}
   - component: {fileID: 5146266951207705447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -29312,7 +29488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888342226469617997}
   - component: {fileID: 4436565822001388227}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29854,7 +30030,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8395814134387052939}
-  m_Layer: 0
+  - component: {fileID: 6142424171469654457}
+  m_Layer: 9
   m_Name: SafeArea (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29882,6 +30059,27 @@ Transform:
   - {fileID: 1967841605161579828}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6142424171469654457
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438953566191692722}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &2440179618340460601
 GameObject:
   m_ObjectHideFlags: 0
@@ -29977,7 +30175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920337522435805150}
   - component: {fileID: 4395633693344158800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30659,7 +30857,7 @@ GameObject:
   - component: {fileID: 7664064219649197826}
   - component: {fileID: 533243183709773680}
   - component: {fileID: 8851741879312208131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -30835,7 +31033,7 @@ GameObject:
   - component: {fileID: 3007066917121874054}
   - component: {fileID: 2167609076973819683}
   - component: {fileID: 4174858507633239017}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32428,7 +32626,7 @@ GameObject:
   - component: {fileID: 4067752320384411239}
   - component: {fileID: 141142106844989949}
   - component: {fileID: 6501684915557973119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32546,7 +32744,7 @@ GameObject:
   - component: {fileID: 3425730718742057197}
   - component: {fileID: 1739929208329379656}
   - component: {fileID: 4594110516566977410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32629,7 +32827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 529297608116508181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33776,7 +33974,7 @@ GameObject:
   - component: {fileID: 3263098084103480246}
   - component: {fileID: 1938520357123255315}
   - component: {fileID: 4396628929601935577}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35496,7 +35694,7 @@ GameObject:
   - component: {fileID: 6959923484635413429}
   - component: {fileID: 985392887934231495}
   - component: {fileID: 8078630979317870004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -37099,7 +37297,7 @@ GameObject:
   - component: {fileID: 1638044958240536068}
   - component: {fileID: 3557692506065535694}
   - component: {fileID: 6915311246679862226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37312,7 +37510,7 @@ GameObject:
   - component: {fileID: 2448142386965895895}
   - component: {fileID: 1609569655689762162}
   - component: {fileID: 3581100966863315384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37811,7 +38009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567218186821917030}
   - component: {fileID: 3898699423421743848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37903,7 +38101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9099883949415951676}
-  m_Layer: 0
+  - component: {fileID: 2824294853964779700}
+  m_Layer: 9
   m_Name: SafeArea (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37931,6 +38130,27 @@ Transform:
   - {fileID: 1262566756183738755}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2824294853964779700
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103616886637090565}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &3108684973683678986
 GameObject:
   m_ObjectHideFlags: 0
@@ -40239,7 +40459,7 @@ GameObject:
   - component: {fileID: 2684153855317175386}
   - component: {fileID: 1364551244439610367}
   - component: {fileID: 3822196440347907893}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41084,7 +41304,7 @@ GameObject:
   - component: {fileID: 1357515290510344397}
   - component: {fileID: 3833174333091951623}
   - component: {fileID: 6599254717645315355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41188,7 +41408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 978078382079142562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41439,7 +41659,7 @@ GameObject:
   - component: {fileID: 3744919343315713612}
   - component: {fileID: 756112827500089814}
   - component: {fileID: 5886680356463305812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41735,7 +41955,7 @@ GameObject:
   - component: {fileID: 3704515089779273951}
   - component: {fileID: 788116782137089861}
   - component: {fileID: 5845676772436191943}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42747,7 +42967,7 @@ GameObject:
   - component: {fileID: 4296260007384660828}
   - component: {fileID: 878406589322507513}
   - component: {fileID: 3158234358486057011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44215,7 +44435,7 @@ GameObject:
   - component: {fileID: 4165833889130364936}
   - component: {fileID: 1044791461732241325}
   - component: {fileID: 2998041677328399207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44298,7 +44518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225772358436538096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44524,7 +44744,7 @@ GameObject:
   - component: {fileID: 3326241506950215298}
   - component: {fileID: 1706811303663589656}
   - component: {fileID: 5503468916921134234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44802,7 +45022,7 @@ GameObject:
   - component: {fileID: 1148442203901241589}
   - component: {fileID: 2888180996418133055}
   - component: {fileID: 5094567185214321955}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46899,7 +47119,7 @@ GameObject:
   - component: {fileID: 8936999718246750183}
   - component: {fileID: 1242102825489436565}
   - component: {fileID: 7821930662700483046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -47224,7 +47444,7 @@ GameObject:
   - component: {fileID: 716134924301601599}
   - component: {fileID: 3320507122993561589}
   - component: {fileID: 4662253855431038697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47523,7 +47743,7 @@ GameObject:
   - component: {fileID: 670434142608827710}
   - component: {fileID: 3362265897710309876}
   - component: {fileID: 4615700926557599976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47884,7 +48104,7 @@ GameObject:
   - component: {fileID: 4508567017054059956}
   - component: {fileID: 666108633196769809}
   - component: {fileID: 3376161555930629851}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48054,7 +48274,7 @@ GameObject:
   - component: {fileID: 4514180783630082361}
   - component: {fileID: 651416745598611100}
   - component: {fileID: 3381846381532912214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48461,7 +48681,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7136362502727936865}
-  m_Layer: 0
+  - component: {fileID: 4329736412209756903}
+  m_Layer: 9
   m_Name: SafeArea (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48489,6 +48710,27 @@ Transform:
   - {fileID: 920337522435805150}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 15.74, z: 0}
+--- !u!135 &4329736412209756903
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914323803363807576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &3916365429590390021
 GameObject:
   m_ObjectHideFlags: 0
@@ -48669,7 +48911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967841605161579828}
   - component: {fileID: 3065528664718864058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48917,7 +49159,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7176705321170658802}
-  m_Layer: 0
+  - component: {fileID: 691990978798874462}
+  m_Layer: 9
   m_Name: SafeArea (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48945,6 +49188,27 @@ Transform:
   - {fileID: 888342226469617997}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &691990978798874462
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946222374668951499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &3948576543974973070
 GameObject:
   m_ObjectHideFlags: 0
@@ -48956,7 +49220,7 @@ GameObject:
   - component: {fileID: 4433787093715584052}
   - component: {fileID: 731872647594249105}
   - component: {fileID: 3300246833514610523}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49555,7 +49819,7 @@ GameObject:
   - component: {fileID: 834101924329815999}
   - component: {fileID: 3204210039937370997}
   - component: {fileID: 4814572863559557737}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49982,7 +50246,7 @@ GameObject:
   - component: {fileID: 2658121324764990005}
   - component: {fileID: 2118217481453708719}
   - component: {fileID: 5092053404609646637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50067,7 +50331,7 @@ GameObject:
   - component: {fileID: 3698750682950299394}
   - component: {fileID: 358952834507694247}
   - component: {fileID: 2530942702978307181}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50890,7 +51154,7 @@ GameObject:
   - component: {fileID: 3628543102605367331}
   - component: {fileID: 429239647302031238}
   - component: {fileID: 2454462238071939916}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51058,7 +51322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1912338882540642011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51347,7 +51611,7 @@ GameObject:
   - component: {fileID: 3659904979108419248}
   - component: {fileID: 388791412092557589}
   - component: {fileID: 2486467426455072223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51537,7 +51801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880334762565750856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51742,7 +52006,7 @@ GameObject:
   - component: {fileID: 362698212116662624}
   - component: {fileID: 2516499901327801770}
   - component: {fileID: 5497505222642373814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52188,7 +52452,7 @@ GameObject:
   - component: {fileID: 3585886723405097136}
   - component: {fileID: 462880568306476821}
   - component: {fileID: 2416335291922404319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52358,7 +52622,7 @@ GameObject:
   - component: {fileID: 3570156550878496435}
   - component: {fileID: 442590688646433046}
   - component: {fileID: 2432105061979684316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52682,7 +52946,7 @@ GameObject:
   - component: {fileID: 3462161464348579538}
   - component: {fileID: 550505781406210423}
   - component: {fileID: 2325895208670391741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53356,7 +53620,7 @@ GameObject:
   - component: {fileID: 3990358143106593542}
   - component: {fileID: 58337903389686947}
   - component: {fileID: 2822548922829588585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53545,7 +53809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262566756183738755}
   - component: {fileID: 2323952317159117325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53880,7 +54144,7 @@ GameObject:
   - component: {fileID: 4014359630080241113}
   - component: {fileID: 7324146553250428}
   - component: {fileID: 2882006945647433398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54273,7 +54537,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7499592980958985689}
-  m_Layer: 0
+  - component: {fileID: 1378060679006985634}
+  m_Layer: 9
   m_Name: SafeArea (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54301,6 +54566,27 @@ Transform:
   - {fileID: 567218186821917030}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1378060679006985634
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416029249913063392}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &4420003711695175164
 GameObject:
   m_ObjectHideFlags: 0
@@ -55468,7 +55754,7 @@ GameObject:
   - component: {fileID: 3749652436167609590}
   - component: {fileID: 263085178581009235}
   - component: {fileID: 2612753927345354649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55553,7 +55839,7 @@ GameObject:
   - component: {fileID: 8614742354840506316}
   - component: {fileID: 1925282877404370878}
   - component: {fileID: 7423686031907838413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -55623,7 +55909,7 @@ GameObject:
   - component: {fileID: 267143897022411976}
   - component: {fileID: 2617122158110818306}
   - component: {fileID: 5401656742553135390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56028,7 +56314,7 @@ GameObject:
   - component: {fileID: 8582737268447084895}
   - component: {fileID: 1884279283562060077}
   - component: {fileID: 7464592725735184222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -56997,7 +57283,7 @@ GameObject:
   - component: {fileID: 5444249037345259838}
   - component: {fileID: 8944712028245003931}
   - component: {fileID: 6613245211561032273}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57222,7 +57508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7160451868433713094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57626,7 +57912,7 @@ GameObject:
   - component: {fileID: 5337849326141356172}
   - component: {fileID: 9060119003111470889}
   - component: {fileID: 6510223135519359971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57851,7 +58137,7 @@ GameObject:
   - component: {fileID: 5368973808914593311}
   - component: {fileID: 9020066491272657338}
   - component: {fileID: 6541832394606185840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58090,7 +58376,7 @@ GameObject:
   - component: {fileID: 5283566744984873103}
   - component: {fileID: 9150510026646677290}
   - component: {fileID: 6420394923987309536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58173,7 +58459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7025665278824410743}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58291,7 +58577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8029167006989791188}
   - component: {fileID: 6820854800919442522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58670,7 +58956,7 @@ GameObject:
   - component: {fileID: 751892411168950997}
   - component: {fileID: 7445873222154326695}
   - component: {fileID: 1937902096530218196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -59156,7 +59442,7 @@ GameObject:
   - component: {fileID: 5248188916863695086}
   - component: {fileID: 9185807869587650379}
   - component: {fileID: 6385678619612709761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59239,7 +59525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6919643033985187350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59898,7 +60184,7 @@ GameObject:
   - component: {fileID: 901957750028287840}
   - component: {fileID: 7043112907437713170}
   - component: {fileID: 2022090192453249377}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -60264,7 +60550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7452061800361548738}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60647,7 +60933,7 @@ GameObject:
   - component: {fileID: 5744860394933116218}
   - component: {fileID: 8653107591762530975}
   - component: {fileID: 6913857534309508693}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61544,7 +61830,7 @@ GameObject:
   - component: {fileID: 937815519337524993}
   - component: {fileID: 6933720616577382259}
   - component: {fileID: 2128029595961964800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -62060,7 +62346,7 @@ GameObject:
   - component: {fileID: 1034492673026774737}
   - component: {fileID: 7161019786142600867}
   - component: {fileID: 2220498919327252688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -62235,7 +62521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7754831170406683876}
   - component: {fileID: 6510918956735008618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63145,7 +63431,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1334697140736469169}
-  m_Layer: 0
+  - component: {fileID: 3184121543266309346}
+  m_Layer: 9
   m_Name: SafeArea (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63173,6 +63460,27 @@ Transform:
   - {fileID: 9027757928490748942}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3184121543266309346
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5178788664537027208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &5187741522548911974
 GameObject:
   m_ObjectHideFlags: 0
@@ -63269,7 +63577,7 @@ GameObject:
   - component: {fileID: 4847597471530440032}
   - component: {fileID: 8424541252227717829}
   - component: {fileID: 5984453686870978063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63506,7 +63814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7752087599876625304}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64031,7 +64339,7 @@ GameObject:
   - component: {fileID: 6066937064167205861}
   - component: {fileID: 7905215704839111807}
   - component: {fileID: 3925740059714122237}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65638,7 +65946,7 @@ GameObject:
   - component: {fileID: 4686349834735595060}
   - component: {fileID: 8549690049140040081}
   - component: {fileID: 5855363982050710875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65915,7 +66223,7 @@ GameObject:
   - component: {fileID: 4700823743793958603}
   - component: {fileID: 8544302509001310574}
   - component: {fileID: 5870304217181222308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66408,7 +66716,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2196124781047587051}
-  m_Layer: 0
+  - component: {fileID: 3553186395709423773}
+  m_Layer: 9
   m_Name: SafeArea (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66436,6 +66745,27 @@ Transform:
   - {fileID: 8194002796425364564}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3553186395709423773
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413670873739107026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &5416075216861722965
 GameObject:
   m_ObjectHideFlags: 0
@@ -66991,7 +67321,7 @@ GameObject:
   - component: {fileID: 5819198392400105685}
   - component: {fileID: 7586052756911718223}
   - component: {fileID: 3641409673172208333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67074,7 +67404,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807838796611945791}
-  m_Layer: 0
+  - component: {fileID: 317885986222760698}
+  m_Layer: 9
   m_Name: SafeArea (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67102,6 +67433,27 @@ Transform:
   - {fileID: 8564292012713599360}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: -20.53, z: 0}
+--- !u!135 &317885986222760698
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498245260161498886}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &5510051847784342300
 GameObject:
   m_ObjectHideFlags: 0
@@ -68091,7 +68443,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1770218372724102494}
-  m_Layer: 0
+  - component: {fileID: 5659169242074099075}
+  m_Layer: 9
   m_Name: SafeArea (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68119,6 +68472,27 @@ Transform:
   - {fileID: 8601265885043028449}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 23.9, z: 0}
+--- !u!135 &5659169242074099075
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5605326888681090919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &5605443675396836367
 GameObject:
   m_ObjectHideFlags: 0
@@ -68344,7 +68718,7 @@ GameObject:
   - component: {fileID: 4995041239293474818}
   - component: {fileID: 8286104480509638567}
   - component: {fileID: 6132459405202703213}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68429,7 +68803,7 @@ GameObject:
   - component: {fileID: 473082513013342863}
   - component: {fileID: 7758283920794163965}
   - component: {fileID: 1592927986795844750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -68938,7 +69312,7 @@ GameObject:
   - component: {fileID: 8220193263804847313}
   - component: {fileID: 6194430195424124955}
   - component: {fileID: 4274023788946098439}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69042,7 +69416,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1895505728069631215}
-  m_Layer: 0
+  - component: {fileID: 744733858354281600}
+  m_Layer: 9
   m_Name: SafeArea (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69070,6 +69445,27 @@ Transform:
   - {fileID: 8467595858088892496}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &744733858354281600
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698526096674375382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &5704440528267047755
 GameObject:
   m_ObjectHideFlags: 0
@@ -70420,7 +70816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9027757928490748942}
   - component: {fileID: 5516018486282016640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70775,7 +71171,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 311434640077123675}
-  m_Layer: 0
+  - component: {fileID: 3166879144373144575}
+  m_Layer: 9
   m_Name: SafeArea (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70803,6 +71200,27 @@ Transform:
   - {fileID: 7754831170406683876}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 219.3, z: 0}
+--- !u!135 &3166879144373144575
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839333665956645474}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &5842880518186800745
 GameObject:
   m_ObjectHideFlags: 0
@@ -71184,7 +71602,7 @@ GameObject:
   - component: {fileID: 6492583539504563513}
   - component: {fileID: 7905384980052232860}
   - component: {fileID: 5355174169823166038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71355,7 +71773,7 @@ GameObject:
   - component: {fileID: 7889136046913680306}
   - component: {fileID: 5377051828877002616}
   - component: {fileID: 2609915883246775908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71495,7 +71913,7 @@ GameObject:
   - component: {fileID: 7876766328963608383}
   - component: {fileID: 5380414484864228341}
   - component: {fileID: 2597586304064828137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71779,7 +72197,7 @@ GameObject:
   - component: {fileID: 6532382146847730488}
   - component: {fileID: 7856658633343984797}
   - component: {fileID: 5398833193764360279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72164,7 +72582,7 @@ GameObject:
   - component: {fileID: 7957169369625741874}
   - component: {fileID: 5298902948157964024}
   - component: {fileID: 2823216713862961124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72794,7 +73212,7 @@ GameObject:
   - component: {fileID: 5627904006679182165}
   - component: {fileID: 8618961910023066831}
   - component: {fileID: 3193971555420709197}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73134,7 +73552,7 @@ GameObject:
   - component: {fileID: 6375164100022743481}
   - component: {fileID: 8058903931576827420}
   - component: {fileID: 5202234969492179670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73652,7 +74070,7 @@ GameObject:
   - component: {fileID: 5256108689287089888}
   - component: {fileID: 8176166171458740602}
   - component: {fileID: 3078320109611947256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74803,7 +75221,7 @@ GameObject:
   - component: {fileID: 5293661355770093185}
   - component: {fileID: 8138070659767185691}
   - component: {fileID: 3116433913504990361}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75056,7 +75474,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45481441765772139}
-  m_Layer: 0
+  - component: {fileID: 5564434007699931097}
+  m_Layer: 9
   m_Name: SafeArea (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75084,6 +75503,27 @@ Transform:
   - {fileID: 8029167006989791188}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5564434007699931097
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6195437965012726098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &6198717833679243770
 GameObject:
   m_ObjectHideFlags: 0
@@ -75457,7 +75897,7 @@ GameObject:
   - component: {fileID: 5345305811723020113}
   - component: {fileID: 8334112878416414923}
   - component: {fileID: 2911374324567211337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75542,7 +75982,7 @@ GameObject:
   - component: {fileID: 6744499107842916966}
   - component: {fileID: 7653477932129947075}
   - component: {fileID: 5607662034099730697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75841,7 +76281,7 @@ GameObject:
   - component: {fileID: 6636727667898050291}
   - component: {fileID: 7761319762535049558}
   - component: {fileID: 5499256308820221340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76860,7 +77300,7 @@ GameObject:
   - component: {fileID: 1172908254796438117}
   - component: {fileID: 9042469126832931351}
   - component: {fileID: 57575160229743716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -77035,7 +77475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8467595858088892496}
   - component: {fileID: 4919951723282203614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77215,7 +77655,7 @@ GameObject:
   - component: {fileID: 7232689122057495519}
   - component: {fileID: 4880594841177773845}
   - component: {fileID: 3250529840394649097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78169,7 +78609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8768697876279373890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78203,7 +78643,7 @@ GameObject:
   - component: {fileID: 5864389218891380410}
   - component: {fileID: 7407758902255270175}
   - component: {fileID: 4695374456191274453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78597,7 +79037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8601265885043028449}
   - component: {fileID: 5086827151854365295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79062,7 +79502,7 @@ GameObject:
   - component: {fileID: 7485831099067302640}
   - component: {fileID: 4613925659162080826}
   - component: {fileID: 3359857379547848486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79168,7 +79608,7 @@ GameObject:
   - component: {fileID: 5791461214846941902}
   - component: {fileID: 7489693846807803243}
   - component: {fileID: 4617398629697094049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80415,7 +80855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8564292012713599360}
   - component: {fileID: 5124997018023492110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80509,7 +80949,7 @@ GameObject:
   - component: {fileID: 6292622081750597329}
   - component: {fileID: 6988524376786923892}
   - component: {fileID: 5123071819575330238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80679,7 +81119,7 @@ GameObject:
   - component: {fileID: 1492068962892898645}
   - component: {fileID: 8759123893329754407}
   - component: {fileID: 306079072503428948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -80854,7 +81294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8194002796425364564}
   - component: {fileID: 4644105903103434714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81848,7 +82288,7 @@ GameObject:
   - component: {fileID: 6260815630453852006}
   - component: {fileID: 7011323074538981571}
   - component: {fileID: 5091827875581377545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82432,7 +82872,7 @@ GameObject:
   - component: {fileID: 4820448917886448399}
   - component: {fileID: 8891033726047853717}
   - component: {fileID: 2354463503640176919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82973,7 +83413,7 @@ GameObject:
   - component: {fileID: 7073415891170485942}
   - component: {fileID: 5029717105998631548}
   - component: {fileID: 3128398118652476256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83079,7 +83519,7 @@ GameObject:
   - component: {fileID: 6165880796595391882}
   - component: {fileID: 7079166582076178991}
   - component: {fileID: 5033536977109481189}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83233,7 +83673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9026138636240063346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84465,7 +84905,7 @@ GameObject:
   - component: {fileID: 8960284188096995462}
   - component: {fileID: 5034938826469019420}
   - component: {fileID: 2166304175724673694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84548,7 +84988,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4856110683868428063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84950,7 +85390,7 @@ GameObject:
   - component: {fileID: 7761545346916348391}
   - component: {fileID: 6636432057864552002}
   - component: {fileID: 8934473717910014600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85482,7 +85922,7 @@ GameObject:
   - component: {fileID: 7705483727988520117}
   - component: {fileID: 6719576481607056144}
   - component: {fileID: 8837272466973855706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87371,7 +87811,7 @@ GameObject:
   - component: {fileID: 9216050562359427497}
   - component: {fileID: 5071930560883535411}
   - component: {fileID: 2138345594562321329}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87840,7 +88280,7 @@ GameObject:
   - component: {fileID: 7508045571858705972}
   - component: {fileID: 6890001922193498513}
   - component: {fileID: 8681466150666294619}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87958,7 +88398,7 @@ GameObject:
   - component: {fileID: 7533408425960833077}
   - component: {fileID: 6855552417620791184}
   - component: {fileID: 8702968579580722010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88424,7 +88864,7 @@ GameObject:
   - component: {fileID: 8002623226067404650}
   - component: {fileID: 6386347237425203407}
   - component: {fileID: 9170502776299863045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89343,7 +89783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5316450096673142378}
   - component: {fileID: 8647488143134600676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89778,7 +90218,7 @@ GameObject:
   - component: {fileID: 7965783615641658367}
   - component: {fileID: 6423257229779905626}
   - component: {fileID: 9135280414064990352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89949,7 +90389,7 @@ GameObject:
   - component: {fileID: 6549168791870910550}
   - component: {fileID: 9009351105827226780}
   - component: {fileID: 1414356320179203456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90316,7 +90756,7 @@ GameObject:
   - component: {fileID: 3341695540754884104}
   - component: {fileID: 4853291016836365946}
   - component: {fileID: 4533888947152039945}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -90385,7 +90825,7 @@ GameObject:
   - component: {fileID: 8804305101428778479}
   - component: {fileID: 4875652401492806261}
   - component: {fileID: 1758158687903678455}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90809,7 +91249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5396928009703805799}
   - component: {fileID: 8872200091473791209}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91009,7 +91449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5391247732459868138}
   - component: {fileID: 8868802248849560676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91717,7 +92157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5008999041111137006}
   - component: {fileID: 8378478170936443232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92864,7 +93304,7 @@ GameObject:
   - component: {fileID: 7118262547379404738}
   - component: {fileID: 6153884700810883175}
   - component: {fileID: 8251169348091888813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93034,7 +93474,7 @@ GameObject:
   - component: {fileID: 8465969049049198827}
   - component: {fileID: 5547248572817694577}
   - component: {fileID: 1672024221118032627}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93204,7 +93644,7 @@ GameObject:
   - component: {fileID: 8451316615204678758}
   - component: {fileID: 5534918987025056764}
   - component: {fileID: 1657337283603347070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94546,7 +94986,7 @@ GameObject:
   - component: {fileID: 8533043594970974571}
   - component: {fileID: 5759423471280645873}
   - component: {fileID: 1450833242922636147}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95129,7 +95569,7 @@ GameObject:
   - component: {fileID: 6205021789876107276}
   - component: {fileID: 8212416419150646470}
   - component: {fileID: 2260584587028178394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95722,7 +96162,7 @@ GameObject:
   - component: {fileID: 5834287493118070201}
   - component: {fileID: 8580336790229907827}
   - component: {fileID: 1852125503563534447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97042,7 +97482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4632334748484173480}
   - component: {fileID: 8182060302689592614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97222,7 +97662,7 @@ GameObject:
   - component: {fileID: 5868228135054482904}
   - component: {fileID: 8544688778536610066}
   - component: {fileID: 1743945978256687118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97794,7 +98234,7 @@ GameObject:
   - component: {fileID: 7333446966130949085}
   - component: {fileID: 5938691807849854072}
   - component: {fileID: 8470866235846377650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98393,7 +98833,7 @@ GameObject:
   - component: {fileID: 5920168360306762760}
   - component: {fileID: 8488263336776405186}
   - component: {fileID: 1975732254638438878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98498,7 +98938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897088724131897223}
   - component: {fileID: 8228124519890961417}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98938,7 +99378,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4212386911760419894}
-  m_Layer: 0
+  - component: {fileID: 7520928691436333595}
+  m_Layer: 9
   m_Name: SafeArea (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98966,6 +99407,27 @@ Transform:
   - {fileID: 6177151332110559369}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 8.63, z: 0}
+--- !u!135 &7520928691436333595
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011460306333283855}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &8012344856279709188
 GameObject:
   m_ObjectHideFlags: 0
@@ -99046,7 +99508,7 @@ GameObject:
   - component: {fileID: 7238590811511259754}
   - component: {fileID: 6042555715477179855}
   - component: {fileID: 8376571205550274821}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99905,7 +100367,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2674380360751344469}
-  m_Layer: 0
+  - component: {fileID: 3595077758171180844}
+  m_Layer: 9
   m_Name: SafeArea (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99933,6 +100396,27 @@ Transform:
   - {fileID: 5391247732459868138}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3595077758171180844
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8090230628387279212}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &8102670300503903713
 GameObject:
   m_ObjectHideFlags: 0
@@ -99942,7 +100426,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2677808433402197976}
-  m_Layer: 0
+  - component: {fileID: 5396940325427723321}
+  m_Layer: 9
   m_Name: SafeArea (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99970,6 +100455,27 @@ Transform:
   - {fileID: 5396928009703805799}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: -7.36, z: 0}
+--- !u!135 &5396940325427723321
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102670300503903713}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &8109207457161474612
 GameObject:
   m_ObjectHideFlags: 0
@@ -100280,7 +100786,7 @@ GameObject:
   - component: {fileID: 8902666625002275712}
   - component: {fileID: 5486364791858760741}
   - component: {fileID: 7766331097002244335}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100366,7 +100872,7 @@ GameObject:
   - component: {fileID: 5491270636889565372}
   - component: {fileID: 7768743189598772342}
   - component: {fileID: 393913550650996074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100472,7 +100978,7 @@ GameObject:
   - component: {fileID: 4047685157762076934}
   - component: {fileID: 6131096878308395380}
   - component: {fileID: 2929531835600144135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -100539,7 +101045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6007364909216597368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101975,7 +102481,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2741305459526914773}
-  m_Layer: 0
+  - component: {fileID: 5832561908693071779}
+  m_Layer: 9
   m_Name: SafeArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102003,6 +102510,27 @@ Transform:
   - {fileID: 5316450096673142378}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5832561908693071779
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309169808921848044}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &8309481737452329702
 GameObject:
   m_ObjectHideFlags: 0
@@ -102184,7 +102712,7 @@ GameObject:
   - component: {fileID: 4292189801323212841}
   - component: {fileID: 6244988511737292891}
   - component: {fileID: 3106189034998605352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -102253,7 +102781,7 @@ GameObject:
   - component: {fileID: 8652589589734208275}
   - component: {fileID: 5745458386470091958}
   - component: {fileID: 7520730726816696444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102409,7 +102937,7 @@ GameObject:
   - component: {fileID: 8684515641313852800}
   - component: {fileID: 5704445974002987557}
   - component: {fileID: 7552171718614845167}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102772,7 +103300,7 @@ GameObject:
   - component: {fileID: 5244174078839608204}
   - component: {fileID: 8008521381083555654}
   - component: {fileID: 109374260121554522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103155,7 +103683,7 @@ GameObject:
   - component: {fileID: 9099085301239244742}
   - component: {fileID: 5325975269672544355}
   - component: {fileID: 7930096790450740393}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103287,7 +103815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6238791092421779774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104264,7 +104792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6136168404173766673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104298,7 +104826,7 @@ GameObject:
   - component: {fileID: 4492967478540358767}
   - component: {fileID: 6007931684439477277}
   - component: {fileID: 3373679388572074606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -104581,7 +105109,7 @@ GameObject:
   - component: {fileID: 9077812133151688425}
   - component: {fileID: 5356193502222076236}
   - component: {fileID: 7904365818763492742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104666,7 +105194,7 @@ GameObject:
   - component: {fileID: 7644016672258791304}
   - component: {fileID: 6022403935018825746}
   - component: {fileID: 602374577686285712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105886,7 +106414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6177151332110559369}
   - component: {fileID: 7240796437951050503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105980,7 +106508,7 @@ GameObject:
   - component: {fileID: 8331381137066912568}
   - component: {fileID: 4913665331904144541}
   - component: {fileID: 7193427126880342103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106065,7 +106593,7 @@ GameObject:
   - component: {fileID: 8334736917692992455}
   - component: {fileID: 4901381513106670690}
   - component: {fileID: 7197248967291383976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106686,7 +107214,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3186637330673318712}
-  m_Layer: 0
+  - component: {fileID: 5607199310363788822}
+  m_Layer: 9
   m_Name: SafeArea (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106714,6 +107243,27 @@ Transform:
   - {fileID: 4897088724131897223}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5607199310363788822
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746622577597153537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &8752091779919956059
 GameObject:
   m_ObjectHideFlags: 0
@@ -107044,7 +107594,7 @@ GameObject:
   - component: {fileID: 3533143402811146603}
   - component: {fileID: 6643498983564073241}
   - component: {fileID: 2414970289574139754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -107338,7 +107888,7 @@ GameObject:
   - component: {fileID: 3547725335996145126}
   - component: {fileID: 6631059457363641748}
   - component: {fileID: 2429552356838771687}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -108329,7 +108879,7 @@ GameObject:
   - component: {fileID: 3611433055350126827}
   - component: {fileID: 6855656408020213913}
   - component: {fileID: 2492160342971248362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gasolene
   m_TagString: Gasolene
   m_Icon: {fileID: 0}
@@ -108481,7 +109031,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3424312495893060119}
-  m_Layer: 0
+  - component: {fileID: 7649809130268023861}
+  m_Layer: 9
   m_Name: SafeArea (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108509,6 +109060,27 @@ Transform:
   - {fileID: 4632334748484173480}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7649809130268023861
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853673562422911022}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &8862936830886671415
 GameObject:
   m_ObjectHideFlags: 0
@@ -110148,7 +110720,7 @@ GameObject:
   - component: {fileID: 8631422497319038724}
   - component: {fileID: 4640715955600302241}
   - component: {fileID: 7459040544952145003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110233,7 +110805,7 @@ GameObject:
   - component: {fileID: 8631063826183290126}
   - component: {fileID: 4641075171135845035}
   - component: {fileID: 7461512468792018529}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_p_007_gasoline_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110316,7 +110888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6852837788953881084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111694,7 +112266,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3048738956918685265}
-  m_Layer: 0
+  - component: {fileID: 6400099580969174976}
+  m_Layer: 9
   m_Name: SafeArea (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111722,6 +112295,27 @@ Transform:
   - {fileID: 5008999041111137006}
   m_Father: {fileID: 1768123011726506132}
   m_LocalEulerAnglesHint: {x: 0, y: -23.86, z: 0}
+--- !u!135 &6400099580969174976
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157015195537065064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5.04
+  m_Center: {x: 1.45, y: 0.78, z: 0}
 --- !u!1 &9167446009468665724
 GameObject:
   m_ObjectHideFlags: 0
@@ -111961,7 +112555,7 @@ GameObject:
   - component: {fileID: 8421349815063516804}
   - component: {fileID: 4859804684177021217}
   - component: {fileID: 7247850724522356203}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112044,7 +112638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6645138177200966897}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112078,7 +112672,7 @@ GameObject:
   - component: {fileID: 8424712457256126985}
   - component: {fileID: 4847365018418693548}
   - component: {fileID: 7251283053498118502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112161,7 +112755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6632807910669127804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
