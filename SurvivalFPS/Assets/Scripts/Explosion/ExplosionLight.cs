@@ -9,6 +9,7 @@ public class ExplosionLight : MonoBehaviour
     [SerializeField] float amplitude = 8.0f;     // 最大強度
     [SerializeField] float lightDuration = 0.25f; // 光る総時間（秒
     [SerializeField] Light pointLight;
+    [SerializeField] SphereCollider sphereCollider;
     [SerializeField] ParticleSystem mainExplosion; //メイン(炎)
     [SerializeField] ParticleSystem subExplosion; //　サブ(煙)
 
@@ -34,6 +35,7 @@ public class ExplosionLight : MonoBehaviour
         mainExplosion.transform.localScale *= sizeMul;
         subExplosion.transform.localScale *= sizeMul;
         pointLight.range *= sizeMul;
+        sphereCollider.radius *= sizeMul;
         if (mainExplosion) mainExplosion.Play();
 
         
