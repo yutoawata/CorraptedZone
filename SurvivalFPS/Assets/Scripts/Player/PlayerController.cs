@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     Material gunMaterial;
     Animator ShootAnim;
-    Animation reloadAnim;
+    Animator reloadAnim;
+    AnimatorStateInfo stateInfo;
     Vector3 ADSPosition = new Vector3(0.0f, 0.393f, 0.25f);
     Vector3 hipPosition = new Vector3(0.2f, 0.35f, 0.45f);
     Vector3 moveDirection = Vector2.zero;
@@ -47,9 +49,10 @@ public class PlayerController : MonoBehaviour
     {
         
         ShootAnim = shootGun.GetComponent<Animator>();
-        reloadAnim = reloadGun.GetComponent<Animation>();
+        reloadAnim = reloadGun.GetComponent<Animator>();
         gunMaterial = gun_obj.GetComponent<MeshRenderer>().material;
         rb = GetComponent<Rigidbody>();
+        stateInfo = reloadAnim.GetCurrentAnimatorStateInfo(0);
         remainingBulletVaue = MAX_FIRE_VALUE;
         timer = fireIngerval;
 
@@ -78,19 +81,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (InputManager.IsInputLeftButton())
-        {
-            reloadGun.SetActive(true);
-            shootGun.SetActive(false);
-            ReLoad();
-        }
+        
 
         if (!isRecoiling) 
         {
             ADS();
         }
 
-
+        ReLoad();
         Move();
 
         if (isRecoiling)
@@ -172,18 +170,21 @@ public class PlayerController : MonoBehaviour
 
     void ReLoad()
     {
-        if (remainingBulletVaue != MAX_FIRE_VALUE)
+        if (InputManager.IsInputLeftButton())
         {
-            Debug.Log("ƒŠƒ[ƒh");
-
-            reloadAnim.Play();
-            isReloading = true;
-            remainingBulletVaue = MAX_FIRE_VALUE;
-            currentBulleValue -= MAX_FIRE_VALUE - remainingBulletVaue;
+            reloadGun.SetActive(true);
+            shootGun.SetActive(false);
         }
 
-        if (!reloadAnim.IsPlaying("Take 001"))
+        if (stateInfo.normalizedTime >= 1.0f)
         {
+            if (remainingBulletVaue != MAX_FIRE_VALUE)
+            {
+                isReloading = true;
+                remainingBulletVaue = MAX_FIRE_VALUE;
+                currentBulleValue -= MAX_FIRE_VALUE - remainingBulletVaue;
+            }
+
             isReloading = false;
             reloadGun.SetActive(false);
             shootGun.SetActive(true);
