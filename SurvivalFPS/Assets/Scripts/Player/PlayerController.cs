@@ -148,6 +148,11 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
+        if (!shootAnim.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
+        {
+            muzzleFlash.SetActive(false);
+        }
+
         if (InputManager.IsInputRightTrigger())
         {
             if (timer >= fireIngerval && remainingBulletVaue > 0)
@@ -164,10 +169,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(shootAnim.GetCurrentAnimatorStateInfo(1).normalizedTime >= 1.0f)
-        {
-            muzzleFlash.SetActive(false);
-        }
+        
     }
 
     void ReLoad()
