@@ -6537,6 +6537,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: recoilPower
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7121494132723412649, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: field of view
       value: 60
