@@ -9,6 +9,7 @@ TagManager:
   - Gasolene
   - Ammo
   - 'Generator '
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - UI
   - Mf
   - Gun
-  - 
-  - 
-  - 
+  - Explosion
+  - SafeArea
+  - Player
   - 
   - 
   - 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6816056601356457573}
   - component: {fileID: 8750366982602316175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8796617260411990417}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Untagged
+  m_TagString: Explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   amplitude: 8
   lightDuration: 0.32
   pointLight: {fileID: 8750366982602316175}
+  sphereCollider: {fileID: 9101576494675680101}
   mainExplosion: {fileID: 8998084449742107948}
   subExplosion: {fileID: 8530917620195916666}
 --- !u!1 &7569880941772008156
@@ -155,7 +156,7 @@ GameObject:
   - component: {fileID: 2046360777406771697}
   - component: {fileID: 8530917620195916666}
   - component: {fileID: 6502322293415612899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5136,7 +5137,8 @@ GameObject:
   - component: {fileID: 8998084449742107948}
   - component: {fileID: 1433095738491558435}
   - component: {fileID: 3838470075747258083}
-  m_Layer: 0
+  - component: {fileID: 9101576494675680101}
+  m_Layer: 8
   m_Name: TestExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10092,3 +10094,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe381838c5b0e94db6f7e7a7d90f3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &9101576494675680101
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333837028856443487}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
