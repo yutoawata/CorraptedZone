@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
     Vector3 targetRot = Vector3.zero;
     Vector3 movePos = Vector3.zero;
     float timer;
+    float yPos;
     bool isExplosionHit;
     bool isBulletHit;
     float currentSpeed;
@@ -32,29 +33,31 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
         lightHouseController = GameObject.Find("LightHouse").GetComponentInChildren<LightHouseController>();
         explosionManager = GameObject.Find("ExplosionManager").GetComponent<ExplosionManager>();
         rb = GetComponent<Rigidbody>();
+        yPos = transform.position.y; // 敵が浮かないようにするため
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Debug.Log(currentSpeed);
-        float dis = Vector3.Distance(transform.position, player.transform.position);
-        if (dis <= playerTargetDis)
+        Vector3 dis = player.transform.position - transform.position;
+        Vector3 lightDis = lightHouseController.ReturnEnemyTargetTransform() - transform.position; // ライト方向に向かせるために必要
+        if (dis.sqrMagnitude <= playerTargetDis * playerTargetDis)
         {
            targetPos = player.transform.position;
            targetRot = player.transform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(dis);
+            transform.rotation = targetRotation;
         }
         else
         {
             targetPos = lightHouseController.ReturnEnemyTargetTransform();
             targetRot = lightHouseController.ReturnEnemyTargetTransform();
+            Quaternion targetRotation = Quaternion.LookRotation(lightDis);
+            transform.rotation = targetRotation;
         }
-        Quaternion targetRotation = Quaternion.LookRotation(targetRot);
-        transform.rotation = targetRotation;
         movePos = targetPos - transform.position;
         movePos.Normalize();
-        rb.AddForce(movePos * currentSpeed);
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.AddForce(movePos * currentSpeed, ForceMode.Acceleration);
 
 
 
@@ -62,7 +65,7 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
         if (isExplosionHit)
         {
             currentSpeed = 0;
-            timer += Time.deltaTime;
+            timer += Time.fixedDeltaTime;
             if(timer >= damageExplosionTiem)
             {
                 currentSpeed = MoveSpeed;
@@ -73,9 +76,9 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
         }
         else if (isBulletHit && !isExplosionHit)
         {
-            explosionManager.Generate(transform.position.x, transform.position.y, transform.position.z, 0.3f);
-            currentSpeed = 0.5f;
-            timer += Time.deltaTime;
+
+            rb.velocity *= 0.7f;
+            timer += Time.fixedDeltaTime;
             if (timer >= damageBulletTiem)
             {
                 currentSpeed = MoveSpeed;
@@ -87,6 +90,7 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
 
     public void OnRaycastHit(RaycastHit hit)
     {
+        explosionManager.Generate(hit.point.x, hit.point.y, hit.point.z, 0.3f);
         isBulletHit = true;
     }
 

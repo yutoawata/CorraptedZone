@@ -6,6 +6,7 @@ using UnityEngine;
 public class ExplosionDrumCan : MonoBehaviour, IRayCastHit
 {
     [SerializeField] GameObject child;
+    CapsuleCollider capsule;
     ExplosionManager explosionManager;
     bool isActive = true;
     float timer = 0;
@@ -13,6 +14,7 @@ public class ExplosionDrumCan : MonoBehaviour, IRayCastHit
     void Awake()
     {
         explosionManager = GameObject.Find("ExplosionManager").GetComponent<ExplosionManager>();
+        capsule = GetComponent<CapsuleCollider>();
     }
 
 
@@ -26,6 +28,7 @@ public class ExplosionDrumCan : MonoBehaviour, IRayCastHit
         {
             explosionManager.Generate(child.transform.position.x, child.transform.position.y, child.transform.position.z, explosionMul);
             child.gameObject.SetActive(false);
+            capsule.enabled = false;
             isActive = false;
         }
     }
@@ -39,6 +42,7 @@ public class ExplosionDrumCan : MonoBehaviour, IRayCastHit
             {
                 isActive = true;
                 child.SetActive(true);
+                capsule.enabled = true;
                 timer = 0;
             }
         }
