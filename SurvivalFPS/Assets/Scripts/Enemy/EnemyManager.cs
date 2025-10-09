@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyObject = null;
     [SerializeField] GameObject lightObject = null;
+    [SerializeField] GameObject spawnPosition = null;
     [SerializeField] LayerMask obstaclesLayer = ~0;
     // ¶¬”ÍˆÍ‚ğŒˆ‚ß‚é•Ï”
     [SerializeField] Vector3 spawnRange = Vector3.zero;
@@ -102,6 +103,10 @@ public class EnemyManager : MonoBehaviour
         // Fw’è
         Gizmos.color = Color.red;
         Vector3 center = Vector3.zero;
+        if (spawnPosition != null)
+        {
+            center = spawnPosition.transform.position;
+        }
         // •`‰æ‚Ì‘å‚«‚³‚ğ2”{‚É‚·‚é
         Vector3 size = new Vector3(spawnRange.x * 2, spawnRange.y, spawnRange.z * 2);
         Gizmos.DrawWireCube(center, size);
