@@ -1,19 +1,17 @@
-
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
-using UnityEngine.InputSystem.XR;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameObject gun;
-    [SerializeField] Camera mainCamera;
-    [SerializeField] MeshRenderer gun_obj;
+    [SerializeField] GameObject gun = null;
+    [SerializeField] Camera mainCamera = null;
+    [SerializeField] MeshRenderer gun_obj = null;
     [SerializeField] float shootLenge = 20.0f;
     [SerializeField] float fireIngerval = 1.0f;
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 300.0f;
     [SerializeField] float recoilPower = 5.0f;
+
+
     const int MAX_FIRE_VALUE = 2;   //ÉäÉçÅ[Éhñ≥ÇµÇ≈ÇÃéÀåÇâÒêî
 
     Rigidbody rb;
@@ -77,6 +75,14 @@ public class PlayerController : MonoBehaviour
         Recoiling();
     }
 
+    void OnTriggerStay(Collider other)
+    {
+        if(other.CompareTag("LightHouse"))
+        {
+
+        }
+    }
+
     void Move()
     {
         rb.AddForce(-rb.velocity);
@@ -132,10 +138,6 @@ public class PlayerController : MonoBehaviour
     {
         if(Physics.Raycast(mainCamera.transform.position,transform.forward,out RaycastHit target, shootLenge))
         {
-            if (target.collider.gameObject.tag == "Enemy")
-            {
-                
-            }
             target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
         }
         remainingBulletVaue--;
