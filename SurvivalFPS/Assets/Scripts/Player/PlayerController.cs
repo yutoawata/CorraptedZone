@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody rb;
     Material gunMaterial;
-    Animator ShootAnim;
+    Animator shootAnim;
     Animator reloadAnim;
     AnimatorStateInfo stateInfo;
     Vector3 ADSPosition = new Vector3(0.0f, 0.393f, 0.25f);
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         
-        ShootAnim = shootGun.GetComponent<Animator>();
+        shootAnim = shootGun.GetComponent<Animator>();
         reloadAnim = reloadGun.GetComponent<Animator>();
         gunMaterial = gun_obj.GetComponent<MeshRenderer>().material;
         rb = GetComponent<Rigidbody>();
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             //‰•œ•ª‚ÌŽžŠÔ‚ð‘ã“ü
             recoilTimer = 2.0f;
-            Recoiling();
+            //Recoiling();
         }
     }
 
@@ -161,8 +161,13 @@ public class PlayerController : MonoBehaviour
                 isRecoiling = true;
                 remainingBulletVaue--;
                 timer = 0.0f;
-                ShootAnim.SetTrigger("IsTrigger");
+                shootAnim.SetTrigger("IsTrigger");
             }
+        }
+
+        if(shootAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        {
+
         }
     }
 
