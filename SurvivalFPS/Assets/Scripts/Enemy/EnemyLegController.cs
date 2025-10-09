@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +8,6 @@ public class EnemyLegController : MonoBehaviour
     [SerializeField] List<GameObject> targetPositions; //ボーンの座標配列
 
     List<EnemyLeg> legList = new List<EnemyLeg>();
-    int maxIteration = 0;                           //関節数
 
     void Awake()
     {
@@ -46,6 +44,12 @@ public class EnemyLegController : MonoBehaviour
 
         //リストから親オブジェクトを削除
         list.Remove(parent_);
+
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            Debug.Log(list[i].name);
+        }
 
         return list;
     }
