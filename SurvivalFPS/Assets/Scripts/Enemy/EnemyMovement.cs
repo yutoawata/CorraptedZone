@@ -7,11 +7,13 @@ public class EnemyMovement : MonoBehaviour
 {
     LightHouseController lightHouseController;
     GameObject player;
+    Rigidbody rb;
     [SerializeField]private float MoveSpeed;
     [SerializeField] float damageTiem = 2;
     [SerializeField] float playerTargetDis; // ìGÇ™ÉvÉåÉCÉÑÅ[Çí«Ç§ãóó£
     Vector3 targetPos = Vector3.zero;
     Vector3 targetRot = Vector3.zero;
+    Vector3 movePos = Vector3.zero;
     float timer;
     bool isHit;
     float currentSpeed;
@@ -23,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
         currentSpeed = MoveSpeed;
         player = GameObject.Find("Player");
         lightHouseController = GameObject.Find("LightHouse").GetComponentInChildren<LightHouseController>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -41,7 +44,10 @@ public class EnemyMovement : MonoBehaviour
         }
         Quaternion targetRotation = Quaternion.LookRotation(targetRot);
         transform.rotation = targetRotation;
-        transform.position = Vector3.MoveTowards(transform.position,targetPos, currentSpeed * Time.deltaTime);
+        movePos = targetPos - transform.position;
+        movePos.Normalize();
+        rb.AddForce(movePos * currentSpeed);
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
 
 
