@@ -22,4 +22,5 @@ public class InputManager : MonoBehaviour
     public static bool IsInputLeftTrigger() { return gamepad.leftTrigger.isPressed;}
     public static bool IsInputRightShoulder() { return gamepad.rightShoulder.isPressed; }
     public static bool IsInputLeftShoulder() { return gamepad.leftShoulder.isPressed; }
+    public static bool IsSelectButton() { return gamepad.selectButton.isPressed;}
 }

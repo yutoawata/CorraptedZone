@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         reloadAnim = reloadGun.GetComponent<Animator>();
         gunMaterial = gun_obj.GetComponent<MeshRenderer>().material;
         rb = GetComponent<Rigidbody>();
-        stateInfo = reloadAnim.GetCurrentAnimatorStateInfo(0);
+       
         remainingBulletVaue = MAX_FIRE_VALUE;
         timer = fireIngerval;
 
@@ -176,8 +176,13 @@ public class PlayerController : MonoBehaviour
             shootGun.SetActive(false);
         }
 
-        if (stateInfo.normalizedTime >= 1.0f)
+        Debug.Log(reloadAnim.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        Debug.Log(stateInfo.IsName("Reload"));
+
+        if (reloadAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
+            Debug.Log("re");
+            
             if (remainingBulletVaue != MAX_FIRE_VALUE)
             {
                 isReloading = true;
