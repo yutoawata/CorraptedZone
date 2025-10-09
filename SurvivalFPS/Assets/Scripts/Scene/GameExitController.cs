@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameExitController : MonoBehaviour
 {
@@ -27,11 +24,11 @@ public class GameExitController : MonoBehaviour
         {
             isOpenPause = true;
         }
-        if (InputManager.IsInputRightButton())
+        if (InputManager.IsInputRightButton() && isOpenPause)
         {
             isReturnGame = true;
         }
-        if (InputManager.IsInputDownButton())
+        if (InputManager.IsInputDownButton() && isOpenPause)
         {
             isExitGame = true;
         }
