@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject reloadGun = null;   //リロードモーション用の銃モデル
     [SerializeField] GameObject shootGun = null;    //射撃モーション用の銃モデル
+    //[SerializeField] GameObject 
     [SerializeField] Camera mainCamera = null;      //
     [SerializeField] MeshRenderer gun_obj = null;   //
     [SerializeField] float shootLenge = 20.0f;
