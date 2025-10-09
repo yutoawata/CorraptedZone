@@ -164,8 +164,6 @@ public class PlayerController : MonoBehaviour
                 ShootAnim.SetTrigger("IsTrigger");
             }
         }
-
-        if()
     }
 
     void ReLoad()
