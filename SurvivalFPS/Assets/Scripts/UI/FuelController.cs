@@ -22,6 +22,5 @@ public class FuelUI : MonoBehaviour
     {
         currentFuel = emissionController.Fuel;
         fuel.value = currentFuel / maxFuel;
-        Debug.Log(fuel.value);
     }
 }
