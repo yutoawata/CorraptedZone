@@ -23,7 +23,8 @@ public class RepopItem : MonoBehaviour
             if (timer >= repopTimer)
             {
                 child.SetActive(true);
-                // boxCollider.enabled = true;
+                boxCollider.enabled = true;
+                timer = 0;
             }
         }
     }
@@ -33,8 +34,8 @@ public class RepopItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             child.SetActive(false);
+            boxCollider.enabled = false;
             Debug.Log("’Ê‚Á‚½‚æ");
-            // boxCollider.enabled = false;
         }
     }
 }
