@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour, IRayCastHit
 {
-    LightHouseController lightHouseController;
-    LightEmissionController playerEmission;
-    GameObject player;
-    Rigidbody rb;
     [SerializeField]private float MoveSpeed;
     [SerializeField] float damageExplosionTiem = 2;
     [SerializeField] float damageBulletTiem = 2;
     [SerializeField] float playerTargetDis; // ìGÇ™ÉvÉåÉCÉÑÅ[Çí«Ç§ãóó£
+    ExplosionManager explosionManager;
+    LightHouseController lightHouseController;
+    LightEmissionController playerEmission;
+    GameObject player;
+    Rigidbody rb;
     Vector3 targetPos = Vector3.zero;
     Vector3 targetRot = Vector3.zero;
     Vector3 movePos = Vector3.zero;
@@ -29,6 +30,7 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
         player = GameObject.Find("Player");
         playerEmission = player.GetComponent<LightEmissionController>();
         lightHouseController = GameObject.Find("LightHouse").GetComponentInChildren<LightHouseController>();
+        explosionManager = GameObject.Find("ExplosionManager").GetComponent<ExplosionManager>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -71,6 +73,7 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
         }
         else if (isBulletHit && !isExplosionHit)
         {
+            explosionManager.Generate(transform.position.x, transform.position.y, transform.position.z, 0.3f);
             currentSpeed = 0.5f;
             timer += Time.deltaTime;
             if (timer >= damageBulletTiem)
