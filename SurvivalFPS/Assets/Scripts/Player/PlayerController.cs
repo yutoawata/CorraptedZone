@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     bool isReloading = false;
     bool isRecoiling = false;
     bool isDown = false;
-
+    bool isInteract = false;
 
 
     public int CurrentBulleValue { get => currentBulleValue; }
@@ -68,23 +68,27 @@ public class PlayerController : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-
-        Fire();
-
-        ADS();
-        if (!isRecoiling) 
+        if (!isInteract)
         {
-            
+            Fire();
+            ADS();
+            ReLoad();
+            Move();
         }
-
-        ReLoad();
-        Move();
 
         if (isRecoiling)
         {
             //往復分の時間を代入
             recoilTimer = 2.0f;
             //Recoiling();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Gasolene"))
+        {
+            fuelValue++;
         }
     }
 
@@ -96,11 +100,20 @@ public class PlayerController : MonoBehaviour
             {
                 if (InputManager.IsInputRightButton())
                 {
-                    fuelValue--;
+                    if (!isInteract)
+                    {
+                        fuelValue--;
+                    }
+                    Debug.Log("DD");
+                }
+                else
+                {
+                    isInteract = false;
                 }
             }
-            
         }
+
+        
     }
 
     void Move()
@@ -125,7 +138,7 @@ public class PlayerController : MonoBehaviour
     {
         if (InputManager.IsInputLeftTrigger())
         {
-            reticle.SetActive(false);
+            //reticle.SetActive(false);
             gunMaterial.SetFloat("_OutlineWidth", 0.0f);
             //ズームイン
             mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
@@ -136,7 +149,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            reticle.SetActive(true);
+            //reticle.SetActive(true);
             gunMaterial.SetFloat("_OutlineWidth", 0.001f);
             //ズームアウト
             mainCamera.fieldOfView += (cameraViewMax - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
