@@ -32,10 +32,13 @@ public class PlayerController : MonoBehaviour
     float timer = 0.0f;
     int currentBulleValue = 10;      //ŠŽ‚µ‚Ä‚¢‚é’e‚Ì‘”
     int remainingBulletVaue = 0;    //ŽËŒ‚‰Â”\”(dS“à‚Ì’e‚Ì”)
+    int fuelValue = 0;
     bool isfirstFrame = true;
     bool isReloading = false;
     bool isRecoiling = false;
     bool isDown = false;
+
+
 
     public int CurrentBulleValue { get => currentBulleValue; }
 
@@ -100,9 +103,16 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("LightHouse"))
+        if(other.CompareTag("Generator"))
         {
-
+            if(fuelValue > 0)
+            {
+                if (InputManager.IsInputRightButton())
+                {
+                    fuelValue--;
+                }
+            }
+            
         }
     }
 
