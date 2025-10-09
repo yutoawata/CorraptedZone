@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float fireIngerval = 1.0f;
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 300.0f;
-    [SerializeField] float recoilPower = 5.0f;
+    [SerializeField] float recoilPower = 50.0f;
 
 
     const int MAX_FIRE_VALUE = 2;   //ÉäÉçÅ[Éhñ≥ÇµÇ≈ÇÃéÀåÇâÒêî
@@ -155,16 +155,13 @@ public class PlayerController : MonoBehaviour
 
     void Recoiling()
     {
-        if (mainCamera.transform.rotation.x < 5.0f || mainCamera.transform.rotation.x > 1e-4)
-        {
-            if (!isDown)
-            {
-                mainCamera.transform.eulerAngles += new Vector3(isDown ? recoilPower : -recoilPower, 0.0f, 0.0f) * Time.deltaTime;
-            }
-        }
-        else
-        {
-            isDown = true;
-        }
+        //if (mainCamera.transform.rotation.x < 5.0f || mainCamera.transform.rotation.x > 1e-4)
+        //{
+        //    mainCamera.transform.eulerAngles += new Vector3(isDown ? recoilPower : -recoilPower, 0.0f, 0.0f) * Time.deltaTime;
+        //}
+        //else
+        //{
+        //    isDown = true;
+        //}
     }
 }
