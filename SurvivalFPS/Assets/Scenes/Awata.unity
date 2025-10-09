@@ -6529,6 +6529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 2309551000996678446, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: moveSpeed
       value: 10
@@ -6553,6 +6557,14 @@ PrefabInstance:
     - target: {fileID: 547148981772367690, guid: 15b64a88525b4644aa115818c5df38f4, type: 3}
       propertyPath: m_Name
       value: Enemy_Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 547148981772367690, guid: 15b64a88525b4644aa115818c5df38f4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722717910095300251, guid: 15b64a88525b4644aa115818c5df38f4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2181525746154819295, guid: 15b64a88525b4644aa115818c5df38f4, type: 3}
       propertyPath: m_LocalPosition.x
