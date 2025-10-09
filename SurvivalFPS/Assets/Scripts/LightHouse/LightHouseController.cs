@@ -44,7 +44,6 @@ public class LightHouseController : MonoBehaviour
         // ==== 2) 子は上下だけ回す ====
         // 親のローカル空間に変換したターゲット方向
         Vector3 localDir = transform.InverseTransformPoint(ReturnEnemyTargetTransform());
-        Debug.Log(localDir);
 
         // 前方向(Z)に対する仰角を計算
         float pitch = Mathf.Atan2(localDir.y, localDir.z) * Mathf.Rad2Deg;
@@ -58,14 +57,11 @@ public class LightHouseController : MonoBehaviour
 
         // 追加 現在の角度と目標回転角の差を格納
         float angleDeff = Quaternion.Angle(transform.rotation, rotation);
-
-        Debug.Log(angleDeff);
         // 追加 一定角度内を向くと敵が生成されるようになる マジックナンバーは角度
         if (angleDeff < ON_SPAWNANGLE && !hasSpawned)
         {
             enemyManager.SpawnEnemy();
             hasSpawned = true;
-            Debug.Log("通ったよ");
         }
 
         // 追加 一定角度から離れると生成が出来る状態に戻す
