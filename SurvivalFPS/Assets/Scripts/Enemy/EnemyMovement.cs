@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]private LightHouseController lightHouseController;
-    [SerializeField] GameObject player;
+    LightHouseController lightHouseController;
+    GameObject player;
     [SerializeField]private float MoveSpeed;
     [SerializeField] float damageTiem = 2;
     [SerializeField] float playerTargetDis; // “G‚ªƒvƒŒƒCƒ„[‚ğ’Ç‚¤‹——£
@@ -21,6 +21,8 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         currentSpeed = MoveSpeed;
+        player = GameObject.Find("Player");
+        lightHouseController = GameObject.Find("LightHouse").GetComponentInChildren<LightHouseController>();
     }
 
     // Update is called once per frame

@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e818620c13fd5488a62f24b170035e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyObject: {fileID: 547148981772367690, guid: 15b64a88525b4644aa115818c5df38f4, type: 3}
+  enemyObject: {fileID: 2954705124341011634, guid: 61da9faa4d52f4f46be2b37268db44c7, type: 3}
   lightObject: {fileID: 4199255465133359215}
   spawnPosition: {fileID: 1682784040}
   obstaclesLayer:
@@ -234,17 +234,6 @@ MonoBehaviour:
   spawnRange: {x: 601.8, y: 0, z: 406.3}
   spawnRadius: 10
   spawnCount: 10
---- !u!114 &170698996 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6633908135966895974, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
-  m_PrefabInstance: {fileID: 4199255465133359214}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4199255465133359215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4f146a7411995a439449b097fff5158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &276997876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3201882822831898500, guid: ca5294be36fcf4c4a875b627c57382ee, type: 3}
@@ -259,11 +248,6 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5306337599316038299, guid: ca5294be36fcf4c4a875b627c57382ee, type: 3}
   m_PrefabInstance: {fileID: 644620576}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &515636464 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8222499127928116595, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
-  m_PrefabInstance: {fileID: 4199255465133359214}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &630120667
 GameObject:
@@ -861,8 +845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea8885e7b9988e419b042aec53862bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightHouseController: {fileID: 170698996}
-  player: {fileID: 1060834510}
   MoveSpeed: 5
   damageTiem: 30
   playerTargetDis: 130
@@ -1203,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2309551000996678446, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: m_Name
-      value: Capsule
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2309551000996678446, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: m_Layer
@@ -1555,11 +1537,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 432798149173050602, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       propertyPath: m_Name
-      value: BG_002_toudai_04_07
+      value: LightHouse
       objectReference: {fileID: 0}
     - target: {fileID: 432798149173050602, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       propertyPath: m_TagString
       value: LightHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586727869521802521, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1696962547621178709, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       propertyPath: m_Camera
@@ -1612,6 +1598,18 @@ PrefabInstance:
     - target: {fileID: 5572194462370044265, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607446986562955029, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607446986562955029, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5794827730246757205, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6633908135966895974, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       propertyPath: enemyObject
@@ -1729,12 +1727,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 432798149173050602, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4199255465133359220}
+    - targetCorrespondingSourceObject: {fileID: 432798149173050602, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4199255465133359222}
     - targetCorrespondingSourceObject: {fileID: 5794827730246757205, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4199255465133359226}
-    - targetCorrespondingSourceObject: {fileID: 8222499127928116595, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4199255465133359223}
   m_SourcePrefab: {fileID: 100100000, guid: 3488f82c01f955849b4ccbef855f6d3d, type: 3}
 --- !u!1 &4199255465133359215 stripped
 GameObject:
@@ -1818,13 +1816,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &4199255465133359223
+--- !u!135 &4199255465133359222
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515636464}
+  m_GameObject: {fileID: 4199255465133359219}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1837,7 +1835,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 23.2
+  m_Radius: 30.31
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4199255465133359226
 MonoBehaviour:
