@@ -1,22 +1,25 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameObject gun = null;
-    [SerializeField] Camera mainCamera = null;
-    [SerializeField] MeshRenderer gun_obj = null;
+    [SerializeField] GameObject reloadGun = null;   //リロードモーション用の銃モデル
+    [SerializeField] GameObject shootGun = null;    //射撃モーション用の銃モデル
+    [SerializeField] Camera mainCamera = null;      //
+    [SerializeField] MeshRenderer gun_obj = null;   //
     [SerializeField] float shootLenge = 20.0f;
     [SerializeField] float fireIngerval = 1.0f;
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 300.0f;
-    [SerializeField] float recoilPower = 50.0f;
+    [SerializeField] float recoilPower = 5.0f;
 
 
     const int MAX_FIRE_VALUE = 2;   //リロード無しでの射撃回数
 
     Rigidbody rb;
     Material gunMaterial;
-    Animator controller;
+    Animator ShootAnim;
+    Animation reloadAnim;
     Vector3 ADSPosition = new Vector3(0.0f, 0.393f, 0.25f);
     Vector3 hipPosition = new Vector3(0.2f, 0.35f, 0.45f);
     Vector3 moveDirection = Vector2.zero;
@@ -25,20 +28,29 @@ public class PlayerController : MonoBehaviour
     float cameraViewMin = 45.0f;
     float ADSSpeed = 5.0f;
     float currentSpeed = 0.0f;
+    float recoilTimer = 0.0f;
     float timer = 0.0f;
     int currentBulleValue = 10;      //所持している弾の総数
     int remainingBulletVaue = 0;    //射撃可能数(重心内の弾の数)
     bool isfirstFrame = true;
+    bool isReloading = false;
+    bool isRecoiling = false;
     bool isDown = false;
+
+    public int CurrentBulleValue { get => currentBulleValue; }
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = gun.GetComponent<Animator>();
-        timer = fireIngerval;
-        rb = GetComponent<Rigidbody>();
+        
+        ShootAnim = shootGun.GetComponent<Animator>();
+        reloadAnim = reloadGun.GetComponent<Animation>();
         gunMaterial = gun_obj.GetComponent<MeshRenderer>().material;
+        rb = GetComponent<Rigidbody>();
         remainingBulletVaue = MAX_FIRE_VALUE;
+        timer = fireIngerval;
+
+        reloadGun.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,7 +69,7 @@ public class PlayerController : MonoBehaviour
             {
                 Fire();
                 timer = 0.0f;
-                controller.SetTrigger("IsTrigger");
+                ShootAnim.SetTrigger("IsTrigger");
 
                 Debug.Log("Fire");
             }
@@ -65,14 +77,25 @@ public class PlayerController : MonoBehaviour
 
         if (InputManager.IsInputLeftButton())
         {
+            reloadGun.SetActive(true);
+            shootGun.SetActive(false);
             ReLoad();
         }
 
+        if (!isRecoiling) 
+        {
+            ADS();
+        }
+
+
         Move();
 
-        ADS();
-
-        Recoiling();
+        if (isRecoiling)
+        {
+            //往復分の時間を代入
+            recoilTimer = 2.0f;
+            Recoiling();
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -87,15 +110,8 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(-rb.velocity);
 
-        if (!isfirstFrame)
-        {
-            moveDirection = InputManager.InputLeftStickValue();
-            rotate = InputManager.InputRightStickValue();
-        }
-        else
-        {
-            isfirstFrame = false;
-        }
+        moveDirection = InputManager.InputLeftStickValue();
+        rotate = InputManager.InputRightStickValue();
 
         Quaternion rotation = transform.rotation;
 
@@ -116,8 +132,8 @@ public class PlayerController : MonoBehaviour
             //ズームイン
             mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
             //移動処理
-            Vector3 direction = ADSPosition - gun.transform.localPosition;
-            gun.transform.localPosition += direction * ADSSpeed * Time.deltaTime;
+            Vector3 direction = ADSPosition - shootGun.transform.localPosition;
+            shootGun.transform.localPosition += direction * ADSSpeed * Time.deltaTime;
             currentSpeed = moveSpeed / 2.0f;
         }
         else
@@ -127,8 +143,8 @@ public class PlayerController : MonoBehaviour
             mainCamera.fieldOfView += (cameraViewMax - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
 
             //ショットガン移動処理
-            Vector3 direction = hipPosition - gun.transform.localPosition;
-            gun.transform.localPosition += direction * ADSSpeed * Time.deltaTime;
+            Vector3 direction = hipPosition - shootGun.transform.localPosition;
+            shootGun.transform.localPosition += direction * ADSSpeed * Time.deltaTime;
             currentSpeed = moveSpeed;
         }
         mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, cameraViewMin, cameraViewMax);
@@ -140,6 +156,7 @@ public class PlayerController : MonoBehaviour
         {
             target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
         }
+        isRecoiling = true;
         remainingBulletVaue--;
     }
 
@@ -147,21 +164,40 @@ public class PlayerController : MonoBehaviour
     {
         if (remainingBulletVaue != MAX_FIRE_VALUE)
         {
-            remainingBulletVaue = MAX_FIRE_VALUE;
+            Debug.Log("リロード");
 
+            reloadAnim.Play();
+            isReloading = true;
+            remainingBulletVaue = MAX_FIRE_VALUE;
             currentBulleValue -= MAX_FIRE_VALUE - remainingBulletVaue;
+        }
+
+        if (!reloadAnim.IsPlaying("Take 001"))
+        {
+            isReloading = false;
+            reloadGun.SetActive(false);
+            shootGun.SetActive(true);
         }
     }
 
     void Recoiling()
     {
-        //if (mainCamera.transform.rotation.x < 5.0f || mainCamera.transform.rotation.x > 1e-4)
-        //{
-        //    mainCamera.transform.eulerAngles += new Vector3(isDown ? recoilPower : -recoilPower, 0.0f, 0.0f) * Time.deltaTime;
-        //}
-        //else
-        //{
-        //    isDown = true;
-        //}
+        if (recoilTimer <= 0.0f)
+        {
+            isRecoiling = false;
+            return;
+        }
+        else
+        {
+            recoilTimer -= Time.deltaTime;
+        }
+
+        if (!(mainCamera.transform.localEulerAngles.x >= 355.0f || mainCamera.transform.localEulerAngles.x == 0.0f))
+        {
+            isDown = !isDown;
+        }
+
+        mainCamera.transform.eulerAngles 
+            -= new Vector3(isDown ? -recoilPower : recoilPower, 0.0f, 0.0f) * Time.deltaTime;
     }
 }

@@ -25,14 +25,14 @@ public class EnemyLeg
         lengths.Clear();
         for (int i = 0; i < bones.Count - 1; i++)
         {
-            lengths.Add(Vector3.Distance(bones[i].position, bones[i + 1].position));
+            lengths.Add(Vector3.Distance(bones[i].transform.position, bones[i + 1].transform.position));
         }
 
         // ボーンの位置
         positions.Clear();
         for (int i = 0; i < bones.Count; i++)
         {
-            positions.Add(bones[i].position);
+            positions.Add(bones[i].transform.position);
         }
         maxIteration = bones.Count - 2;
     }
@@ -43,14 +43,14 @@ public class EnemyLeg
         // 現在のボーン位置をコピーしてくる
         for (int i = 0; i < bones.Count; i++)
         {
-            positions[i] = bones[i].position;
+            positions[i] = bones[i].transform.position;
         }
 
         // FABRIKでボーン位置を推定
         Vector3 basePosition = positions[0];
         float prevDistance = 0.0f;
 
-        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= 1.0f)
+        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= 0.1f)
         {
             tipPosition = target.transform.position;
         }
@@ -66,6 +66,7 @@ public class EnemyLeg
             //非常に小さい値なら処理を抜ける
             if (distance < 1e-6 || change < 1e-8)
             {
+                Debug.Log("out");
                 break;
             }
 
@@ -103,11 +104,11 @@ public class EnemyLeg
         // 推定したボーン位置から回転角を計算
         for (int i = 0; i < positions.Count - 1; i++)
         {
-            Vector3 origin = bones[i].position;
-            Vector3 current = bones[i + 1].position;
+            Vector3 origin = bones[i].transform.position;
+            Vector3 current = bones[i + 1].transform.position;
             Vector3 target = positions[i + 1];
             Quaternion delta = GetDeltaRotation(origin, current, target);
-            bones[i].rotation = delta * bones[i].rotation;
+            bones[i].transform.rotation = delta * bones[i].transform.rotation;
         }
     }
 
