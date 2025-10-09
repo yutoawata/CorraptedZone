@@ -70,11 +70,11 @@ public class PlayerController : MonoBehaviour
 
 
         Fire();
-        
 
+        ADS();
         if (!isRecoiling) 
         {
-            ADS();
+            
         }
 
         ReLoad();
