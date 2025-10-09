@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     Material gunMaterial;
     Animator shootAnim;
     Animator reloadAnim;
-    AnimatorStateInfo stateInfo;
     Vector3 ADSPosition = new Vector3(0.0f, 0.393f, 0.25f);
     Vector3 hipPosition = new Vector3(0.2f, 0.35f, 0.45f);
     Vector3 moveDirection = Vector2.zero;
@@ -165,9 +164,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(shootAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        if(shootAnim.GetCurrentAnimatorStateInfo(1).normalizedTime >= 1.0f)
         {
-
+            muzzleFlash.SetActive(false);
         }
     }
 
@@ -178,9 +177,6 @@ public class PlayerController : MonoBehaviour
             reloadGun.SetActive(true);
             shootGun.SetActive(false);
         }
-
-        Debug.Log(reloadAnim.GetCurrentAnimatorStateInfo(0).normalizedTime);
-        Debug.Log(stateInfo.IsName("Reload"));
 
         if (reloadAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {

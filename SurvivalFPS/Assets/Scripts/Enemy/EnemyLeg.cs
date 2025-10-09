@@ -10,6 +10,7 @@ public class EnemyLeg
     GameObject target;
     Vector3 tipPosition;
     int maxIteration = 0;     //ŠÖß”
+    float length = 1.5f;
 
     //•Ï”‰Šú‰»ˆ—
     public void initialized(List<Transform> bones_, GameObject target_)
@@ -50,7 +51,7 @@ public class EnemyLeg
         Vector3 basePosition = positions[0];
         float prevDistance = 0.0f;
 
-        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= 0.1f)
+        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= length)
         {
             tipPosition = target.transform.position;
         }
