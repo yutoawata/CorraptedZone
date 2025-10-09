@@ -388,11 +388,6 @@ MonoBehaviour:
   spawnRange: {x: 601.8, y: 0, z: 406.3}
   spawnRadius: 10
   spawnCount: 10
---- !u!137 &238112257 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 118062649025191779, guid: 15b64a88525b4644aa115818c5df38f4, type: 3}
-  m_PrefabInstance: {fileID: 103404286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245009954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309551000996678446, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
@@ -481,6 +476,14 @@ PrefabInstance:
     - target: {fileID: 2309551000996678446, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763040237606439614, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: moveSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3850846727285769996, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1379,7 +1382,7 @@ PrefabInstance:
     - target: {fileID: 4455524101086089487, guid: 6c0e562eb2f9da340ab696dbcb3b5516, type: 3}
       propertyPath: ShapeModule.m_SkinnedMeshRenderer
       value: 
-      objectReference: {fileID: 238112257}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
