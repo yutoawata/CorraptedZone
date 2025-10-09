@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour, IRayCastHit
 {
     LightHouseController lightHouseController;
     GameObject player;
     Rigidbody rb;
     [SerializeField]private float MoveSpeed;
-    [SerializeField] float damageTiem = 2;
+    [SerializeField] float damageExplosionTiem = 2;
+    [SerializeField] float damageBulletTiem = 2;
     [SerializeField] float playerTargetDis; // ìGÇ™ÉvÉåÉCÉÑÅ[Çí«Ç§ãóó£
     Vector3 targetPos = Vector3.zero;
     Vector3 targetRot = Vector3.zero;
     Vector3 movePos = Vector3.zero;
     float timer;
-    bool isHit;
+    bool isExplosionHit;
+    bool isBulletHit;
     float currentSpeed;
 
 
@@ -31,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(currentSpeed);
         float dis = Vector3.Distance(transform.position, player.transform.position);
         if (dis <= playerTargetDis)
         {
@@ -52,25 +55,41 @@ public class EnemyMovement : MonoBehaviour
 
 
         // îöî≠ÇéÛÇØÇΩÇÁìÆÇ´Ç™é~Ç‹ÇÈ
-        if (isHit)
+        if (isExplosionHit)
         {
             currentSpeed = 0;
             timer += Time.deltaTime;
-            if(timer >= damageTiem)
+            if(timer >= damageExplosionTiem)
             {
                 currentSpeed = MoveSpeed;
-                isHit = false;
+                isExplosionHit = false;
                 timer = 0;
             }
 
         }
+        else if (isBulletHit && !isExplosionHit)
+        {
+            currentSpeed = 0.5f;
+            timer += Time.deltaTime;
+            if (timer >= damageBulletTiem)
+            {
+                currentSpeed = MoveSpeed;
+                isBulletHit = false;
+                timer = 0;
+            }
+        }
     }
 
-    private void OnCollisionEnter(Collision other)
+    public void OnRaycastHit(RaycastHit hit)
     {
-        if (other.gameObject.CompareTag("Explosion"))
+        isBulletHit = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Explosion"))
         {
-            isHit = true;
+            isExplosionHit = true;
             Debug.Log("ìñÇΩÇ¡ÇΩÇÊ");
         }
     }

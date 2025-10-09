@@ -7,6 +7,8 @@ public class LightEmissionController : MonoBehaviour
 
     [Header("“”‘ä‚Ì‰ñ•œ”ÍˆÍ‚Ì”»’è")]
     [SerializeField] SphereCollider sphereCollider = null;
+    [SerializeField] SphereCollider sphereBarrier = null;
+    [SerializeField] SphereCollider sphereBarrier2 = null;
 
     [Header("”R—¿İ’è")]
     [SerializeField] float fuelMax = 100f;         // Å‘å”R—¿
@@ -24,6 +26,10 @@ public class LightEmissionController : MonoBehaviour
     [SerializeField] float lightHouseIntensityAtEmptyS = 0f;
     [SerializeField] float lightHouseTrrigerRadiusFull = 11.69f;
     [SerializeField] float lightHouseTrrigerRadiusEmppty = 0.1f; // “”‘äüˆÍ‚ğÆ‚ç‚·–¾‚©‚è(ƒvƒŒƒCƒ„[‚Ì”R—¿‰ñ•œ”ÍˆÍ)‚Ì”»’è‚à¬‚³‚­‚·‚é
+    [SerializeField] float lightHouseBarrierRadiusFull = 0.1f; 
+    [SerializeField] float lightHouseBarrierRadiusEmppty = 0.1f; 
+    [SerializeField] float lightHouseBarrier2RadiusFull = 0.1f; 
+    [SerializeField] float lightHouseBarrier2RadiusEmpty = 0.1f;
     [SerializeField] float lightHouseSpotAngleAtFull = 80f;
     [SerializeField] float lightHouseSpotAngleAtEmpty = 1f;
     [SerializeField] float lightHousePointRangeAtFull = 17.7f;
@@ -88,6 +94,8 @@ public class LightEmissionController : MonoBehaviour
             lightingPoint.range = Mathf.Lerp(lightHousePointRangeAtEmpty, lightHousePointRangeAtFull, t);
             lightingSpot.spotAngle = Mathf.Lerp(lightHouseSpotAngleAtEmpty, lightHouseSpotAngleAtFull, t);
             sphereCollider.radius = Mathf.Lerp(lightHouseTrrigerRadiusEmppty, lightHouseTrrigerRadiusFull, t);
+            sphereBarrier.radius = Mathf.Lerp(lightHouseBarrierRadiusEmppty, lightHouseBarrierRadiusFull, t);
+            sphereBarrier2.radius = Mathf.Lerp(lightHouseBarrier2RadiusEmpty, lightHouseBarrier2RadiusFull, t);
         }
         else
         {

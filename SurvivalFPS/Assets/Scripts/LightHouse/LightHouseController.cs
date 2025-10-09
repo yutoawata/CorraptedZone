@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LightHouseController : MonoBehaviour
 {
     [SerializeField]private float spotChangeSpan;       //切り替え間隔
     [SerializeField]private GameObject child;
+    [SerializeField] GameObject barrier;
     [SerializeField]private EnemyManager enemyManager;
     [SerializeField]private Transform[] targetItem;     //アイテムの座標取得に使用
     private int targetNumber;             //照らすアイテムの番号
@@ -54,6 +56,7 @@ public class LightHouseController : MonoBehaviour
 
         //位置座標から角度に変換
         Quaternion rotation = Quaternion.LookRotation(flatTarget, Vector3.right);
+        barrier.transform.position = targetItem[targetNumber].position;
 
         // 追加 現在の角度と目標回転角の差を格納
         float angleDeff = Quaternion.Angle(transform.rotation, rotation);
