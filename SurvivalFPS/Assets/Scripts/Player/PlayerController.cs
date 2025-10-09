@@ -1,12 +1,11 @@
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject reloadGun = null;   //リロードモーション用の銃モデル
     [SerializeField] GameObject shootGun = null;    //射撃モーション用の銃モデル
-    //[SerializeField] GameObject 
+    [SerializeField] GameObject muzzleFlash = null; //
     [SerializeField] Camera mainCamera = null;      //
     [SerializeField] MeshRenderer gun_obj = null;   //
     [SerializeField] float shootLenge = 20.0f;
@@ -57,6 +56,7 @@ public class PlayerController : MonoBehaviour
         remainingBulletVaue = MAX_FIRE_VALUE;
         timer = fireIngerval;
 
+        muzzleFlash.SetActive(false);
         reloadGun.SetActive(false);
     }
 
@@ -68,20 +68,8 @@ public class PlayerController : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        if (InputManager.IsInputRightTrigger())
-        {
-            Debug.Log("トリガー");
 
-            if (timer >= fireIngerval && remainingBulletVaue > 0)
-            {
-                Fire();
-                timer = 0.0f;
-                ShootAnim.SetTrigger("IsTrigger");
-
-                Debug.Log("Fire");
-            }
-        }
-
+        Fire();
         
 
         if (!isRecoiling) 
@@ -161,12 +149,23 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
-        if(Physics.Raycast(mainCamera.transform.position,transform.forward,out RaycastHit target, shootLenge))
+        if (InputManager.IsInputRightTrigger())
         {
-            target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
+            if (timer >= fireIngerval && remainingBulletVaue > 0)
+            {
+                muzzleFlash.SetActive(true);
+                if (Physics.Raycast(mainCamera.transform.position, transform.forward, out RaycastHit target, shootLenge))
+                {
+                    target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
+                }
+                isRecoiling = true;
+                remainingBulletVaue--;
+                timer = 0.0f;
+                ShootAnim.SetTrigger("IsTrigger");
+            }
         }
-        isRecoiling = true;
-        remainingBulletVaue--;
+
+        if()
     }
 
     void ReLoad()
