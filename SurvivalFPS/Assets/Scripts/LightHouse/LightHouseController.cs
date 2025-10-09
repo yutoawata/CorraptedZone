@@ -10,6 +10,8 @@ public class LightHouseController : MonoBehaviour
     private int spotIndex;              //アイテム配列の要素数の取得に使用
     [SerializeField] private float OFF_SPAWNANGLE = 200.0f;
     [SerializeField] private float ON_SPAWNANGLE = 100.0f;
+    float adjY = 83.6f;
+    float adjZ = 1.6f;
 
     // 追加 スポーンを管理する変数
     private bool hasSpawned;
@@ -49,7 +51,7 @@ public class LightHouseController : MonoBehaviour
 
 
         // 子はローカルX回転だけ動かす
-        child.transform.localRotation = Quaternion.Euler(0, 90, -pitch);
+        child.transform.localRotation = Quaternion.Euler(0, adjY, -pitch + adjZ);
 
         //位置座標から角度に変換
         Quaternion rotation = Quaternion.LookRotation(flatTarget, Vector3.right);

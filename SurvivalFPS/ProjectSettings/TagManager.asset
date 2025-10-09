@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - LightHouse
+  - Gasolene
+  - Ammo
   layers:
   - Default
   - TransparentFX
