@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] private GameObject exitCanvas;
     [SerializeField] private LightEmissionController lightEmissionController;
+    [SerializeField] private LightEmissionController playerEmissionController;
     bool isOpenPause;
     bool isReturnGame;
     bool isExitGame;
@@ -68,7 +69,7 @@ public class SceneController : MonoBehaviour
             }
         }
 
-        if (lightEmissionController.Fuel >= 0.0f)
+        if (lightEmissionController.Fuel <= 0.0f || playerEmissionController.Fuel <= 0.0f)
         {
             SceneManager.LoadScene("GameOverScene");
         }

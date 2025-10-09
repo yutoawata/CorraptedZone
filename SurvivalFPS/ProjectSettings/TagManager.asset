@@ -10,6 +10,7 @@ TagManager:
   - Ammo
   - 'Generator '
   - Explosion
+  - Generator
   layers:
   - Default
   - TransparentFX

@@ -2438,13 +2438,16 @@ MonoBehaviour:
   reloadGun: {fileID: 5126118236453341259}
   shootGun: {fileID: 1111211203725247622}
   muzzleFlash: {fileID: 0}
+  reticle: {fileID: 0}
   mainCamera: {fileID: 4522493360676187919}
+  lightEmissionController: {fileID: 0}
   gun_obj: {fileID: 6813139380423563589}
   shootLenge: 20
   fireIngerval: 1
   moveSpeed: 20
   rotateSpeed: 60
   recoilPower: 50
+  interactTime: 2
 --- !u!114 &6751047083858311135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,8 +3419,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8590467
-  m_Range: 15.943834
+  m_Intensity: 0.89679044
+  m_Range: 16.600418
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

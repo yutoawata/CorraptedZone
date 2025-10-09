@@ -7,16 +7,17 @@ public class PlyerBulletUI : MonoBehaviour
 {
     [SerializeField] PlayerController playerController = null;
 
-    Text text = null;
+    [SerializeField] Text textBullet = null;
+    [SerializeField] Text doubleBullet = null;
 
     private void Awake()
     {
-        text = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = playerController.CurrentBulleValue.ToString();
+        textBullet.text = "écíeêî : " + playerController.AmmoValue.ToString();
+        doubleBullet.text = "î≠éÀâ¬î\êî : " + playerController.RemainingBulletVaue.ToString();
     }
 }

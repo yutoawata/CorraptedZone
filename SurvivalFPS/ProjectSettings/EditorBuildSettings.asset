@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 542351d7ba780be448d47b467d025685
   - enabled: 1
-    path: Assets/Scenes/Kanazawa.unity
-    guid: 1dd56f3bcf929c34fb7eb4a60135b980
+    path: Assets/Scenes/Tamura.unity
+    guid: 85ae49f61f865634483ff74d62cd1d38
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: c4a30281520166d4da2fb0ddc2d30b74

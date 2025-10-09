@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour, IRayCastHit
 {
     LightHouseController lightHouseController;
+    LightEmissionController playerEmission;
     GameObject player;
     Rigidbody rb;
     [SerializeField]private float MoveSpeed;
@@ -26,6 +27,7 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
     {
         currentSpeed = MoveSpeed;
         player = GameObject.Find("Player");
+        playerEmission = player.GetComponent<LightEmissionController>();
         lightHouseController = GameObject.Find("LightHouse").GetComponentInChildren<LightHouseController>();
         rb = GetComponent<Rigidbody>();
     }
@@ -90,7 +92,14 @@ public class EnemyMovement : MonoBehaviour, IRayCastHit
         if (other.CompareTag("Explosion"))
         {
             isExplosionHit = true;
-            Debug.Log("“–‚½‚Á‚½‚æ");
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerEmission.AddFuel(-300);
         }
     }
 
