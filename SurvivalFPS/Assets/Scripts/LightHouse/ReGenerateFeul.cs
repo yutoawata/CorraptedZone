@@ -12,6 +12,7 @@ public class ReGenerateFuel : MonoBehaviour
         {
             emissionController.SetRegenerateing(true); // ‰ñ•œ’†‚É‚·‚é
             emissionController.AddFuel(regeneValue); // ‰ñ•œ‚³‚¹‚é
+            Debug.Log("’Ê‚Á‚½‚æ");
         }
     }
 

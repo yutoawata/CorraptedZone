@@ -69,11 +69,6 @@ public class LightEmissionController : MonoBehaviour
 
             ApplyLightFromFuel();
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetFuelRatio(200);
-        }
     }
 
     void ApplyLightFromFuel()

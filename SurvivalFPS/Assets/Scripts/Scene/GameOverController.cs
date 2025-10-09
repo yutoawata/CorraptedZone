@@ -35,7 +35,7 @@ public class GameOverController : MonoBehaviour
         }
         if (isRestartGame)
         {
-            SceneManager.LoadScene("Kanazawa");
+            SceneManager.LoadScene("Tamura");
         }
     }
 }

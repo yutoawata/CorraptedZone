@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject muzzleFlash = null; //
     [SerializeField] GameObject reticle = null;
     [SerializeField] Camera mainCamera = null;      //
+    [SerializeField] LightEmissionController lightEmissionController = null;
     [SerializeField] MeshRenderer gun_obj = null;   //
     [SerializeField] float shootLenge = 20.0f;
     [SerializeField] float fireIngerval = 1.0f;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
 
     const int MAX_FIRE_VALUE = 2;   //リロード無しでの射撃回数
+    const int MAX_AMMO_VALUE = 100;
 
     Rigidbody rb;
     Material gunMaterial;
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
     int currentBulleValue = 10;      //所持している弾の総数
     int remainingBulletVaue = 0;    //射撃可能数(重心内の弾の数)
     int fuelValue = 0;
+    int ammoValue = 10;
     bool isReloading = false;
     bool isRecoiling = false;
     bool isDown = false;
@@ -43,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
 
     public int CurrentBulleValue { get => currentBulleValue; }
+    public int RemainingBulletVaue { get => remainingBulletVaue;}
+    public int AmmoValue { get => ammoValue;}
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +81,8 @@ public class PlayerController : MonoBehaviour
             Move();
         }
 
+        Debug.Log(currentBulleValue);
+
         if (isRecoiling)
         {
             //往復分の時間を代入
@@ -89,6 +96,16 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Gasolene"))
         {
             fuelValue++;
+        }
+
+        if (other.CompareTag("Ammo"))
+        {
+            Debug.Log("アもです");
+            ammoValue++;
+            if(ammoValue >= MAX_AMMO_VALUE)
+            {
+                ammoValue = MAX_AMMO_VALUE;
+            }
         }
     }
 
@@ -104,6 +121,7 @@ public class PlayerController : MonoBehaviour
                     {
                         fuelValue--;
                     }
+                    lightEmissionController.AddFuel(500);
                     Debug.Log("DD");
                 }
                 else
@@ -164,28 +182,29 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
-        if (!shootAnim.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
+        if (ammoValue >= 0)
         {
-            muzzleFlash.SetActive(false);
-        }
-
-        if (InputManager.IsInputRightTrigger())
-        {
-            if (timer >= fireIngerval && remainingBulletVaue > 0)
+            if (!shootAnim.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
             {
-                muzzleFlash.SetActive(true);
-                if (Physics.Raycast(mainCamera.transform.position, transform.forward, out RaycastHit target, shootLenge))
+                muzzleFlash.SetActive(false);
+            }
+
+            if (InputManager.IsInputRightTrigger())
+            {
+                if (timer >= fireIngerval && remainingBulletVaue > 0)
                 {
-                    target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
+                    muzzleFlash.SetActive(true);
+                    if (Physics.Raycast(mainCamera.transform.position, transform.forward, out RaycastHit target, shootLenge))
+                    {
+                        target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
+                    }
+                    isRecoiling = true;
+                    remainingBulletVaue--;
+                    timer = 0.0f;
+                    shootAnim.SetTrigger("IsTrigger");
                 }
-                isRecoiling = true;
-                remainingBulletVaue--;
-                timer = 0.0f;
-                shootAnim.SetTrigger("IsTrigger");
             }
         }
-
-        
     }
 
     void ReLoad()
@@ -204,7 +223,9 @@ public class PlayerController : MonoBehaviour
             {
                 isReloading = true;
                 remainingBulletVaue = MAX_FIRE_VALUE;
-                currentBulleValue -= MAX_FIRE_VALUE - remainingBulletVaue;
+                //currentBulleValue -= MAX_FIRE_VALUE - remainingBulletVaue;
+                //ammoValue -= MAX_FIRE_VALUE - remainingBulletVaue;
+                ammoValue -= 2;
             }
 
             isReloading = false;

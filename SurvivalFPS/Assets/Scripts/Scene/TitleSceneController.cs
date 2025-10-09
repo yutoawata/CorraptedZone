@@ -11,7 +11,7 @@ public class TitleSceneController : MonoBehaviour
     {
         if(InputManager.IsInputDownButton())
         {
-            SceneManager.LoadScene("Kanazawa");
+            SceneManager.LoadScene("Tamura");
         }
         if (InputManager.IsInputRightButton())
         {

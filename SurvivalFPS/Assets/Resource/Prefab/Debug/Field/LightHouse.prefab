@@ -87,6 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   sphereCollider: {fileID: 5607446986562955029}
+  sphereBarrier: {fileID: 0}
+  sphereBarrier2: {fileID: 0}
   fuelMax: 1000
   startFuel: 1000
   minutesToEmpty: 5
@@ -98,6 +100,10 @@ MonoBehaviour:
   lightHouseIntensityAtEmptyS: 0
   lightHouseTrrigerRadiusFull: 11.69
   lightHouseTrrigerRadiusEmppty: 0.1
+  lightHouseBarrierRadiusFull: 0.1
+  lightHouseBarrierRadiusEmppty: 0.1
+  lightHouseBarrier2RadiusFull: 0.1
+  lightHouseBarrier2RadiusEmpty: 0.1
   lightHouseSpotAngleAtFull: 40
   lightHouseSpotAngleAtEmpty: 1
   lightHousePointRangeAtFull: 28.47
@@ -860,6 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spotChangeSpan: 50
   child: {fileID: 1544818937918712315}
+  barrier: {fileID: 0}
   enemyManager: {fileID: 0}
   targetItem:
   - {fileID: 0}
@@ -887,7 +894,7 @@ GameObject:
   - component: {fileID: 287458456720864568}
   m_Layer: 0
   m_Name: o_bg_011_generator_01_01
-  m_TagString: Untagged
+  m_TagString: 'Generator '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
