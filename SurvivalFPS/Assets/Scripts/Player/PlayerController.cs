@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("Ammo"))
         {
-            Debug.Log("ƒA‚à‚Å‚·");
+            
             ammoValue++;
             if(ammoValue >= MAX_AMMO_VALUE)
             {
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
                     {
                         fuelValue--;
                     }
-                    lightEmissionController.AddFuel(500);
+                    lightEmissionController.AddFuel(40);
                     Debug.Log("DD");
                 }
                 else

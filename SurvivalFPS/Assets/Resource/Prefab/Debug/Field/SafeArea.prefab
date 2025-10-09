@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2626645903286959386}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: StreetLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 910125313879145442}
   - component: {fileID: 4255534084108088391}
   - component: {fileID: 2083555817415803021}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: o_bg_009_streetlight_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,8 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6729083641813501491}
-  - component: {fileID: 4499889334277697177}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: SafeArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,27 +154,6 @@ Transform:
   - {fileID: 3651926789192966796}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4499889334277697177
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592657433796590602}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 4.22
-  m_Center: {x: 2.02, y: 0.68, z: 0.64}
 --- !u!1 &1290271418590964357
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +165,7 @@ GameObject:
   - component: {fileID: 937565460368825741}
   - component: {fileID: 3784156188084908567}
   - component: {fileID: 8019774062150813589}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: o_bg_008_woodplate_01_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,6 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3651926789192966796}
   - component: {fileID: 246466008052660482}
+  - component: {fileID: 2934234732152119143}
   m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
@@ -354,6 +333,27 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!65 &2934234732152119143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274144652361493010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.193783, y: 6.972452, z: 10.568312}
+  m_Center: {x: 0.5377941, y: 0.9107399, z: -0.44397354}
 --- !u!1 &3017433161610644427
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 1514362041886187220}
   - component: {fileID: 3666192918712347166}
   - component: {fileID: 6649432383229526786}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: O_CR_001_kibako_01_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 5111140273975349458}
   - component: {fileID: 8160999070969716599}
   - component: {fileID: 6243473576291314621}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: o_bg_008_woodplate_01_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,11 +560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199641060311911370, guid: 758dbf3eb52f6a84c894ffec0a6b4c49, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6372246274184814116, guid: 758dbf3eb52f6a84c894ffec0a6b4c49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.618
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 6372246274184814116, guid: 758dbf3eb52f6a84c894ffec0a6b4c49, type: 3}
       propertyPath: m_LocalPosition.y
@@ -604,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7938385071480438093, guid: 758dbf3eb52f6a84c894ffec0a6b4c49, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
