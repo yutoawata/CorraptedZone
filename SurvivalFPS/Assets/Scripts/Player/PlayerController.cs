@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject reloadGun = null;   //リロードモーション用の銃モデル
     [SerializeField] GameObject shootGun = null;    //射撃モーション用の銃モデル
     [SerializeField] GameObject muzzleFlash = null; //
+    [SerializeField] GameObject reticle = null;
     [SerializeField] Camera mainCamera = null;      //
     [SerializeField] MeshRenderer gun_obj = null;   //
     [SerializeField] float shootLenge = 20.0f;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 20.0f;
     [SerializeField] float rotateSpeed = 300.0f;
     [SerializeField] float recoilPower = 5.0f;
+    [SerializeField] float interactTime = 2.0f;
 
 
     const int MAX_FIRE_VALUE = 2;   //リロード無しでの射撃回数
@@ -34,7 +36,6 @@ public class PlayerController : MonoBehaviour
     int currentBulleValue = 10;      //所持している弾の総数
     int remainingBulletVaue = 0;    //射撃可能数(重心内の弾の数)
     int fuelValue = 0;
-    bool isfirstFrame = true;
     bool isReloading = false;
     bool isRecoiling = false;
     bool isDown = false;
@@ -124,6 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         if (InputManager.IsInputLeftTrigger())
         {
+            reticle.SetActive(false);
             gunMaterial.SetFloat("_OutlineWidth", 0.0f);
             //ズームイン
             mainCamera.fieldOfView += (cameraViewMin - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
@@ -134,6 +136,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            reticle.SetActive(true);
             gunMaterial.SetFloat("_OutlineWidth", 0.001f);
             //ズームアウト
             mainCamera.fieldOfView += (cameraViewMax - mainCamera.fieldOfView) * Time.deltaTime * 5.0f;
