@@ -107,9 +107,10 @@ public class PlayerController : MonoBehaviour
                 if (!isInteract)
                 {
                     fuelValue--;
-                    isInteract = true;
+                    lightEmissionController.AddFuel(recoveryFuelValue);
+                    
                 }
-                lightEmissionController.AddFuel(recoveryFuelValue);
+                isInteract = true;
 
             }
             else
@@ -218,7 +219,6 @@ public class PlayerController : MonoBehaviour
             if (remainingAmmoValue != MAX_FIRE_VALUE)
             {
                 isReloading = true;
-                
 
                 if(ammoValue - MAX_FIRE_VALUE > 0)
                 {
