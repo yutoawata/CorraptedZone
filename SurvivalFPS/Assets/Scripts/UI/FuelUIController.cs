@@ -8,9 +8,11 @@ public class FuelUIController : MonoBehaviour
     [SerializeField] Text fuelText = null;
     [SerializeField] PlayerController playerController = null;
 
-    public void UpdateFuelUI()
+    int fuelValue = 0;
+
+    private void Update()
     {
-        int fuelValue = playerController.FuelValue;
-        fuelText.text = "”R—¿ : " + fuelValue;
+        fuelValue = playerController.FuelValue;
+        fuelText.text = "”R—¿ : " +  fuelValue.ToString();
     }
 }
