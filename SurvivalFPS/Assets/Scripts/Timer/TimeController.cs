@@ -35,7 +35,7 @@ public class TimeController : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60f);
         int seconds = Mathf.FloorToInt(elapsedTime % 60f);
-        timeText.text = minutes + ":" + seconds;
+        timeText.text = "ê∂ë∂éûä‘ : " + minutes + ":" + seconds.ToString("00");
     }
 
     public void StartTimer()

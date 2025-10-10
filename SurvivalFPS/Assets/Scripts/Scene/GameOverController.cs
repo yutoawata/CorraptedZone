@@ -25,7 +25,7 @@ public class GameOverController : MonoBehaviour
         float time = timeController.GetElapsedTime();
         int minutes = Mathf.FloorToInt(time / 60f);
         int seconds = Mathf.FloorToInt(time % 60f);
-        timeText.text = minutes + ":" + seconds;
+        timeText.text = "ê∂ë∂éûä‘ : " + minutes + ":" + seconds.ToString("00");
 
         isReturnTitle = false;
         isRestartGame = false;
