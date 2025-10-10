@@ -215,8 +215,8 @@ public class PlayerController : MonoBehaviour
 
                 if(ammoValue - MAX_FIRE_VALUE > 0)
                 {
-                    remainingAmmoValue = MAX_FIRE_VALUE;
                     ammoValue -= MAX_FIRE_VALUE - remainingAmmoValue;
+                    remainingAmmoValue = MAX_FIRE_VALUE;
                 }
                 else
                 {
