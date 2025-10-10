@@ -203,8 +203,11 @@ public class PlayerController : MonoBehaviour
     {
         if (InputManager.IsInputLeftButton())
         {
-            reloadGun.SetActive(true);
-            shootGun.SetActive(false);
+            if (AmmoValue > 0 && remainingAmmoValue < MAX_FIRE_VALUE)
+            {
+                reloadGun.SetActive(true);
+                shootGun.SetActive(false);
+            }
         }
 
         if (reloadAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
