@@ -21,6 +21,7 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         timeController.StartTimer();
         exitCanvas.SetActive(false);
         ResetBool();
