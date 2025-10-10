@@ -602,7 +602,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "GoTitle :  X or \u3007"
+  m_Text: "ReturnTitle :  X or \u25B3"
 --- !u!222 &1094759857
 CanvasRenderer:
   m_ObjectHideFlags: 0
