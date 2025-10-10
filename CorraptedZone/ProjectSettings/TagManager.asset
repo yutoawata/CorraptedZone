@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - LightHouse
+  - Gasolene
+  - Ammo
+  - 'Generator '
+  - Explosion
+  - Generator
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Obstacles
+  - Water
+  - UI
+  - Mf
+  - Gun
+  - Explosion
+  - SafeArea
+  - Player
+  - Enemy
+  - TelePhonePole
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
