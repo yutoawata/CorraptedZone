@@ -18,6 +18,6 @@ public class PlyerBulletUI : MonoBehaviour
     void Update()
     {
         textBullet.text = "c’e” : " + playerController.AmmoValue.ToString();
-        doubleBullet.text = "”­Ë‰Â”\” : " + playerController.RemainingBulletVaue.ToString();
+        doubleBullet.text = "”­Ë‰Â”\” : " + playerController.RemainingAmmoValue.ToString();
     }
 }

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float rotateSpeed = 300.0f;
     [SerializeField] float recoilPower = 5.0f;
     [SerializeField] float interactTime = 2.0f;
-
+    [SerializeField] float recoveryFuelValue = 40.0f;
 
     const int MAX_FIRE_VALUE = 2;   //リロード無しでの射撃回数
     const int MAX_AMMO_VALUE = 100;
@@ -33,21 +33,15 @@ public class PlayerController : MonoBehaviour
     float cameraViewMin = 45.0f;
     float ADSSpeed = 5.0f;
     float currentSpeed = 0.0f;
-    float recoilTimer = 0.0f;
     float timer = 0.0f;
-    int currentBulleValue = 10;      //所持している弾の総数
-    int remainingBulletVaue = 0;    //射撃可能数(重心内の弾の数)
+    int remainingAmmoValue = 0;    //射撃可能数(重心内の弾の数)
     int fuelValue = 0;
     int ammoValue = 10;
     bool isReloading = false;
-    bool isRecoiling = false;
-    bool isDown = false;
     bool isInteract = false;
 
-
-    public int CurrentBulleValue { get => currentBulleValue; }
-    public int RemainingBulletVaue { get => remainingBulletVaue;}
-    public int AmmoValue { get => ammoValue;}
+    public int RemainingAmmoValue { get => remainingAmmoValue; }
+    public int AmmoValue { get => ammoValue; }
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +52,7 @@ public class PlayerController : MonoBehaviour
         gunMaterial = gun_obj.GetComponent<MeshRenderer>().material;
         rb = GetComponent<Rigidbody>();
        
-        remainingBulletVaue = MAX_FIRE_VALUE;
+        remainingAmmoValue = MAX_FIRE_VALUE;
         timer = fireIngerval;
 
         muzzleFlash.SetActive(false);
@@ -80,15 +74,6 @@ public class PlayerController : MonoBehaviour
             ReLoad();
             Move();
         }
-
-        Debug.Log(currentBulleValue);
-
-        if (isRecoiling)
-        {
-            //往復分の時間を代入
-            recoilTimer = 2.0f;
-            //Recoiling();
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -100,7 +85,6 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("Ammo"))
         {
-            
             ammoValue++;
             if(ammoValue >= MAX_AMMO_VALUE)
             {
@@ -113,21 +97,24 @@ public class PlayerController : MonoBehaviour
     {
         if(other.CompareTag("Generator"))
         {
-            if(fuelValue > 0)
+            if(fuelValue <= 0)
             {
-                if (InputManager.IsInputRightButton())
+                return;
+            }
+
+            if (InputManager.IsInputRightButton())
+            {
+                if (!isInteract)
                 {
-                    if (!isInteract)
-                    {
-                        fuelValue--;
-                    }
-                    lightEmissionController.AddFuel(40);
-                    Debug.Log("DD");
+                    fuelValue--;
+                    isInteract = true;
                 }
-                else
-                {
-                    isInteract = false;
-                }
+                lightEmissionController.AddFuel(recoveryFuelValue);
+
+            }
+            else
+            {
+                isInteract = false;
             }
         }
 
@@ -154,6 +141,11 @@ public class PlayerController : MonoBehaviour
 
     void ADS()
     {
+        if (isReloading)
+        {
+            return;
+        }
+
         if (InputManager.IsInputLeftTrigger())
         {
             //reticle.SetActive(false);
@@ -182,33 +174,39 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
-        if (ammoValue >= 0)
+        if (!shootAnim.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
         {
-            if (!shootAnim.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
-            {
-                muzzleFlash.SetActive(false);
-            }
+            muzzleFlash.SetActive(false);
+        }
 
-            if (InputManager.IsInputRightTrigger())
+        if (remainingAmmoValue <= 0)
+        {
+            return;
+        }
+
+        if (InputManager.IsInputRightTrigger())
+        {
+            if (timer >= fireIngerval)
             {
-                if (timer >= fireIngerval && remainingBulletVaue > 0)
+                muzzleFlash.SetActive(true);
+                if (Physics.Raycast(mainCamera.transform.position, transform.forward, out RaycastHit target, shootLenge))
                 {
-                    muzzleFlash.SetActive(true);
-                    if (Physics.Raycast(mainCamera.transform.position, transform.forward, out RaycastHit target, shootLenge))
-                    {
-                        target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
-                    }
-                    isRecoiling = true;
-                    remainingBulletVaue--;
-                    timer = 0.0f;
-                    shootAnim.SetTrigger("IsTrigger");
+                    target.collider.gameObject.SendMessage("OnRaycastHit", target, SendMessageOptions.DontRequireReceiver);
                 }
+                remainingAmmoValue--;
+                timer = 0.0f;
+                shootAnim.SetTrigger("IsTrigger");
             }
         }
     }
 
     void ReLoad()
     {
+        if (ammoValue <= 0)
+        {
+            return;
+        }
+
         if (InputManager.IsInputLeftButton())
         {
             reloadGun.SetActive(true);
@@ -216,42 +214,27 @@ public class PlayerController : MonoBehaviour
         }
 
         if (reloadAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
-        {
-            Debug.Log("re");
-            
-            if (remainingBulletVaue != MAX_FIRE_VALUE)
+        {   
+            if (remainingAmmoValue != MAX_FIRE_VALUE)
             {
                 isReloading = true;
-                remainingBulletVaue = MAX_FIRE_VALUE;
-                //currentBulleValue -= MAX_FIRE_VALUE - remainingBulletVaue;
-                //ammoValue -= MAX_FIRE_VALUE - remainingBulletVaue;
-                ammoValue -= 2;
+                
+
+                if(ammoValue - MAX_FIRE_VALUE > 0)
+                {
+                    remainingAmmoValue = MAX_FIRE_VALUE;
+                    ammoValue -= MAX_FIRE_VALUE - remainingAmmoValue;
+                }
+                else
+                {
+                    remainingAmmoValue = ammoValue;
+                    ammoValue = 0;
+                }
             }
 
             isReloading = false;
             reloadGun.SetActive(false);
             shootGun.SetActive(true);
         }
-    }
-
-    void Recoiling()
-    {
-        if (recoilTimer <= 0.0f)
-        {
-            isRecoiling = false;
-            return;
-        }
-        else
-        {
-            recoilTimer -= Time.deltaTime;
-        }
-
-        if (!(mainCamera.transform.localEulerAngles.x >= 355.0f || mainCamera.transform.localEulerAngles.x == 0.0f))
-        {
-            isDown = !isDown;
-        }
-
-        mainCamera.transform.eulerAngles 
-            -= new Vector3(isDown ? -recoilPower : recoilPower, 0.0f, 0.0f) * Time.deltaTime;
     }
 }

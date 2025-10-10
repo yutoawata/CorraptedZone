@@ -66,7 +66,6 @@ public class EnemyLeg
             //”ñí‚É¬‚³‚¢’l‚È‚çˆ—‚ğ”²‚¯‚é
             if (distance < 1e-6 || change < 1e-8)
             {
-                Debug.Log("out");
                 break;
             }
 
