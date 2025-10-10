@@ -38,7 +38,7 @@ public class ExplosionDrumCan : MonoBehaviour, IRayCastHit
         if (!isActive)
         {
             timer += Time.deltaTime;
-            if (timer >= 10)
+            if (timer >= 20)
             {
                 isActive = true;
                 child.SetActive(true);
