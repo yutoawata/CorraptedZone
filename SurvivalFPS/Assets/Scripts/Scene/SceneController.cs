@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject exitCanvas;
     [SerializeField] private LightEmissionController lightEmissionController;
     [SerializeField] private LightEmissionController playerEmissionController;
+    [SerializeField] private TimeController timeController;
     bool isOpenPause;
     bool isReturnGame;
     bool isExitGame;
@@ -20,6 +21,7 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeController.StartTimer();
         exitCanvas.SetActive(false);
         ResetBool();
     }

@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverController : MonoBehaviour
 {
+    [SerializeField] Text timeText = null;
+
     bool isReturnTitle;
     bool isRestartGame;
 
+    TimeController timeController;
 
+    private void Awake()
+    {
+        timeController = FindAnyObjectByType<TimeController>();
+        timeController.StopTimer();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        float time = timeController.GetElapsedTime();
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
+        timeText.text = minutes + ":" + seconds;
+
         isReturnTitle = false;
         isRestartGame = false;
     }
