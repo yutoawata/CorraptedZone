@@ -70,10 +70,22 @@ public class PlayerController : MonoBehaviour
 
         if (!isInteract)
         {
-            Fire();
-            ADS();
-            ReLoad();
-            Move();
+            if (Time.timeScale > 0.0f)
+            {
+                Fire();
+                ADS();
+                ReLoad();
+                Move();
+            }
+           
+        }
+
+        if (isInteract)
+        {
+            if (!InputManager.IsInputRightButton())
+            {
+                isInteract = false;
+            }
         }
     }
 
@@ -110,10 +122,6 @@ public class PlayerController : MonoBehaviour
                     }
                     isInteract = true;
                 }
-            }
-            else
-            {
-                isInteract = false;
             }
         }
 
