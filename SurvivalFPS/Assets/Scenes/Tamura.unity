@@ -421,6 +421,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1837630050}
   fixedY: 0.5
+  forwardDistance: 0.5
+  sideOffset: 0
+  smooth: 0
+  followLerp: 12
 --- !u!1001 &353905064
 PrefabInstance:
   m_ObjectHideFlags: 0
