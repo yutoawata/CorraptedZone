@@ -97,21 +97,18 @@ public class PlayerController : MonoBehaviour
     {
         if(other.CompareTag("Generator"))
         {
-            if(fuelValue <= 0)
-            {
-                return;
-            }
 
             if (InputManager.IsInputRightButton())
             {
                 if (!isInteract)
                 {
-                    fuelValue--;
-                    lightEmissionController.AddFuel(recoveryFuelValue);
-                    
+                    if (fuelValue > 0)
+                    {
+                        fuelValue--;
+                        lightEmissionController.AddFuel(recoveryFuelValue);
+                    }
+                    isInteract = true;
                 }
-                isInteract = true;
-
             }
             else
             {
