@@ -2687,6 +2687,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
+      propertyPath: recoveryFuelValue
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701175431022426846, guid: 1989e16b5cc903040b709c1ac84fa7de, type: 3}
       propertyPath: lightEmissionController
       value: 
       objectReference: {fileID: 4199255465133359220}
