@@ -15,6 +15,7 @@ public class GameOverController : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.visible = false;
         timeController = FindAnyObjectByType<TimeController>();
         timeController.StopTimer();
     }

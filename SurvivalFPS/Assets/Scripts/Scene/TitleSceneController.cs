@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class TitleSceneController : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
 
     // Update is called once per frame
     void Update()
