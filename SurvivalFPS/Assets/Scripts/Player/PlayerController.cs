@@ -97,20 +97,18 @@ public class PlayerController : MonoBehaviour
     {
         if(other.CompareTag("Generator"))
         {
-            if(fuelValue <= 0)
-            {
-                return;
-            }
 
             if (InputManager.IsInputRightButton())
             {
                 if (!isInteract)
                 {
-                    fuelValue--;
+                    if (fuelValue > 0)
+                    {
+                        fuelValue--;
+                        lightEmissionController.AddFuel(recoveryFuelValue);
+                    }
                     isInteract = true;
                 }
-                lightEmissionController.AddFuel(recoveryFuelValue);
-
             }
             else
             {
@@ -218,7 +216,6 @@ public class PlayerController : MonoBehaviour
             if (remainingAmmoValue != MAX_FIRE_VALUE)
             {
                 isReloading = true;
-                
 
                 if(ammoValue - MAX_FIRE_VALUE > 0)
                 {
