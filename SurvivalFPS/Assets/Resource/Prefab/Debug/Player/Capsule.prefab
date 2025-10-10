@@ -1891,6 +1891,7 @@ MonoBehaviour:
   rotateSpeed: 60
   recoilPower: 50
   interactTime: 2
+  recoveryFuelValue: 40
 --- !u!1 &2337466926783008260
 GameObject:
   m_ObjectHideFlags: 0
