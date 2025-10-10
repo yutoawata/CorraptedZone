@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     bool isReloading = false;
     bool isInteract = false;
 
+    public int FuelValue { get => fuelValue; }
     public int RemainingAmmoValue { get => remainingAmmoValue; }
     public int AmmoValue { get => ammoValue; }
 
@@ -200,11 +201,6 @@ public class PlayerController : MonoBehaviour
 
     void ReLoad()
     {
-        if (ammoValue <= 0)
-        {
-            return;
-        }
-
         if (InputManager.IsInputLeftButton())
         {
             reloadGun.SetActive(true);
