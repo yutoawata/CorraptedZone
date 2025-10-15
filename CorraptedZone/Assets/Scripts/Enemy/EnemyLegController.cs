@@ -46,12 +46,6 @@ public class EnemyLegController : MonoBehaviour
         //リストから親オブジェクトを削除
         list.Remove(parent_);
 
-
-        for (int i = 0; i < list.Count; i++)
-        {
-            Debug.Log(list[i].name);
-        }
-
         return list;
     }
 }
