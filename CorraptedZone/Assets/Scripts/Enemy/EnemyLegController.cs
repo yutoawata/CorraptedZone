@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyLegController : MonoBehaviour
 {
-    [SerializeField] List<Transform> legObjectList;
+    [SerializeField] List<Transform> legObjectList;     //ボーンの親オブジェクト配列
     [SerializeField] List<GameObject> targetPositions; //ボーンの座標配列
 
-    List<EnemyLeg> legList = new List<EnemyLeg>();
+    List<EnemyLeg> legList = new List<EnemyLeg>();      //足一本単位のボーンのクラス配列
 
     void Awake()
     {
@@ -27,6 +27,7 @@ public class EnemyLegController : MonoBehaviour
         }
     }
 
+    //ボーンのTransformを取得
     List<Transform> GetChildren(Transform parent_, bool include_parent)
     {
         List<Transform> list = new List<Transform>();

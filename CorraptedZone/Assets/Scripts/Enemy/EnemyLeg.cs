@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class EnemyLeg
 {
-    List<Transform> bones;
-    List<Vector3> positions;
-    List<float> lengths;
-    GameObject target;
-    Vector3 tipPosition;
-    int maxIteration = 0;     //関節数
-    float length = 1.5f;
+    List<Transform> bones;      //ボーンのTransform配列
+    List<Vector3> positions;    //ボーンの座標のコピー配列
+    List<float> lengths;        //ボーン間の距離の配列
+    GameObject target;          //先端の設置座標
+    Vector3 tipPosition;        //先端の座標
+    int maxIteration = 0;       //関節数
+    float stride = 1.5f;        //歩幅
 
     //変数初期化処理
     public void initialized(List<Transform> bones_, GameObject target_)
@@ -50,7 +50,7 @@ public class EnemyLeg
         Vector3 basePosition = positions[0];
         float prevDistance = 0.0f;
 
-        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= length)
+        if (Vector3.Distance(positions[positions.Count - 1], tipPosition) >= stride)
         {
             tipPosition = target.transform.position;
         }
@@ -69,34 +69,18 @@ public class EnemyLeg
                 break;
             }
 
-            // Backward
-            positions[positions.Count - 1] = tipPosition;
-
             //先端から付け根にかけての関節処理
+            positions[positions.Count - 1] = tipPosition;
             for (int i = positions.Count - 1; i >= 1; i--)
             {
-                Vector3 direction = (positions[i] - positions[i - 1]).normalized;
-                Vector3 setPosition = positions[i] - direction * lengths[i - 1];
-                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / maxIteration;
-
-                positions[i - 1] = setPosition;
-            }
-
-            float allLength = 0;
-            for (int i = 0; i < lengths.Count; i++)
-            {
-                allLength += lengths[i];
+                positions[i - 1] = GetPosition(positions[i], positions[i - 1], lengths[i - 1], i);
             }
 
             // 付け根から先端にかけた関節処理
             positions[0] = basePosition;
             for (int i = 0; i <= positions.Count - 2; i++)
             {
-                Vector3 direction = (positions[i + 1] - positions[i]).normalized;
-                Vector3 setPosition = positions[i] + direction * lengths[i];
-                setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * i) / maxIteration;
-
-                positions[i + 1] = setPosition;
+                positions[i + 1] = GetPosition(positions[i], positions[i + 1], lengths[i], i);
             }
         }
 
@@ -109,6 +93,15 @@ public class EnemyLeg
             Quaternion delta = GetDeltaRotation(origin, current, target);
             bones[i].transform.rotation = delta * bones[i].transform.rotation;
         }
+    }
+
+    Vector3 GetPosition(Vector3 current_, Vector3 next_, float length_, int num_)
+    {
+        Vector3 direction = (current_ - next_).normalized;
+        Vector3 setPosition = current_ - direction * length_;
+        setPosition.y += Mathf.Sin((Mathf.PI / positions.Count) * num_) / maxIteration;
+
+        return setPosition;
     }
 
     //回転角の差を算出

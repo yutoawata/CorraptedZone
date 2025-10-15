@@ -1884,13 +1884,11 @@ MonoBehaviour:
   reticle: {fileID: 0}
   mainCamera: {fileID: 7121494132723412649}
   lightEmissionController: {fileID: 0}
-  gun_obj: {fileID: -6295847236071286009}
+  shootGunRenderer: {fileID: -6295847236071286009}
   shootLenge: 20
   fireIngerval: 1
   moveSpeed: 10
   rotateSpeed: 60
-  recoilPower: 50
-  interactTime: 2
   recoveryFuelValue: 40
 --- !u!1 &2337466926783008260
 GameObject:
